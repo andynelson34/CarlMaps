@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04E25C35191A964C00E7A8F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E25C34191A964C00E7A8F9 /* Foundation.framework */; };
+		04E25C37191A964C00E7A8F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E25C36191A964C00E7A8F9 /* CoreGraphics.framework */; };
+		04E25C39191A964C00E7A8F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E25C38191A964C00E7A8F9 /* UIKit.framework */; };
+		04E25C3F191A964C00E7A8F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E25C3D191A964C00E7A8F9 /* InfoPlist.strings */; };
+		04E25C41191A964C00E7A8F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E25C40191A964C00E7A8F9 /* main.m */; };
+		04E25C45191A964C00E7A8F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E25C44191A964C00E7A8F9 /* AppDelegate.m */; };
+		04E25C48191A964C00E7A8F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E25C46191A964C00E7A8F9 /* Main.storyboard */; };
+		04E25C4B191A964C00E7A8F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E25C4A191A964C00E7A8F9 /* ViewController.m */; };
+		04E25C4D191A964C00E7A8F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E25C4C191A964C00E7A8F9 /* Images.xcassets */; };
+		04E25C54191A964D00E7A8F9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E25C53191A964D00E7A8F9 /* XCTest.framework */; };
+		04E25C55191A964D00E7A8F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E25C34191A964C00E7A8F9 /* Foundation.framework */; };
+		04E25C56191A964D00E7A8F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E25C38191A964C00E7A8F9 /* UIKit.framework */; };
+		04E25C5E191A964D00E7A8F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E25C5C191A964D00E7A8F9 /* InfoPlist.strings */; };
+		04E25C60191A964D00E7A8F9 /* CarlMapsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E25C5F191A964D00E7A8F9 /* CarlMapsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04E25C57191A964D00E7A8F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04E25C29191A964C00E7A8F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04E25C30191A964C00E7A8F9;
+			remoteInfo = CarlMaps;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04E25C31191A964C00E7A8F9 /* CarlMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarlMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04E25C34191A964C00E7A8F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		04E25C36191A964C00E7A8F9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		04E25C38191A964C00E7A8F9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		04E25C3C191A964C00E7A8F9 /* CarlMaps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CarlMaps-Info.plist"; sourceTree = "<group>"; };
+		04E25C3E191A964C00E7A8F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		04E25C40191A964C00E7A8F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04E25C42191A964C00E7A8F9 /* CarlMaps-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CarlMaps-Prefix.pch"; sourceTree = "<group>"; };
+		04E25C43191A964C00E7A8F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04E25C44191A964C00E7A8F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04E25C47191A964C00E7A8F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04E25C49191A964C00E7A8F9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04E25C4A191A964C00E7A8F9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04E25C4C191A964C00E7A8F9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		04E25C52191A964D00E7A8F9 /* CarlMapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarlMapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04E25C53191A964D00E7A8F9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		04E25C5B191A964D00E7A8F9 /* CarlMapsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CarlMapsTests-Info.plist"; sourceTree = "<group>"; };
+		04E25C5D191A964D00E7A8F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		04E25C5F191A964D00E7A8F9 /* CarlMapsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarlMapsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04E25C2E191A964C00E7A8F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E25C37191A964C00E7A8F9 /* CoreGraphics.framework in Frameworks */,
+				04E25C39191A964C00E7A8F9 /* UIKit.framework in Frameworks */,
+				04E25C35191A964C00E7A8F9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04E25C4F191A964D00E7A8F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E25C54191A964D00E7A8F9 /* XCTest.framework in Frameworks */,
+				04E25C56191A964D00E7A8F9 /* UIKit.framework in Frameworks */,
+				04E25C55191A964D00E7A8F9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04E25C28191A964C00E7A8F9 = {
+			isa = PBXGroup;
+			children = (
+				04E25C3A191A964C00E7A8F9 /* CarlMaps */,
+				04E25C59191A964D00E7A8F9 /* CarlMapsTests */,
+				04E25C33191A964C00E7A8F9 /* Frameworks */,
+				04E25C32191A964C00E7A8F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04E25C32191A964C00E7A8F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04E25C31191A964C00E7A8F9 /* CarlMaps.app */,
+				04E25C52191A964D00E7A8F9 /* CarlMapsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04E25C33191A964C00E7A8F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04E25C34191A964C00E7A8F9 /* Foundation.framework */,
+				04E25C36191A964C00E7A8F9 /* CoreGraphics.framework */,
+				04E25C38191A964C00E7A8F9 /* UIKit.framework */,
+				04E25C53191A964D00E7A8F9 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04E25C3A191A964C00E7A8F9 /* CarlMaps */ = {
+			isa = PBXGroup;
+			children = (
+				04E25C43191A964C00E7A8F9 /* AppDelegate.h */,
+				04E25C44191A964C00E7A8F9 /* AppDelegate.m */,
+				04E25C46191A964C00E7A8F9 /* Main.storyboard */,
+				04E25C49191A964C00E7A8F9 /* ViewController.h */,
+				04E25C4A191A964C00E7A8F9 /* ViewController.m */,
+				04E25C4C191A964C00E7A8F9 /* Images.xcassets */,
+				04E25C3B191A964C00E7A8F9 /* Supporting Files */,
+			);
+			path = CarlMaps;
+			sourceTree = "<group>";
+		};
+		04E25C3B191A964C00E7A8F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04E25C3C191A964C00E7A8F9 /* CarlMaps-Info.plist */,
+				04E25C3D191A964C00E7A8F9 /* InfoPlist.strings */,
+				04E25C40191A964C00E7A8F9 /* main.m */,
+				04E25C42191A964C00E7A8F9 /* CarlMaps-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04E25C59191A964D00E7A8F9 /* CarlMapsTests */ = {
+			isa = PBXGroup;
+			children = (
+				04E25C5F191A964D00E7A8F9 /* CarlMapsTests.m */,
+				04E25C5A191A964D00E7A8F9 /* Supporting Files */,
+			);
+			path = CarlMapsTests;
+			sourceTree = "<group>";
+		};
+		04E25C5A191A964D00E7A8F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04E25C5B191A964D00E7A8F9 /* CarlMapsTests-Info.plist */,
+				04E25C5C191A964D00E7A8F9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04E25C30191A964C00E7A8F9 /* CarlMaps */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04E25C63191A964D00E7A8F9 /* Build configuration list for PBXNativeTarget "CarlMaps" */;
+			buildPhases = (
+				04E25C2D191A964C00E7A8F9 /* Sources */,
+				04E25C2E191A964C00E7A8F9 /* Frameworks */,
+				04E25C2F191A964C00E7A8F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CarlMaps;
+			productName = CarlMaps;
+			productReference = 04E25C31191A964C00E7A8F9 /* CarlMaps.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04E25C51191A964D00E7A8F9 /* CarlMapsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04E25C66191A964D00E7A8F9 /* Build configuration list for PBXNativeTarget "CarlMapsTests" */;
+			buildPhases = (
+				04E25C4E191A964D00E7A8F9 /* Sources */,
+				04E25C4F191A964D00E7A8F9 /* Frameworks */,
+				04E25C50191A964D00E7A8F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04E25C58191A964D00E7A8F9 /* PBXTargetDependency */,
+			);
+			name = CarlMapsTests;
+			productName = CarlMapsTests;
+			productReference = 04E25C52191A964D00E7A8F9 /* CarlMapsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04E25C29191A964C00E7A8F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Jonathan Knudson";
+				TargetAttributes = {
+					04E25C51191A964D00E7A8F9 = {
+						TestTargetID = 04E25C30191A964C00E7A8F9;
+					};
+				};
+			};
+			buildConfigurationList = 04E25C2C191A964C00E7A8F9 /* Build configuration list for PBXProject "CarlMaps" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04E25C28191A964C00E7A8F9;
+			productRefGroup = 04E25C32191A964C00E7A8F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04E25C30191A964C00E7A8F9 /* CarlMaps */,
+				04E25C51191A964D00E7A8F9 /* CarlMapsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04E25C2F191A964C00E7A8F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E25C4D191A964C00E7A8F9 /* Images.xcassets in Resources */,
+				04E25C3F191A964C00E7A8F9 /* InfoPlist.strings in Resources */,
+				04E25C48191A964C00E7A8F9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04E25C50191A964D00E7A8F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E25C5E191A964D00E7A8F9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04E25C2D191A964C00E7A8F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E25C4B191A964C00E7A8F9 /* ViewController.m in Sources */,
+				04E25C45191A964C00E7A8F9 /* AppDelegate.m in Sources */,
+				04E25C41191A964C00E7A8F9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04E25C4E191A964D00E7A8F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E25C60191A964D00E7A8F9 /* CarlMapsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04E25C58191A964D00E7A8F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04E25C30191A964C00E7A8F9 /* CarlMaps */;
+			targetProxy = 04E25C57191A964D00E7A8F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04E25C3D191A964C00E7A8F9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04E25C3E191A964C00E7A8F9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		04E25C46191A964C00E7A8F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04E25C47191A964C00E7A8F9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04E25C5C191A964D00E7A8F9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04E25C5D191A964D00E7A8F9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04E25C61191A964D00E7A8F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		04E25C62191A964D00E7A8F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04E25C64191A964D00E7A8F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CarlMaps/CarlMaps-Prefix.pch";
+				INFOPLIST_FILE = "CarlMaps/CarlMaps-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		04E25C65191A964D00E7A8F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CarlMaps/CarlMaps-Prefix.pch";
+				INFOPLIST_FILE = "CarlMaps/CarlMaps-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		04E25C67191A964D00E7A8F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CarlMaps.app/CarlMaps";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CarlMaps/CarlMaps-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CarlMapsTests/CarlMapsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		04E25C68191A964D00E7A8F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CarlMaps.app/CarlMaps";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CarlMaps/CarlMaps-Prefix.pch";
+				INFOPLIST_FILE = "CarlMapsTests/CarlMapsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04E25C2C191A964C00E7A8F9 /* Build configuration list for PBXProject "CarlMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04E25C61191A964D00E7A8F9 /* Debug */,
+				04E25C62191A964D00E7A8F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04E25C63191A964D00E7A8F9 /* Build configuration list for PBXNativeTarget "CarlMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04E25C64191A964D00E7A8F9 /* Debug */,
+				04E25C65191A964D00E7A8F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		04E25C66191A964D00E7A8F9 /* Build configuration list for PBXNativeTarget "CarlMapsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04E25C67191A964D00E7A8F9 /* Debug */,
+				04E25C68191A964D00E7A8F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04E25C29191A964C00E7A8F9 /* Project object */;
+}
