@@ -15,10 +15,12 @@
 
 @implementation ViewController {
     GMSMapView *mapView_;
+    UITableView *trailView;
 }
 
 - (void)viewDidLoad
 {
+    
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
@@ -34,6 +36,12 @@
     marker.title = @"Sydney";
     marker.snippet = @"Australia";
     marker.map = mapView_;
+    
+    UIButton *trailButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    trailButton.frame = CGRectMake(mapView_.bounds.size.width - 60, mapView_.bounds.size.height - 450, 50, 20);
+    trailButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
+    [trailButton setTitle:@"Trails" forState:UIControlStateNormal];
+    [mapView_ addSubview:trailButton];
 
 }
 

@@ -35,6 +35,7 @@
 		8062A289192024C9006A3CEC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8062A288192024C9006A3CEC /* OpenGLES.framework */; };
 		8062A28B192024CF006A3CEC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8062A28A192024CF006A3CEC /* QuartzCore.framework */; };
 		8062A28D192024D6006A3CEC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8062A28C192024D6006A3CEC /* SystemConfiguration.framework */; };
+		80AF6AD9192059B600FCA0EC /* TrailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80AF6AD8192059B600FCA0EC /* TrailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		8062A288192024C9006A3CEC /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		8062A28A192024CF006A3CEC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8062A28C192024D6006A3CEC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		80AF6AD7192059B600FCA0EC /* TrailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailViewController.h; sourceTree = "<group>"; };
+		80AF6AD8192059B600FCA0EC /* TrailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 				04E25C46191A964C00E7A8F9 /* Main.storyboard */,
 				04E25C49191A964C00E7A8F9 /* ViewController.h */,
 				04E25C4A191A964C00E7A8F9 /* ViewController.m */,
+				80AF6AD7192059B600FCA0EC /* TrailViewController.h */,
+				80AF6AD8192059B600FCA0EC /* TrailViewController.m */,
 				04E25C4C191A964C00E7A8F9 /* Images.xcassets */,
 				04E25C3B191A964C00E7A8F9 /* Supporting Files */,
 			);
@@ -308,6 +313,7 @@
 				04E25C4B191A964C00E7A8F9 /* ViewController.m in Sources */,
 				04E25C45191A964C00E7A8F9 /* AppDelegate.m in Sources */,
 				04E25C41191A964C00E7A8F9 /* main.m in Sources */,
+				80AF6AD9192059B600FCA0EC /* TrailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
