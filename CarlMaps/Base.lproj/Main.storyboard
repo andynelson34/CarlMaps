@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - CarlMaps-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="CarlMaps" id="pdI-9f-ogh">
+                    <navigationItem key="navigationItem" id="pdI-9f-ogh">
                         <barButtonItem key="rightBarButtonItem" title="Trails" id="nCZ-j9-wSA">
                             <connections>
                                 <segue destination="9pS-Ix-QMo" kind="push" id="NBM-Dl-crJ"/>
