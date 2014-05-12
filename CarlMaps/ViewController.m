@@ -20,6 +20,11 @@
 
 - (void)viewDidLoad
 {
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.view.backgroundColor = [UIColor clearColor];
     
     // Create a GMSCameraPosition that tells the map to display the
     // coordinates of Carleton College at zoom level 16.5
