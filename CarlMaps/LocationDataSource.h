@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface LocationDataSource : NSObject
 - (NSArray*)searchForPath:(NSString*)searchString;

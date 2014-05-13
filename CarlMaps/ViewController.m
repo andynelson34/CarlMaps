@@ -17,7 +17,6 @@
 @implementation ViewController {
     GMSMapView *mapView_;
     LocationDataSource *testSource;
-    UITableView *trailView;
 }
 
 - (void)viewDidLoad

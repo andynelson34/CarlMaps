@@ -45,4 +45,6 @@
     }
 }
 
+//TODO: Add method to continuously check user's current location and pass that info to the dictionary, as well as display it on the map.
+
 @end
