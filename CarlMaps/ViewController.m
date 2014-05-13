@@ -46,12 +46,6 @@
     marker.title = @"Sydney";
     marker.snippet = @"Australia";
     marker.map = mapView_;*/
-    
-    UIButton *trailButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    trailButton.frame = CGRectMake(mapView_.bounds.size.width - 60, mapView_.bounds.size.height - 450, 50, 20);
-    trailButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
-    [trailButton setTitle:@"Trails" forState:UIControlStateNormal];
-    [mapView_ addSubview:trailButton];
 
 }
 
