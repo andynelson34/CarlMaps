@@ -38,7 +38,6 @@
 		8062A28B192024CF006A3CEC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8062A28A192024CF006A3CEC /* QuartzCore.framework */; };
 		8062A28D192024D6006A3CEC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8062A28C192024D6006A3CEC /* SystemConfiguration.framework */; };
 		80C458921921B209003D33D7 /* LocationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C458911921B209003D33D7 /* LocationDataSource.m */; };
-		80C458961921B238003D33D7 /* TrailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C458951921B238003D33D7 /* TrailDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,8 +88,6 @@
 		8062A28C192024D6006A3CEC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		80C458901921B209003D33D7 /* LocationDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDataSource.h; sourceTree = "<group>"; };
 		80C458911921B209003D33D7 /* LocationDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDataSource.m; sourceTree = "<group>"; };
-		80C458941921B238003D33D7 /* TrailDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrailDataSource.h; path = ../TrailDataSource.h; sourceTree = "<group>"; };
-		80C458951921B238003D33D7 /* TrailDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrailDataSource.m; path = ../TrailDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,8 +222,6 @@
 			children = (
 				80C458901921B209003D33D7 /* LocationDataSource.h */,
 				80C458911921B209003D33D7 /* LocationDataSource.m */,
-				80C458941921B238003D33D7 /* TrailDataSource.h */,
-				80C458951921B238003D33D7 /* TrailDataSource.m */,
 			);
 			name = "Data Sources";
 			sourceTree = "<group>";
@@ -331,7 +326,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80C458961921B238003D33D7 /* TrailDataSource.m in Sources */,
 				04E25C4B191A964C00E7A8F9 /* ViewController.m in Sources */,
 				04E25C45191A964C00E7A8F9 /* AppDelegate.m in Sources */,
 				04E25C41191A964C00E7A8F9 /* main.m in Sources */,

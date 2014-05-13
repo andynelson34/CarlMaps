@@ -33,7 +33,7 @@
     return self;
 }
 
-- (NSArray*)searchForCoords:(NSString*)searchString {
+- (NSArray*)searchForPath:(NSString*)searchString {
     
     // This is a standin method for a more advanced search algorithm with autocomplete that we will implement later.
     

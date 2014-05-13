@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface LocationDataSource : NSObject
+- (NSArray*)searchForPath:(NSString*)searchString;
 
 @end

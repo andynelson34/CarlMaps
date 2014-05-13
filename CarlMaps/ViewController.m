@@ -16,6 +16,7 @@
 
 @implementation ViewController {
     GMSMapView *mapView_;
+    LocationDataSource *testSource;
     UITableView *trailView;
 }
 
@@ -39,7 +40,12 @@
     
     //set min and max zoom
     [mapView_ setMinZoom:14.0f maxZoom:20.0f];
-    LocationDataSource *dataSource = [[LocationDataSource alloc] init];
+    
+    /* TEST CODE DEMONSTRATING HOW LOCATIONDATASOURCE WORKS
+    //Create a data source, and search for a location
+    testSource = [[LocationDataSource alloc] init];
+    NSString *CMC = @"CMC";
+    NSLog(@"%@",[testSource searchForPath:CMC]);*/
 
 
 }
