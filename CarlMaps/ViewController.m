@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "LocationDataSource.h"
 #import <GoogleMaps/GoogleMaps.h>
 
 @interface ViewController ()
@@ -38,14 +39,8 @@
     
     //set min and max zoom
     [mapView_ setMinZoom:14.0f maxZoom:20.0f];
-    
-    /*
-    // Creates a marker in the center of the map.
-    GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
-    marker.title = @"Sydney";
-    marker.snippet = @"Australia";
-    marker.map = mapView_;*/
+    LocationDataSource *dataSource = [[LocationDataSource alloc] init];
+
 
 }
 

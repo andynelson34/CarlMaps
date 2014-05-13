@@ -21,6 +21,8 @@
 		04E25C56191A964D00E7A8F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E25C38191A964C00E7A8F9 /* UIKit.framework */; };
 		04E25C5E191A964D00E7A8F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E25C5C191A964D00E7A8F9 /* InfoPlist.strings */; };
 		04E25C60191A964D00E7A8F9 /* CarlMapsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E25C5F191A964D00E7A8F9 /* CarlMapsTests.m */; };
+		8016C4061921E60C0016D84B /* TrailsList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8016C4051921E60C0016D84B /* TrailsList.txt */; };
+		802723CE1921CA3B00E16BE6 /* LocationsList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 802723CD1921CA3B00E16BE6 /* LocationsList.txt */; };
 		8062A27319202421006A3CEC /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8062A27219202421006A3CEC /* GoogleMaps.framework */; };
 		8062A27519202458006A3CEC /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8062A27419202458006A3CEC /* GoogleMaps.bundle */; };
 		8062A27719202484006A3CEC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8062A27619202484006A3CEC /* AVFoundation.framework */; };
@@ -69,6 +71,8 @@
 		04E25C5B191A964D00E7A8F9 /* CarlMapsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CarlMapsTests-Info.plist"; sourceTree = "<group>"; };
 		04E25C5D191A964D00E7A8F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		04E25C5F191A964D00E7A8F9 /* CarlMapsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarlMapsTests.m; sourceTree = "<group>"; };
+		8016C4051921E60C0016D84B /* TrailsList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TrailsList.txt; sourceTree = "<group>"; };
+		802723CD1921CA3B00E16BE6 /* LocationsList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LocationsList.txt; sourceTree = "<group>"; };
 		8062A27219202421006A3CEC /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		8062A27419202458006A3CEC /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		8062A27619202484006A3CEC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -173,6 +177,8 @@
 		04E25C3A191A964C00E7A8F9 /* CarlMaps */ = {
 			isa = PBXGroup;
 			children = (
+				802723CD1921CA3B00E16BE6 /* LocationsList.txt */,
+				8016C4051921E60C0016D84B /* TrailsList.txt */,
 				04E25C43191A964C00E7A8F9 /* AppDelegate.h */,
 				04E25C44191A964C00E7A8F9 /* AppDelegate.m */,
 				04E25C46191A964C00E7A8F9 /* Main.storyboard */,
@@ -304,7 +310,9 @@
 				04E25C4D191A964C00E7A8F9 /* Images.xcassets in Resources */,
 				04E25C3F191A964C00E7A8F9 /* InfoPlist.strings in Resources */,
 				04E25C48191A964C00E7A8F9 /* Main.storyboard in Resources */,
+				802723CE1921CA3B00E16BE6 /* LocationsList.txt in Resources */,
 				8062A27519202458006A3CEC /* GoogleMaps.bundle in Resources */,
+				8016C4061921E60C0016D84B /* TrailsList.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
