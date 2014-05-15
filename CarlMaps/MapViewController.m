@@ -6,16 +6,17 @@
 //  Copyright (c) 2014 Jonathan Knudson. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MapViewController.h"
 #import "LocationDataSource.h"
 #import <GoogleMaps/GoogleMaps.h>
 
-@interface ViewController ()
+@interface MapViewController ()
 
 @end
 
-@implementation ViewController {
-    GMSMapView *mapView_;
+@implementation MapViewController {
+    __weak IBOutlet GMSMapView *mapView;
+    __weak IBOutlet UIButton *trailsButton;
     LocationDataSource *testSource;
 }
 
@@ -29,16 +30,16 @@
     
     // Create a GMSCameraPosition that tells the map to display the
     // coordinates of Carleton College at zoom level 16.5
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:44.461329
+    GMSCameraPosition *carlCamera = [GMSCameraPosition cameraWithLatitude:44.461329
                                                             longitude:-93.155607
                                                                  zoom:16.5];
-    
-    mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    mapView_.myLocationEnabled = YES;
-    self.view = mapView_;
+
+    mapView.frame = CGRectZero;
+    mapView.camera = carlCamera;
+    mapView.myLocationEnabled = YES;
     
     //set min and max zoom
-    [mapView_ setMinZoom:14.0f maxZoom:20.0f];
+    [mapView setMinZoom:14.0f maxZoom:20.0f];
     
     /* TEST CODE DEMONSTRATING HOW LOCATIONDATASOURCE WORKS
     //Create a data source, and search for a location

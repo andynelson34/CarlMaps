@@ -14,7 +14,7 @@
 		04E25C41191A964C00E7A8F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E25C40191A964C00E7A8F9 /* main.m */; };
 		04E25C45191A964C00E7A8F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E25C44191A964C00E7A8F9 /* AppDelegate.m */; };
 		04E25C48191A964C00E7A8F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E25C46191A964C00E7A8F9 /* Main.storyboard */; };
-		04E25C4B191A964C00E7A8F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E25C4A191A964C00E7A8F9 /* ViewController.m */; };
+		04E25C4B191A964C00E7A8F9 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E25C4A191A964C00E7A8F9 /* MapViewController.m */; };
 		04E25C4D191A964C00E7A8F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E25C4C191A964C00E7A8F9 /* Images.xcassets */; };
 		04E25C54191A964D00E7A8F9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E25C53191A964D00E7A8F9 /* XCTest.framework */; };
 		04E25C55191A964D00E7A8F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E25C34191A964C00E7A8F9 /* Foundation.framework */; };
@@ -36,6 +36,7 @@
 		8062A289192024C9006A3CEC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8062A288192024C9006A3CEC /* OpenGLES.framework */; };
 		8062A28B192024CF006A3CEC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8062A28A192024CF006A3CEC /* QuartzCore.framework */; };
 		8062A28D192024D6006A3CEC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8062A28C192024D6006A3CEC /* SystemConfiguration.framework */; };
+		807C4A3519245B6400764D62 /* TrailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 807C4A3419245B6400764D62 /* TrailTableViewController.m */; };
 		80C458921921B209003D33D7 /* LocationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C458911921B209003D33D7 /* LocationDataSource.m */; };
 /* End PBXBuildFile section */
 
@@ -61,8 +62,8 @@
 		04E25C43191A964C00E7A8F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04E25C44191A964C00E7A8F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		04E25C47191A964C00E7A8F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		04E25C49191A964C00E7A8F9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		04E25C4A191A964C00E7A8F9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04E25C49191A964C00E7A8F9 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		04E25C4A191A964C00E7A8F9 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		04E25C4C191A964C00E7A8F9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		04E25C52191A964D00E7A8F9 /* CarlMapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarlMapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E25C53191A964D00E7A8F9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -84,6 +85,8 @@
 		8062A288192024C9006A3CEC /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		8062A28A192024CF006A3CEC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8062A28C192024D6006A3CEC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		807C4A3319245B6400764D62 /* TrailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailTableViewController.h; sourceTree = "<group>"; };
+		807C4A3419245B6400764D62 /* TrailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailTableViewController.m; sourceTree = "<group>"; };
 		80C458901921B209003D33D7 /* LocationDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDataSource.h; sourceTree = "<group>"; };
 		80C458911921B209003D33D7 /* LocationDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,8 +179,10 @@
 				04E25C43191A964C00E7A8F9 /* AppDelegate.h */,
 				04E25C44191A964C00E7A8F9 /* AppDelegate.m */,
 				04E25C46191A964C00E7A8F9 /* Main.storyboard */,
-				04E25C49191A964C00E7A8F9 /* ViewController.h */,
-				04E25C4A191A964C00E7A8F9 /* ViewController.m */,
+				04E25C49191A964C00E7A8F9 /* MapViewController.h */,
+				04E25C4A191A964C00E7A8F9 /* MapViewController.m */,
+				807C4A3319245B6400764D62 /* TrailTableViewController.h */,
+				807C4A3419245B6400764D62 /* TrailTableViewController.m */,
 				80C458931921B214003D33D7 /* Data Sources */,
 				04E25C4C191A964C00E7A8F9 /* Images.xcassets */,
 				04E25C3B191A964C00E7A8F9 /* Supporting Files */,
@@ -322,7 +327,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E25C4B191A964C00E7A8F9 /* ViewController.m in Sources */,
+				807C4A3519245B6400764D62 /* TrailTableViewController.m in Sources */,
+				04E25C4B191A964C00E7A8F9 /* MapViewController.m in Sources */,
 				04E25C45191A964C00E7A8F9 /* AppDelegate.m in Sources */,
 				04E25C41191A964C00E7A8F9 /* main.m in Sources */,
 				80C458921921B209003D33D7 /* LocationDataSource.m in Sources */,
