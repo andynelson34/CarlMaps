@@ -31,15 +31,34 @@
                                     <segue destination="9pS-Ix-QMo" kind="modal" modalTransitionStyle="flipHorizontal" id="ht5-SV-xi0"/>
                                 </connections>
                             </button>
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="f34-Ql-Snf">
+                                <rect key="frame" x="0.0" y="13" width="257" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="TGx-2I-Ad9"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="Tpf-rn-wo3" id="7Ad-kZ-bzs"/>
+                        <outlet property="searchBar" destination="f34-Ql-Snf" id="QRB-9v-Xdx"/>
+                        <outlet property="searchDisplayController" destination="lZN-On-IWZ" id="5eg-de-tdZ"/>
                         <outlet property="trailsButton" destination="6iD-zT-lav" id="KG2-Za-Vdr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="lZN-On-IWZ">
+                    <connections>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="BEX-2k-fKL"/>
+                        <outlet property="searchBar" destination="f34-Ql-Snf" id="qiO-DX-YRg"/>
+                        <outlet property="searchContentsController" destination="vXZ-lx-hvc" id="J4V-VZ-gbi"/>
+                        <outlet property="searchResultsDataSource" destination="vXZ-lx-hvc" id="KAW-7i-pbC"/>
+                        <outlet property="searchResultsDelegate" destination="vXZ-lx-hvc" id="R5P-Rr-orB"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="664" y="42"/>
         </scene>
@@ -51,61 +70,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableFooterView" contentMode="scaleToFill" id="1rJ-ds-hfL">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Title" id="6sx-Nz-IKS">
+                                    <barButtonItem key="leftBarButtonItem" systemItem="done" id="wA4-p6-1p9">
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="flipHorizontal" id="Zk3-MS-YAS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
                         <sections>
                             <tableViewSection id="ELq-Ge-P3i">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="97C-7p-1I6" style="IBUITableViewCellStyleDefault" id="YcK-04-vuI">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YcK-04-vuI" id="Vee-Gr-VyS">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Goose Trail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="97C-7p-1I6">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="zfb-Ez-egJ" style="IBUITableViewCellStyleDefault" id="Usp-6g-l6J">
-                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Usp-6g-l6J" id="gHV-SM-gmP">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Deer Path" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zfb-Ez-egJ">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="g9T-65-a7V" style="IBUITableViewCellStyleDefault" id="HUS-0D-Oc3">
-                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HUS-0D-Oc3" id="cXe-N4-hW9">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Trail of Doom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g9T-65-a7V">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
+                                <cells/>
                             </tableViewSection>
                         </sections>
                         <connections>
@@ -113,7 +93,8 @@
                             <outlet property="delegate" destination="9pS-Ix-QMo" id="EKU-BK-zaT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="npo-h1-7Fs"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgI-mK-PcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,6 +17,7 @@
 @implementation MapViewController {
     __weak IBOutlet GMSMapView *mapView;
     __weak IBOutlet UIButton *trailsButton;
+    __weak IBOutlet UISearchBar *searchBar;
     LocationDataSource *testSource;
 }
 
