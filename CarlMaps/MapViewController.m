@@ -42,12 +42,12 @@
     //set min and max zoom
     [mapView setMinZoom:14.0f maxZoom:20.0f];
     
+
     /* TEST CODE DEMONSTRATING HOW LOCATIONDATASOURCE WORKS
     //Create a data source, and search for a location
     testSource = [[LocationDataSource alloc] init];
     NSString *CMC = @"CMC";
     NSLog(@"%@",[testSource searchForPath:CMC]);*/
-
 
 }
 
