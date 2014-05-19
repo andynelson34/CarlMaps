@@ -8,6 +8,7 @@
 
 #import "MapViewController.h"
 #import "LocationDataSource.h"
+#import "KMLParser.h"
 #import <GoogleMaps/GoogleMaps.h>
 
 @interface MapViewController ()
@@ -41,6 +42,16 @@
     
     //set min and max zoom
     [mapView setMinZoom:14.0f maxZoom:20.0f];
+    
+    
+    //SAMPLE CODE FOR KML PARSING
+    //NSURL *path = @"http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-age.kmz";
+    //NSURL *url = [[NSURL alloc] initWithString:@"http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-age.kmz"];
+    //kml = [[KMLParser parseKMLAtURL:url] retain];    // and parse it with the KMLParser.
+    //NSString *path = [[NSBundle mainBundle] pathForResource:@"doc" ofType:@"kml"];
+    //kml = [KMLParser parseKMLAtPath:path];
+    
+    
     
 
     /* TEST CODE DEMONSTRATING HOW LOCATIONDATASOURCE WORKS
