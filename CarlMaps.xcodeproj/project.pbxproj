@@ -22,7 +22,7 @@
 		04E25C5E191A964D00E7A8F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E25C5C191A964D00E7A8F9 /* InfoPlist.strings */; };
 		04E25C60191A964D00E7A8F9 /* CarlMapsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E25C5F191A964D00E7A8F9 /* CarlMapsTests.m */; };
 		68153153192AABEB0021E5C9 /* KMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 68153152192AABEB0021E5C9 /* KMLParser.m */; };
-		68153155192AAC110021E5C9 /* arb_trails.kml in Resources */ = {isa = PBXBuildFile; fileRef = 68153154192AAC110021E5C9 /* arb_trails.kml */; };
+		68153155192AAC110021E5C9 /* arbtrails.kml in Resources */ = {isa = PBXBuildFile; fileRef = 68153154192AAC110021E5C9 /* arbtrails.kml */; };
 		802723CE1921CA3B00E16BE6 /* LocationsList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 802723CD1921CA3B00E16BE6 /* LocationsList.txt */; };
 		8062A27319202421006A3CEC /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8062A27219202421006A3CEC /* GoogleMaps.framework */; };
 		8062A27519202458006A3CEC /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8062A27419202458006A3CEC /* GoogleMaps.bundle */; };
@@ -74,7 +74,7 @@
 		04E25C5F191A964D00E7A8F9 /* CarlMapsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarlMapsTests.m; sourceTree = "<group>"; };
 		68153151192AABCD0021E5C9 /* KMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMLParser.h; sourceTree = "<group>"; };
 		68153152192AABEB0021E5C9 /* KMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMLParser.m; sourceTree = "<group>"; };
-		68153154192AAC110021E5C9 /* arb_trails.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = arb_trails.kml; sourceTree = "<group>"; };
+		68153154192AAC110021E5C9 /* arbtrails.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = arbtrails.kml; sourceTree = "<group>"; };
 		802723CD1921CA3B00E16BE6 /* LocationsList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LocationsList.txt; sourceTree = "<group>"; };
 		8062A27219202421006A3CEC /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		8062A27419202458006A3CEC /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
@@ -238,7 +238,7 @@
 		68E8A34F192A737E00FDF440 /* KMLfiles */ = {
 			isa = PBXGroup;
 			children = (
-				68153154192AAC110021E5C9 /* arb_trails.kml */,
+				68153154192AAC110021E5C9 /* arbtrails.kml */,
 			);
 			name = KMLfiles;
 			sourceTree = "<group>";
@@ -330,7 +330,7 @@
 			files = (
 				04E25C4D191A964C00E7A8F9 /* Images.xcassets in Resources */,
 				04E25C3F191A964C00E7A8F9 /* InfoPlist.strings in Resources */,
-				68153155192AAC110021E5C9 /* arb_trails.kml in Resources */,
+				68153155192AAC110021E5C9 /* arbtrails.kml in Resources */,
 				04E25C48191A964C00E7A8F9 /* Main.storyboard in Resources */,
 				802723CE1921CA3B00E16BE6 /* LocationsList.txt in Resources */,
 				8062A27519202458006A3CEC /* GoogleMaps.bundle in Resources */,

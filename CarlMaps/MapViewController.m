@@ -40,17 +40,12 @@
     mapView.camera = carlCamera;
     mapView.myLocationEnabled = YES;
     
-    //set min and max zoom
+    //set min and max zoom, and disable rotation
     [mapView setMinZoom:14.0f maxZoom:20.0f];
+    mapView.settings.rotateGestures = NO;
     
-    
-    //SAMPLE CODE FOR KML PARSING
-    //NSURL *path = @"http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-age.kmz";
-    //NSURL *url = [[NSURL alloc] initWithString:@"http://earthquake.usgs.gov/earthquakes/catalogs/eqs7day-age.kmz"];
-    //kml = [[KMLParser parseKMLAtURL:url] retain];    // and parse it with the KMLParser.
-    //NSString *path = [[NSBundle mainBundle] pathForResource:@"doc" ofType:@"kml"];
-    //kml = [KMLParser parseKMLAtPath:path];
-    
+    //load KML files?
+    [self loadKMLfiles];
     
     /* TEST CODE DEMONSTRATING HOW LOCATIONDATASOURCE WORKS
     //Create a data source, and search for a location
@@ -58,6 +53,56 @@
     NSString *CMC = @"CMC";
     NSLog(@"%@",[testSource searchForPath:CMC]);*/
 
+}
+
+//TOYING AROUND WITH A FEW IDEAS HERE:
+/*
+This currently will parse the "arb_trails" KML file.
+It's based on something that works for MK files for Apple Maps, but I was
+hoping I could use it for us.
+*/
+-(void)loadKMLfiles
+{
+    // Locate the path to the route.kml file in the application's bundle
+    // and parse it with the KMLParser.
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"arbtrails" ofType:@"kml"];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    KMLParser *theParser = [[KMLParser alloc] initWithURL:url];
+    [theParser parseKML];
+    
+    // Add all of the MKOverlay objects parsed from the KML file to the map.
+    NSArray *overlays = [theParser overlays];
+    //[mapView addOverlays:overlays];
+    
+    // Add all of the MKAnnotation objects parsed from the KML file to the map.
+    //NSArray *annotations = [theParser points];
+    //[mapView addAnnotations:annotations];
+    /*
+    
+    // Walk the list of overlays and annotations and create a MKMapRect that
+    // bounds all of them and store it into flyTo.
+    MKMapRect flyTo = MKMapRectNull;
+    for (id <MKOverlay> overlay in overlays) {
+        if (MKMapRectIsNull(flyTo)) {
+            flyTo = [overlay boundingMapRect];
+        } else {
+            flyTo = MKMapRectUnion(flyTo, [overlay boundingMapRect]);
+        }
+    }
+    
+    for (id <MKAnnotation> annotation in annotations) {
+        MKMapPoint annotationPoint = MKMapPointForCoordinate(annotation.coordinate);
+        MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
+        if (MKMapRectIsNull(flyTo)) {
+            flyTo = pointRect;
+        }else{
+            flyTo = MKMapRectUnion(flyTo, pointRect);
+        }
+    }
+    
+    // Position the map so that all overlays and annotations are visible on screen.
+    map.visibleMapRect = flyTo;
+    */
 }
 
 - (void)didReceiveMemoryWarning
