@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns:atom="http://www.w3.org/2005/Atom" xmlns="http://www.opengis.net/kml/2.2"> <NetworkLink>
+    <open>1</open>
+    <name>arbtrails</name>
+    <LookAt>
+        <longitude>-93.14243630318049</longitude>
+        <latitude>44.47669377405113</latitude>
+        <range>3315.1826279345187</range>
+    </LookAt>
+    <Link>
+        <viewRefreshMode>onStop</viewRefreshMode>
+        <viewRefreshTime>2</viewRefreshTime>
+        <href>http://arcgis64.ads.carleton.edu:6080/arcgis/services/Arb/Arb_Trails/MapServer/KmlServer?Composite=true&amp;LayerIDs=0</href>
+        <viewFormat>BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth];CAMERA=[lookatLon],[lookatLat],[lookatRange],[lookatTilt],[lookatHeading];VIEW=[horizFov],[vertFov],[horizPixels],[vertPixels],[terrainEnabled]</viewFormat>
+    </Link>
+</NetworkLink>
+</kml>
