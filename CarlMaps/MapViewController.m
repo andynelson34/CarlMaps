@@ -52,8 +52,6 @@
     //kml = [KMLParser parseKMLAtPath:path];
     
     
-    
-
     /* TEST CODE DEMONSTRATING HOW LOCATIONDATASOURCE WORKS
     //Create a data source, and search for a location
     testSource = [[LocationDataSource alloc] init];

@@ -21,8 +21,8 @@
 		04E25C56191A964D00E7A8F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E25C38191A964C00E7A8F9 /* UIKit.framework */; };
 		04E25C5E191A964D00E7A8F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E25C5C191A964D00E7A8F9 /* InfoPlist.strings */; };
 		04E25C60191A964D00E7A8F9 /* CarlMapsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E25C5F191A964D00E7A8F9 /* CarlMapsTests.m */; };
-		68E8A34E192A702E00FDF440 /* KMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E8A34D192A702E00FDF440 /* KMLParser.m */; };
-		68E8A351192A738600FDF440 /* arbtrails.kml in Resources */ = {isa = PBXBuildFile; fileRef = 68E8A350192A738600FDF440 /* arbtrails.kml */; };
+		68153116192AA6090021E5C9 /* KMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 68153115192AA6090021E5C9 /* KMLParser.m */; };
+		68153118192AA7A90021E5C9 /* arbtrails.kml in Resources */ = {isa = PBXBuildFile; fileRef = 68153117192AA7A90021E5C9 /* arbtrails.kml */; };
 		802723CE1921CA3B00E16BE6 /* LocationsList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 802723CD1921CA3B00E16BE6 /* LocationsList.txt */; };
 		8062A27319202421006A3CEC /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8062A27219202421006A3CEC /* GoogleMaps.framework */; };
 		8062A27519202458006A3CEC /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8062A27419202458006A3CEC /* GoogleMaps.bundle */; };
@@ -72,9 +72,9 @@
 		04E25C5B191A964D00E7A8F9 /* CarlMapsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CarlMapsTests-Info.plist"; sourceTree = "<group>"; };
 		04E25C5D191A964D00E7A8F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		04E25C5F191A964D00E7A8F9 /* CarlMapsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarlMapsTests.m; sourceTree = "<group>"; };
-		68E8A34C192A702E00FDF440 /* KMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KMLParser.h; path = ../../../Downloads/KMLViewer/Classes/KMLParser.h; sourceTree = "<group>"; };
-		68E8A34D192A702E00FDF440 /* KMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMLParser.m; path = ../../../Downloads/KMLViewer/Classes/KMLParser.m; sourceTree = "<group>"; };
-		68E8A350192A738600FDF440 /* arbtrails.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = arbtrails.kml; path = ../../../Downloads/arbtrails.kml; sourceTree = "<group>"; };
+		68153114192AA6090021E5C9 /* KMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KMLParser.h; path = "../../../Downloads/KMLViewer 2/Classes/KMLParser.h"; sourceTree = "<group>"; };
+		68153115192AA6090021E5C9 /* KMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMLParser.m; path = "../../../Downloads/KMLViewer 2/Classes/KMLParser.m"; sourceTree = "<group>"; };
+		68153117192AA7A90021E5C9 /* arbtrails.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = arbtrails.kml; path = ../../../Downloads/arbtrails.kml; sourceTree = "<group>"; };
 		802723CD1921CA3B00E16BE6 /* LocationsList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LocationsList.txt; sourceTree = "<group>"; };
 		8062A27219202421006A3CEC /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		8062A27419202458006A3CEC /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
@@ -229,8 +229,8 @@
 		68E8A34B192A702200FDF440 /* KMLParser */ = {
 			isa = PBXGroup;
 			children = (
-				68E8A34C192A702E00FDF440 /* KMLParser.h */,
-				68E8A34D192A702E00FDF440 /* KMLParser.m */,
+				68153114192AA6090021E5C9 /* KMLParser.h */,
+				68153115192AA6090021E5C9 /* KMLParser.m */,
 			);
 			name = KMLParser;
 			sourceTree = "<group>";
@@ -238,7 +238,7 @@
 		68E8A34F192A737E00FDF440 /* KMLfiles */ = {
 			isa = PBXGroup;
 			children = (
-				68E8A350192A738600FDF440 /* arbtrails.kml */,
+				68153117192AA7A90021E5C9 /* arbtrails.kml */,
 			);
 			name = KMLfiles;
 			sourceTree = "<group>";
@@ -333,7 +333,7 @@
 				04E25C48191A964C00E7A8F9 /* Main.storyboard in Resources */,
 				802723CE1921CA3B00E16BE6 /* LocationsList.txt in Resources */,
 				8062A27519202458006A3CEC /* GoogleMaps.bundle in Resources */,
-				68E8A351192A738600FDF440 /* arbtrails.kml in Resources */,
+				68153118192AA7A90021E5C9 /* arbtrails.kml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				807C4A3519245B6400764D62 /* TrailTableViewController.m in Sources */,
-				68E8A34E192A702E00FDF440 /* KMLParser.m in Sources */,
+				68153116192AA6090021E5C9 /* KMLParser.m in Sources */,
 				04E25C4B191A964C00E7A8F9 /* MapViewController.m in Sources */,
 				04E25C45191A964C00E7A8F9 /* AppDelegate.m in Sources */,
 				04E25C41191A964C00E7A8F9 /* main.m in Sources */,
