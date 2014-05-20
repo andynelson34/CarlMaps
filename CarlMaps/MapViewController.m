@@ -9,6 +9,7 @@
 #import "MapViewController.h"
 #import "LocationDataSource.h"
 #import "KMLParser.h"
+#import "TileLayer.h"
 #import <GoogleMaps/GoogleMaps.h>
 
 @interface MapViewController ()
@@ -47,6 +48,12 @@
     //load KML files?
     [self loadKMLfiles];
     
+    //add a tile layer?
+    TileLayer *layer = [[TileLayer alloc] init];
+    //layer.zIndex = 16.5;
+    layer.map = mapView;
+
+    
     /* TEST CODE DEMONSTRATING HOW LOCATIONDATASOURCE WORKS
     //Create a data source, and search for a location
     testSource = [[LocationDataSource alloc] init];
@@ -59,25 +66,23 @@
 /*
 This currently will parse the "arb_trails" KML file.
 It's based on something that works for MK files for Apple Maps, but I was
-hoping I could use it for us.
+hoping I could use it for us. -Brady
 */
--(void)loadKMLfiles
-{
+-(void)loadKMLfiles{
     // Locate the path to the route.kml file in the application's bundle
     // and parse it with the KMLParser.
     NSString *path = [[NSBundle mainBundle] pathForResource:@"arbtrails" ofType:@"kml"];
     NSURL *url = [NSURL fileURLWithPath:path];
     KMLParser *theParser = [[KMLParser alloc] initWithURL:url];
     [theParser parseKML];
-    
+    /*
     // Add all of the MKOverlay objects parsed from the KML file to the map.
     NSArray *overlays = [theParser overlays];
-    //[mapView addOverlays:overlays];
+    [mapView addOverlays:overlays];
     
     // Add all of the MKAnnotation objects parsed from the KML file to the map.
     //NSArray *annotations = [theParser points];
     //[mapView addAnnotations:annotations];
-    /*
     
     // Walk the list of overlays and annotations and create a MKMapRect that
     // bounds all of them and store it into flyTo.
