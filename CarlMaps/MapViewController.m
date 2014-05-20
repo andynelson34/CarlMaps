@@ -47,13 +47,11 @@
     
     //load KML files?
     [self loadKMLfiles];
-    
-    //add a tile layer?
-    TileLayer *layer = [[TileLayer alloc] init];
-    //layer.zIndex = 16.5;
+
+    //attempt to create a tile layer
+    GMSTileLayer *layer = [[TileLayer alloc] init];
     layer.map = mapView;
 
-    
     /* TEST CODE DEMONSTRATING HOW LOCATIONDATASOURCE WORKS
     //Create a data source, and search for a location
     testSource = [[LocationDataSource alloc] init];
