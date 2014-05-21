@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MapViewController.h
 //  CarlMaps
 //
 //  Created by Jonathan Knudson on 5/7/14.

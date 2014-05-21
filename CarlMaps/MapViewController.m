@@ -1,5 +1,5 @@
 //
-//  ViewController.m
+//  MapViewController.m
 //  CarlMaps
 //
 //  Created by Jonathan Knudson on 5/7/14.
@@ -9,15 +9,13 @@
 #import "MapViewController.h"
 #import "LocationDataSource.h"
 #import "KMLParser.h"
-#import "TileLayer.h"
-#import <GoogleMaps/GoogleMaps.h>
 
 @interface MapViewController ()
 
 @end
 
 @implementation MapViewController {
-    __weak IBOutlet GMSMapView *mapView;
+    __weak IBOutlet MKMapView *mapView;
     __weak IBOutlet UIButton *trailsButton;
     __weak IBOutlet UISearchBar *searchBar;
     LocationDataSource *testSource;
@@ -25,7 +23,11 @@
 
 - (void)viewDidLoad
 {
-        
+    
+    // TODO: I THINK WE NEED TO INCLUDE SOMETHING CALLED A "LOCATION MANAGER" TO TRACK OUR CURRENT LOCATION. WE'LL WORK ON THIS TONIGHT (5/21)
+    
+    
+    /* Old Joogle Maps Stuffe
     // Create a GMSCameraPosition that tells the map to display the
     // coordinates of Carleton College at zoom level 16.5
     GMSCameraPosition *carlCamera = [GMSCameraPosition cameraWithLatitude:44.461329
@@ -39,13 +41,20 @@
     //set min and max zoom, and disable rotation
     [mapView setMinZoom:14.0f maxZoom:20.0f];
     mapView.settings.rotateGestures = NO;
+     
+     
+     //attempt to create a tile layer
+     GMSTileLayer *layer = [[TileLayer alloc] init];
+     layer.map = mapView;
+    */
+    
+    CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(44.461329, -93.155607);
+    MKCoordinateRegion adjustedRegion = [mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 200, 200)];
+    [mapView setRegion:adjustedRegion animated:YES];
     
     //load KML files?
     [self loadKMLfiles];
 
-    //attempt to create a tile layer
-    GMSTileLayer *layer = [[TileLayer alloc] init];
-    layer.map = mapView;
 
     /*TEST CODE DEMONSTRATING HOW LOCATIONDATASOURCE WORKS
     //Create a data source, and search for a location
