@@ -9,26 +9,17 @@
 #import "LocationDataSource.h"
 
 @implementation LocationDataSource {
-    NSMutableDictionary *placesDict;
+    NSDictionary *placesDict;
 }
 
 - (id)init {
     self = [super init];
     if (self) {
         
-        // Parses text file and adds coordinates of each location in it to dictionary of locations that can be searched later.
+        //Creates dictionary of location GPS coordinates from plist
         
-        placesDict = [[NSMutableDictionary alloc] init];
-        NSString *filePath = [[NSBundle mainBundle] pathForResource: @"LocationsList" ofType:@"txt"];
-        NSString *locString = [NSString stringWithContentsOfFile:filePath encoding: NSUTF8StringEncoding error:NULL];
-        NSArray *rawLocArray = [locString componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-        
-        for (NSString *rawLoc in rawLocArray) {
-            NSArray *tempArray = [rawLoc componentsSeparatedByString:@"#"];
-            NSString *dictKey = [tempArray objectAtIndex: 0];
-            NSArray *coordsArray = @[[tempArray objectAtIndex: 1], [tempArray objectAtIndex: 2]];
-            [placesDict setObject:coordsArray forKey:dictKey];
-        }
+        NSString *locationPath = [[NSBundle mainBundle] pathForResource:@"LocationList" ofType:@"plist"];
+        placesDict = [[NSDictionary alloc] initWithContentsOfFile:locationPath];
     }
     return self;
 }

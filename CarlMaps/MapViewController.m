@@ -25,12 +25,7 @@
 
 - (void)viewDidLoad
 {
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
-                                                  forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.shadowImage = [UIImage new];
-    self.navigationController.navigationBar.translucent = YES;
-    self.navigationController.view.backgroundColor = [UIColor clearColor];
-    
+        
     // Create a GMSCameraPosition that tells the map to display the
     // coordinates of Carleton College at zoom level 16.5
     GMSCameraPosition *carlCamera = [GMSCameraPosition cameraWithLatitude:44.461329
@@ -52,7 +47,7 @@
     GMSTileLayer *layer = [[TileLayer alloc] init];
     layer.map = mapView;
 
-    /* TEST CODE DEMONSTRATING HOW LOCATIONDATASOURCE WORKS
+    /*TEST CODE DEMONSTRATING HOW LOCATIONDATASOURCE WORKS
     //Create a data source, and search for a location
     testSource = [[LocationDataSource alloc] init];
     NSString *CMC = @"CMC";

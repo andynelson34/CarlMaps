@@ -12,7 +12,9 @@
 
 @end
 
-@implementation TrailTableViewController
+@implementation TrailTableViewController {
+    NSArray *trails;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,6 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    trails = [NSArray arrayWithObjects:@"Goose Trail", @"Deer Path", @"Trail of Doom", nil];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -44,28 +48,33 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [trails count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *trailTableIdentifier = @"TrailTableCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:trailTableIdentifier];
     
-    // Configure the cell...
+    // Populates cells in table from trails list
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:trailTableIdentifier];
+    }
+    
+    cell.textLabel.text = [trails objectAtIndex:indexPath.row];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
