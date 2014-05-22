@@ -13,7 +13,7 @@
 @end
 
 @implementation TrailTableViewController {
-    NSArray *trails;
+    NSMutableArray *trails;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -38,7 +38,8 @@
 {
     [super viewDidLoad];
     
-    trails = [NSArray arrayWithObjects:@"Goose Trail", @"Deer Path", @"Trail of Doom", nil];
+    NSString *trailResourcePath = [[NSBundle mainBundle] pathForResource:@"TrailList" ofType:@"plist"];
+    trails = [[NSMutableArray alloc] initWithContentsOfFile:trailResourcePath];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -80,7 +81,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:trailTableIdentifier];
     }
     
-    cell.textLabel.text = [trails objectAtIndex:indexPath.row];
+    NSMutableArray *selectedTrail = [trails objectAtIndex:indexPath.row];
+    cell.textLabel.text = [selectedTrail objectAtIndex:0];
     
     return cell;
 }
@@ -88,10 +90,18 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    // Checkmarks cells upon tapping them
+    // Checks or unchecks cells upon tapping them
     
-    UITableViewCell *checkedCell = [tableView cellForRowAtIndexPath:indexPath];
-    checkedCell.accessoryType = UITableViewCellAccessoryCheckmark;
+    UITableViewCell *tappedCell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    if (tappedCell.accessoryType == UITableViewCellAccessoryNone) {
+        tappedCell.accessoryType = UITableViewCellAccessoryCheckmark;
+        [[trails objectAtIndex:indexPath.row] replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:1]];
+    } else {
+        tappedCell.accessoryType = UITableViewCellAccessoryNone;
+        [[trails objectAtIndex:indexPath.row] replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:0]];
+    }
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
