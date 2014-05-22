@@ -26,7 +26,7 @@
 
 - (NSArray*)searchForPlace:(NSString*)searchString {
     
-    // This is a standin method for a more advanced search algorithm with autocomplete that we will implement later.
+    // This is a standin method for a more advanced search algorithm with autocomplete that we will implement soon.
     
     if([placesDict objectForKey:searchString]) {
         return [placesDict objectForKey:searchString];
