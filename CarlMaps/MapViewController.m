@@ -18,6 +18,7 @@
     __weak IBOutlet MKMapView *mapView;
     __weak IBOutlet UIButton *trailsButton;
     __weak IBOutlet UISearchBar *searchBar;
+    IBOutlet UITableView *searchTableView;
     LocationDataSource *testSource;
 }
 
@@ -55,13 +56,23 @@
     //load KML files?
     [self loadKMLfiles];
 
-
-    /*TEST CODE DEMONSTRATING HOW LOCATIONDATASOURCE WORKS
+    //TEST CODE DEMONSTRATING HOW LOCATIONDATASOURCE WORKS
     //Create a data source, and search for a location
     testSource = [[LocationDataSource alloc] init];
-    NSString *CMC = @"CMC";
-    NSLog(@"%@",[testSource searchForPath:CMC]);*/
+    NSString *NYC = @"New York";
+    [self dropPin:[testSource searchForPlace:NYC]];
+    //NSLog(@"%@",[testSource searchForPlace:CMC]);*/
 
+}
+
+-(void)dropPin:(NSArray*)pinCoords {
+    CLLocationCoordinate2D pinLoc;
+    pinLoc.latitude = [pinCoords[0] doubleValue];
+    pinLoc.longitude = [pinCoords[1] doubleValue];
+    MKPointAnnotation *destinationPin = [[MKPointAnnotation alloc] init];
+    destinationPin.coordinate = pinLoc;
+    [mapView addAnnotation:destinationPin];
+    
 }
 
 //TOYING AROUND WITH A FEW IDEAS HERE:

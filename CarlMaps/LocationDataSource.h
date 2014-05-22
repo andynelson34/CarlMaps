@@ -10,6 +10,6 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface LocationDataSource : NSObject
-- (NSArray*)searchForPath:(NSString*)searchString;
+- (NSArray*)searchForPlace:(NSString*)searchString;
 
 @end

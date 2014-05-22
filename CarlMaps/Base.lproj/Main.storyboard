@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Map View Controller-->
@@ -45,6 +45,7 @@
                         <outlet property="mapView" destination="jMU-ik-UTi" id="2Vr-Cb-7hB"/>
                         <outlet property="searchBar" destination="f34-Ql-Snf" id="QRB-9v-Xdx"/>
                         <outlet property="searchDisplayController" destination="lZN-On-IWZ" id="5eg-de-tdZ"/>
+                        <outlet property="searchTableView" destination="kh9-bI-dsS" id="tMu-R1-g5l"/>
                         <outlet property="trailsButton" destination="6iD-zT-lav" id="KG2-Za-Vdr"/>
                     </connections>
                 </viewController>
@@ -93,7 +94,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgI-mK-PcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1129" y="-5"/>
+            <point key="canvasLocation" x="1151" y="36"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -18,13 +18,13 @@
         
         //Creates dictionary of location GPS coordinates from plist
         
-        NSString *locationPath = [[NSBundle mainBundle] pathForResource:@"LocationList" ofType:@"plist"];
-        placesDict = [[NSDictionary alloc] initWithContentsOfFile:locationPath];
+        NSString *locationResourcePath = [[NSBundle mainBundle] pathForResource:@"LocationList" ofType:@"plist"];
+        placesDict = [[NSDictionary alloc] initWithContentsOfFile:locationResourcePath];
     }
     return self;
 }
 
-- (NSArray*)searchForPath:(NSString*)searchString {
+- (NSArray*)searchForPlace:(NSString*)searchString {
     
     // This is a standin method for a more advanced search algorithm with autocomplete that we will implement later.
     
