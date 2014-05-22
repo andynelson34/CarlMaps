@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="i2d-0T-6Da">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -27,7 +27,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9pS-Ix-QMo" kind="modal" modalTransitionStyle="flipHorizontal" id="ht5-SV-xi0"/>
+                                    <segue destination="9pS-Ix-QMo" kind="push" id="ht5-SV-xi0"/>
                                 </connections>
                             </button>
                             <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="f34-Ql-Snf">
@@ -41,28 +41,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ECf-Qg-kV5"/>
                     <connections>
                         <outlet property="mapView" destination="jMU-ik-UTi" id="2Vr-Cb-7hB"/>
                         <outlet property="searchBar" destination="f34-Ql-Snf" id="QRB-9v-Xdx"/>
-                        <outlet property="searchDisplayController" destination="lZN-On-IWZ" id="5eg-de-tdZ"/>
                         <outlet property="searchTableView" destination="kh9-bI-dsS" id="tMu-R1-g5l"/>
                         <outlet property="trailsButton" destination="6iD-zT-lav" id="KG2-Za-Vdr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="lZN-On-IWZ">
-                    <connections>
-                        <outlet property="delegate" destination="vXZ-lx-hvc" id="BEX-2k-fKL"/>
-                        <outlet property="searchBar" destination="f34-Ql-Snf" id="qiO-DX-YRg"/>
-                        <outlet property="searchContentsController" destination="vXZ-lx-hvc" id="J4V-VZ-gbi"/>
-                        <outlet property="searchResultsDataSource" destination="vXZ-lx-hvc" id="KAW-7i-pbC"/>
-                        <outlet property="searchResultsDelegate" destination="vXZ-lx-hvc" id="R5P-Rr-orB"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="664" y="42"/>
         </scene>
-        <!--Trail Table View Controller-->
+        <!--Trail Table View Controller - Trails-->
         <scene sceneID="Kcy-Od-o1o">
             <objects>
                 <tableViewController id="9pS-Ix-QMo" customClass="TrailTableViewController" sceneMemberID="viewController">
@@ -70,19 +61,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <navigationBar key="tableFooterView" contentMode="scaleToFill" id="1rJ-ds-hfL">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem title="Trails" id="6sx-Nz-IKS">
-                                    <barButtonItem key="leftBarButtonItem" systemItem="done" id="wA4-p6-1p9">
-                                        <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="flipHorizontal" id="Zk3-MS-YAS"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="9pS-Ix-QMo" id="Wcy-Ei-bRi"/>
@@ -90,11 +68,27 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Trails" id="mTy-ad-AQ3"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgI-mK-PcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1151" y="36"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Sp-o9-9Eb">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="i2d-0T-6Da" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UlL-VJ-R2G">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="2yd-zI-GLZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EA8-qf-du8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181" y="42"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

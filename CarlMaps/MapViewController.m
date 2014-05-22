@@ -22,6 +22,12 @@
     LocationDataSource *testSource;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
+
 - (void)viewDidLoad
 {
     
