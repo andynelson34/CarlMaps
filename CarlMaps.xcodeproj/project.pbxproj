@@ -21,6 +21,7 @@
 		04E25C56191A964D00E7A8F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E25C38191A964C00E7A8F9 /* UIKit.framework */; };
 		04E25C5E191A964D00E7A8F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E25C5C191A964D00E7A8F9 /* InfoPlist.strings */; };
 		04E25C60191A964D00E7A8F9 /* CarlMapsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E25C5F191A964D00E7A8F9 /* CarlMapsTests.m */; };
+		3F432871192EB4060074E30C /* TrailList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F432870192EB4060074E30C /* TrailList.plist */; };
 		68153153192AABEB0021E5C9 /* KMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 68153152192AABEB0021E5C9 /* KMLParser.m */; };
 		68153155192AAC110021E5C9 /* arbtrails.kml in Resources */ = {isa = PBXBuildFile; fileRef = 68153154192AAC110021E5C9 /* arbtrails.kml */; };
 		68AC53A9192D0C7F002D6039 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AC53A8192D0C7F002D6039 /* MapKit.framework */; };
@@ -59,6 +60,7 @@
 		04E25C5B191A964D00E7A8F9 /* CarlMapsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CarlMapsTests-Info.plist"; sourceTree = "<group>"; };
 		04E25C5D191A964D00E7A8F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		04E25C5F191A964D00E7A8F9 /* CarlMapsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarlMapsTests.m; sourceTree = "<group>"; };
+		3F432870192EB4060074E30C /* TrailList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TrailList.plist; sourceTree = "<group>"; };
 		68153151192AABCD0021E5C9 /* KMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMLParser.h; sourceTree = "<group>"; };
 		68153152192AABEB0021E5C9 /* KMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMLParser.m; sourceTree = "<group>"; };
 		68153154192AAC110021E5C9 /* arbtrails.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = arbtrails.kml; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		80C458931921B214003D33D7 /* Data Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3F432870192EB4060074E30C /* TrailList.plist */,
 				8808A763192C3E8F0012DA14 /* LocationList.plist */,
 				80C458901921B209003D33D7 /* LocationDataSource.h */,
 				80C458911921B209003D33D7 /* LocationDataSource.m */,
@@ -287,6 +290,7 @@
 				04E25C4D191A964C00E7A8F9 /* Images.xcassets in Resources */,
 				8808A764192C3E8F0012DA14 /* LocationList.plist in Resources */,
 				04E25C3F191A964C00E7A8F9 /* InfoPlist.strings in Resources */,
+				3F432871192EB4060074E30C /* TrailList.plist in Resources */,
 				68153155192AAC110021E5C9 /* arbtrails.kml in Resources */,
 				04E25C48191A964C00E7A8F9 /* Main.storyboard in Resources */,
 			);
