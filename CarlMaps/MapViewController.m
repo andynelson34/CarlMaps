@@ -59,8 +59,9 @@
     
     [searchBar setShowsCancelButton:YES animated:YES];
     
-    searchBar.showsCancelButton = YES;
     [self.view addSubview:searchBar];
+    
+    
     
     CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(44.461329, -93.155607);
     MKCoordinateRegion adjustedRegion = [mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 200, 200)];
@@ -76,6 +77,17 @@
     [self dropPin:[testSource searchForPlace:NYC]];
     //NSLog(@"%@",[testSource searchForPlace:CMC]);*/
 
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [[event allTouches] anyObject];
+    if ([searchBar isFirstResponder] && [touch view] != searchBar)
+    {
+        [searchBar resignFirstResponder];
+        [mapView setUserInteractionEnabled:YES];
+    }
+    [super touchesBegan:touches withEvent:event];
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
