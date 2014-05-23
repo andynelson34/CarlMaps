@@ -53,7 +53,14 @@
      //attempt to create a tile layer
      GMSTileLayer *layer = [[TileLayer alloc] init];
      layer.map = mapView;
-    */
+    */;
+    
+    searchBar.delegate = self;
+    
+    [searchBar setShowsCancelButton:YES animated:YES];
+    
+    searchBar.showsCancelButton = YES;
+    [self.view addSubview:searchBar];
     
     CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(44.461329, -93.155607);
     MKCoordinateRegion adjustedRegion = [mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 200, 200)];
@@ -69,6 +76,11 @@
     [self dropPin:[testSource searchForPlace:NYC]];
     //NSLog(@"%@",[testSource searchForPlace:CMC]);*/
 
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+    [searchBar resignFirstResponder];
+    [searchBar setShowsCancelButton:YES animated:YES];
 }
 
 -(void)dropPin:(NSArray*)pinCoords {
