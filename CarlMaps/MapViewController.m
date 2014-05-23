@@ -56,11 +56,6 @@
     
     //searchBar.delegate = self;
     
-    [searchBar setShowsCancelButton:YES animated:YES];
-    
-    searchBar.showsCancelButton = YES;
-    [self.view addSubview:searchBar];
-    
     CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(44.461329, -93.155607);
     MKCoordinateRegion adjustedRegion = [mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 200, 200)];
     [mapView setRegion:adjustedRegion animated:YES];
