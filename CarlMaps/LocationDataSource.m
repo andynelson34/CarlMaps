@@ -8,9 +8,7 @@
 
 #import "LocationDataSource.h"
 
-@implementation LocationDataSource {
-    NSDictionary *placesDict;
-}
+@implementation LocationDataSource
 
 - (id)init {
     self = [super init];
@@ -19,7 +17,7 @@
         //Creates dictionary of location GPS coordinates from plist
         
         NSString *locationResourcePath = [[NSBundle mainBundle] pathForResource:@"LocationList" ofType:@"plist"];
-        placesDict = [[NSDictionary alloc] initWithContentsOfFile:locationResourcePath];
+        self.placesDict = [[NSDictionary alloc] initWithContentsOfFile:locationResourcePath];
     }
     return self;
 }
@@ -28,8 +26,8 @@
     
     // This is a standin method for a more advanced search algorithm with autocomplete that we will implement soon.
     
-    if([placesDict objectForKey:searchString]) {
-        return [placesDict objectForKey:searchString];
+    if([self.placesDict objectForKey:searchString]) {
+        return [self.placesDict objectForKey:searchString];
     }
     else {
         return NULL;

@@ -7,13 +7,14 @@
 //
 
 #import "TrailTableViewController.h"
+#import "TrailDataSource.h"
 
 @interface TrailTableViewController ()
 
 @end
 
 @implementation TrailTableViewController {
-    NSMutableArray *trails;
+    TrailDataSource *trailSource;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -37,9 +38,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    trailSource = [[TrailDataSource alloc] init];
     
-    NSString *trailResourcePath = [[NSBundle mainBundle] pathForResource:@"TrailList" ofType:@"plist"];
-    trails = [[NSMutableArray alloc] initWithContentsOfFile:trailResourcePath];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -66,7 +66,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [trails count];
+    return [trailSource.trails count];
 }
 
 
@@ -81,7 +81,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:trailTableIdentifier];
     }
     
-    NSMutableArray *selectedTrail = [trails objectAtIndex:indexPath.row];
+    NSMutableArray *selectedTrail = [trailSource.trails objectAtIndex:indexPath.row];
     cell.textLabel.text = [selectedTrail objectAtIndex:0];
     
     return cell;
@@ -96,10 +96,10 @@
     
     if (tappedCell.accessoryType == UITableViewCellAccessoryNone) {
         tappedCell.accessoryType = UITableViewCellAccessoryCheckmark;
-        [[trails objectAtIndex:indexPath.row] replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:1]];
+        [[trailSource.trails objectAtIndex:indexPath.row] replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:1]];
     } else {
         tappedCell.accessoryType = UITableViewCellAccessoryNone;
-        [[trails objectAtIndex:indexPath.row] replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:0]];
+        [[trailSource.trails objectAtIndex:indexPath.row] replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:0]];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

@@ -12,4 +12,6 @@
 @interface LocationDataSource : NSObject
 - (NSArray*)searchForPlace:(NSString*)searchString;
 
+@property NSDictionary *placesDict;
+
 @end

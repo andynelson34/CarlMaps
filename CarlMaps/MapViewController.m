@@ -31,8 +31,7 @@
 - (void)viewDidLoad
 {
     
-    // TODO: I THINK WE NEED TO INCLUDE SOMETHING CALLED A "LOCATION MANAGER" TO TRACK OUR CURRENT LOCATION. WE'LL WORK ON THIS TONIGHT (5/21)
-    
+    // TODO: I THINK WE NEED TO INCLUDE SOMETHING CALLED A "LOCATION MANAGER" TO TRACK OUR CURRENT LOCATION.
     
     /* Old Joogle Maps Stuffe
     // Create a GMSCameraPosition that tells the map to display the
@@ -55,7 +54,7 @@
      layer.map = mapView;
     */;
     
-    searchBar.delegate = self;
+    //searchBar.delegate = self;
     
     [searchBar setShowsCancelButton:YES animated:YES];
     
@@ -78,10 +77,21 @@
 
 }
 
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [[event allTouches] anyObject];
+    if ([searchBar isFirstResponder] && [touch view] != searchBar)
+    {
+        [searchBar resignFirstResponder];
+        [mapView setUserInteractionEnabled:YES];
+    }
+    [super touchesBegan:touches withEvent:event];
+}
+
+/*- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
     [searchBar resignFirstResponder];
     [searchBar setShowsCancelButton:YES animated:YES];
-}
+}*/
 
 -(void)dropPin:(NSArray*)pinCoords {
     CLLocationCoordinate2D pinLoc;

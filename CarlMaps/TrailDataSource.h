@@ -2,12 +2,14 @@
 //  TrailDataSource.h
 //  CarlMaps
 //
-//  Created by student on 5/22/14.
+//  Created by mobiledev on 5/22/14.
 //  Copyright (c) 2014 Jonathan Knudson. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface TrailDataSource : UINavigationController
+@interface TrailDataSource : NSObject
+
+@property NSMutableArray *trails;
 
 @end
