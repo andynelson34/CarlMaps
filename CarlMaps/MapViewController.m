@@ -20,6 +20,8 @@
     __weak IBOutlet UISearchBar *searchBar;
     IBOutlet UITableView *searchTableView;
     LocationDataSource *testSource;
+    KMLParser *theParser;
+    MKTileOverlay *arbtrails;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -59,9 +61,14 @@
     CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(44.461329, -93.155607);
     MKCoordinateRegion adjustedRegion = [mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 200, 200)];
     [mapView setRegion:adjustedRegion animated:YES];
+    mapView.rotateEnabled = false;
+    
     
     //load KML files?
-    [self loadKMLfiles];
+    //[self loadKMLfiles];
+    
+    //add the tiled overlay
+    [self placeTiledOverlay];
 
     //TEST CODE DEMONSTRATING HOW LOCATIONDATASOURCE WORKS
     //Create a data source, and search for a location
@@ -98,27 +105,31 @@
     
 }
 
-//TOYING AROUND WITH A FEW IDEAS HERE:
-/*
-This currently will parse the "arb_trails" KML file.
-It's based on something that works for MK files for Apple Maps, but I was
-hoping I could use it for us. -Brady
-*/
+//Add in a tiled overlay
+-(void)placeTiledOverlay{
+    NSString *template = @"jeff-and-moose.jpg";
+    arbtrails = [[MKTileOverlay alloc] initWithURLTemplate: template];
+    arbtrails.canReplaceMapContent = YES;
+    [mapView addOverlay:arbtrails level: MKOverlayLevelAboveRoads];
+}
+
+
+//Attempt to load in a KML file
 -(void)loadKMLfiles{
     // Locate the path to the route.kml file in the application's bundle
     // and parse it with the KMLParser.
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"arbtrails" ofType:@"kml"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"KML_Samples" ofType:@"kml"];
     NSURL *url = [NSURL fileURLWithPath:path];
-    KMLParser *theParser = [[KMLParser alloc] initWithURL:url];
+    theParser = [[KMLParser alloc] initWithURL:url];
     [theParser parseKML];
-    /*
+    
     // Add all of the MKOverlay objects parsed from the KML file to the map.
     NSArray *overlays = [theParser overlays];
     [mapView addOverlays:overlays];
     
     // Add all of the MKAnnotation objects parsed from the KML file to the map.
-    //NSArray *annotations = [theParser points];
-    //[mapView addAnnotations:annotations];
+    NSArray *annotations = [theParser points];
+    [mapView addAnnotations:annotations];
     
     // Walk the list of overlays and annotations and create a MKMapRect that
     // bounds all of them and store it into flyTo.
@@ -142,8 +153,7 @@ hoping I could use it for us. -Brady
     }
     
     // Position the map so that all overlays and annotations are visible on screen.
-    map.visibleMapRect = flyTo;
-    */
+    mapView.visibleMapRect = flyTo;
 }
 
 - (void)didReceiveMemoryWarning
@@ -151,5 +161,11 @@ hoping I could use it for us. -Brady
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (MKTileOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay
+{
+    return [[MKTileOverlayRenderer alloc] initWithTileOverlay:arbtrails];
+}
+
 
 @end
