@@ -9,7 +9,6 @@
 #import "LocationDataSource.h"
 
 @implementation LocationDataSource
-//test comment so I can commit
 
 - (id)init {
     self = [super init];
