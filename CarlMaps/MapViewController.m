@@ -17,9 +17,9 @@
 @implementation MapViewController {
     __weak IBOutlet MKMapView *mapView;
     __weak IBOutlet UIButton *trailsButton;
-    __weak IBOutlet UISearchBar *searchBar;
+    __weak IBOutlet UISearchBar *locSearchBar;
     IBOutlet UITableView *searchTableView;
-    LocationDataSource *testSource;
+    LocationDataSource *locSource;
     KMLParser *theParser;
     MKTileOverlay *arbtrails;
 }
@@ -56,7 +56,7 @@
      layer.map = mapView;
     */;
     
-    //searchBar.delegate = self;
+    //locSearchBar.delegate = self;
     
     CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(44.461329, -93.155607);
     MKCoordinateRegion adjustedRegion = [mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 200, 200)];
@@ -72,27 +72,32 @@
 
     //TEST CODE DEMONSTRATING HOW LOCATIONDATASOURCE WORKS
     //Create a data source, and search for a location
-    testSource = [[LocationDataSource alloc] init];
+    locSource = [[LocationDataSource alloc] init];
     NSString *NYC = @"New York";
-    [self dropPin:[testSource searchForPlace:NYC]];
-    //NSLog(@"%@",[testSource searchForPlace:CMC]);*/
+    [self dropPin:[locSource searchForPlace:NYC]];
+    //NSLog(@"%@",[locSource searchForPlace:CMC]);*/
 
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    NSLog(@"The search button was clicked!");
+    NSLog(@"%@",[locSource searchForPlace:searchBar.text]);
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [[event allTouches] anyObject];
-    if ([searchBar isFirstResponder] && [touch view] != searchBar)
+    if ([locSearchBar isFirstResponder] && [touch view] != locSearchBar)
     {
-        [searchBar resignFirstResponder];
+        [locSearchBar resignFirstResponder];
         [mapView setUserInteractionEnabled:YES];
     }
     [super touchesBegan:touches withEvent:event];
 }
 
 /*- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
-    [searchBar resignFirstResponder];
-    [searchBar setShowsCancelButton:YES animated:YES];
+    [locSearchBar resignFirstResponder];
+    [locSearchBar setShowsCancelButton:YES animated:YES];
 }*/
 
 -(void)dropPin:(NSArray*)pinCoords {
