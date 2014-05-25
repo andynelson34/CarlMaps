@@ -2,10 +2,35 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>New York</key>
+    <key>Leighton Hall</key>
     <array>
-        <real>40.7056308</real>
-        <real>-73.9780035</real>
+        <real>44.462043</real>
+        <real>-93.155670</real>
+    </array>
+    <key>Gould Library</key>
+    <array>
+        <real>44.4621306</real>
+        <real>-93.1544230</real>
+    </array>
+    <key>Laird Hall</key>
+    <array>
+        <real>44.462049</real>
+        <real>-93.154061</real>
+    </array>
+    <key>CMC</key>
+    <array>
+        <real>44.462424</real>
+        <real>-93.153396</real>
+    </array>
+    <key>Boliou Hall</key>
+    <array>
+        <real>44.462277</real>
+        <real>-93.152843</real>
+    </array>
+    <key>Bald Spot</key>
+    <array>
+        <real>44.460988</real>
+        <real>-93.154597</real>
     </array>
 </dict>
 </plist>

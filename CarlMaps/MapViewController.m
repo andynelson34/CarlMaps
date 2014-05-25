@@ -35,27 +35,6 @@
     
     // TODO: I THINK WE NEED TO INCLUDE SOMETHING CALLED A "LOCATION MANAGER" TO TRACK OUR CURRENT LOCATION.
     
-    /* Old Joogle Maps Stuffe
-    // Create a GMSCameraPosition that tells the map to display the
-    // coordinates of Carleton College at zoom level 16.5
-    GMSCameraPosition *carlCamera = [GMSCameraPosition cameraWithLatitude:44.461329
-                                                            longitude:-93.155607
-                                                                 zoom:16.5];
-
-    mapView.frame = CGRectZero;
-    mapView.camera = carlCamera;
-    mapView.myLocationEnabled = YES;
-    
-    //set min and max zoom, and disable rotation
-    [mapView setMinZoom:14.0f maxZoom:20.0f];
-    mapView.settings.rotateGestures = NO;
-     
-     
-     //attempt to create a tile layer
-     GMSTileLayer *layer = [[TileLayer alloc] init];
-     layer.map = mapView;
-    */;
-    
     //locSearchBar.delegate = self;
     
     CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(44.461329, -93.155607);
@@ -70,17 +49,19 @@
     //add the tiled overlay
     [self placeTiledOverlay];
 
-    //TEST CODE DEMONSTRATING HOW LOCATIONDATASOURCE WORKS
-    //Create a data source, and search for a location
+    // Create a location data source
     locSource = [[LocationDataSource alloc] init];
-    NSString *NYC = @"New York";
-    [self dropPin:[locSource searchForPlace:NYC]];
     //NSLog(@"%@",[locSource searchForPlace:CMC]);*/
 
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    NSLog(@"The search button was clicked!");
+
+    // Carries out search for a given location
+    NSArray *searchCoords = [locSource searchForPlace:searchBar.text];
+    
+    // Places pin on map at coordinates for search result
+    [self pinSearchResult:searchCoords];
     NSLog(@"%@",[locSource searchForPlace:searchBar.text]);
 }
 
@@ -101,6 +82,10 @@
 }*/
 
 -(void)dropPin:(NSArray*)pinCoords {
+    
+    // TODO: MAYBE ADD ANIMATION? THIS IS JUST POLISHING, BUT IT LOOKS COMPLICATED, NEED TO ADD A NEW THING CALLED MKANNOTATIONVIEW
+    
+    // Drops pin onto map at given coordinates
     CLLocationCoordinate2D pinLoc;
     pinLoc.latitude = [pinCoords[0] doubleValue];
     pinLoc.longitude = [pinCoords[1] doubleValue];
@@ -108,6 +93,18 @@
     destinationPin.coordinate = pinLoc;
     [mapView addAnnotation:destinationPin];
     
+}
+
+-(void)pinSearchResult:(NSArray*)pinCoords {
+    
+    // First, remove all existing pins from the map
+    NSArray *existingpoints = mapView.annotations;
+    if ([existingpoints count]) {
+        [mapView removeAnnotations:existingpoints];
+    }
+    
+    // Then add pin for the searched location
+    [self dropPin:pinCoords];
 }
 
 //Add in a tiled overlay
@@ -171,6 +168,5 @@
 {
     return [[MKTileOverlayRenderer alloc] initWithTileOverlay:arbtrails];
 }
-
 
 @end
