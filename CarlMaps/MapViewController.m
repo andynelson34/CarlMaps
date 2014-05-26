@@ -21,6 +21,7 @@
     __weak IBOutlet UISearchBar *locSearchBar;
     IBOutlet UITableView *searchTableView;
     LocationDataSource *locSource;
+    NSArray *trailStatuses;
     KMLParser *theParser;
     MKTileOverlay *arbtrails;
 }
@@ -29,37 +30,79 @@
 {
     [self.navigationController setNavigationBarHidden:YES animated:animated];
     [super viewWillAppear:animated];
+    [self loadSettings];
 }
 
 - (void)viewDidLoad
 {
-    
-    // TODO: I THINK WE NEED TO INCLUDE SOMETHING CALLED A "LOCATION MANAGER" TO TRACK OUR CURRENT LOCATION.
-    
     //locSearchBar.delegate = self;
     
     CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(44.461329, -93.155607);
-    MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 200, 200)];
+    MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 400, 400)];
     [self.mapView setRegion:adjustedRegion animated:YES];
     self.mapView.rotateEnabled = false;
+    adjustedRegion.center = startCoord;
+    MKCoordinateSpan span;
+    span.latitudeDelta = 0.005;
+    span.longitudeDelta = 0.005;
+    adjustedRegion.span = span;
     
-    //add the overlay
+    [self.mapView setRegion:adjustedRegion animated:YES];
     [self placeOverlay];
-
+    
+    
+    
+    //load KML files?
+    //[self loadKMLfiles];
+    
+    //add the tiled overlay
+    
     // Create a location data source
     locSource = [[LocationDataSource alloc] init];
+    
+    self.mapView.showsUserLocation = YES;
     //NSLog(@"%@",[locSource searchForPlace:CMC]);*/
-
+    
 }
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+/*- (void)saveSettings{
+ // Store the data
+ NSMutableArray *checkmarkedTrails;
+ int saveSlide = self.erotic_slider.value;
+ [[NSUserDefaults standardUserDefaults] setObject:saveString forKey:@"haiku_key"];
+ [[NSUserDefaults standardUserDefaults] setInteger:saveSlide forKey:@"slider_key"];
+ }*/
 
+-(void)loadSettings {
+    
+    // Load trails to display
+    self->trailStatuses = [[NSUserDefaults standardUserDefaults] arrayForKey:@"trails_key"];
+    NSLog(@"%@", self->trailStatuses);
+}
+
+/*-(void)saveSettings {
+ [[NSUserDefaults standardUserDefaults] setObject:trailStatuses forKey:@"trails_key"];
+ }*/
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
     // Carries out search for a given location
     NSArray *searchCoords = [locSource searchForPlace:searchBar.text];
     
-    // Places pin on map at coordinates for search result
-    [self pinSearchResult:searchCoords];
-    NSLog(@"%@",[locSource searchForPlace:searchBar.text]);
+    // Removes keyboard if search is successful
+    if ([locSource searchForPlace:searchBar.text]) {
+        if ([locSearchBar isFirstResponder])
+        {
+            [locSearchBar resignFirstResponder];
+            [self.mapView setUserInteractionEnabled:YES];
+        }
+    }
+    
+    // Places pin on map at coordinates for search result if a result was found
+    if (searchCoords != nil) {
+        [self pinSearchResult:searchCoords];
+        NSLog(@"%@",[locSource searchForPlace:searchBar.text]);
+    }
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -74,9 +117,9 @@
 }
 
 /*- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
-    [locSearchBar resignFirstResponder];
-    [locSearchBar setShowsCancelButton:YES animated:YES];
-}*/
+ [locSearchBar resignFirstResponder];
+ [locSearchBar setShowsCancelButton:YES animated:YES];
+ }*/
 
 -(void)dropPin:(NSArray*)pinCoords {
     
@@ -90,14 +133,15 @@
     destinationPin.coordinate = pinLoc;
     [self.mapView addAnnotation:destinationPin];
     
+    [self.mapView setCenterCoordinate:pinLoc animated:YES];
 }
 
 -(void)pinSearchResult:(NSArray*)pinCoords {
     
     // First, remove all existing pins from the map
-    NSArray *existingpoints = self.mapView.annotations;
-    if ([existingpoints count]) {
-        [self.mapView removeAnnotations:existingpoints];
+    NSArray *existingPoints = self.mapView.annotations;
+    if ([existingPoints count]) {
+        [self.mapView removeAnnotations:existingPoints];
     }
     
     // Then add pin for the searched location

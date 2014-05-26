@@ -15,6 +15,7 @@
 
 @implementation TrailTableViewController {
     TrailDataSource *trailSource;
+    IBOutlet UITableView *trailTableView;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -39,6 +40,7 @@
 {
     [super viewDidLoad];
     trailSource = [[TrailDataSource alloc] init];
+    [self loadSettings];
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -49,10 +51,40 @@
     
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [self saveSettings];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)saveSettings {
+    // Save the checkmarked/uncheckmarked status of each trail.
+    NSMutableArray *trailStatuses;
+    trailStatuses = [[NSMutableArray alloc] init];
+    for (NSMutableArray *trail in trailSource.trails) {
+        [trailStatuses addObject:[trail objectAtIndex:1]];
+    }
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:trailStatuses forKey:@"trails_key"];
+    [defaults synchronize];
+}
+
+-(void)loadSettings {
+    NSArray *trailStatuses = [[NSUserDefaults standardUserDefaults] arrayForKey:@"trails_key"];
+    NSLog(@"Loading table:%@", trailStatuses);
+    int i;
+    for (i = 0; i < [trailStatuses count]; i++) {
+        NSNumber *checkmarkStatus = [trailStatuses objectAtIndex:i];
+        if ([checkmarkStatus intValue] == 1) {
+            UITableViewCell *cellToCheckmark = [trailTableView cellForRowAtIndexPath:[NSIndexPath indexPathWithIndex:i]];
+            NSLog(@"The terror of Cell!:%@", cellToCheckmark);
+            cellToCheckmark.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
+    }
 }
 
 #pragma mark - Table view data source
@@ -107,14 +139,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
