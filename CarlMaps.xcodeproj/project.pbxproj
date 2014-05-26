@@ -27,6 +27,8 @@
 		68AC53A9192D0C7F002D6039 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AC53A8192D0C7F002D6039 /* MapKit.framework */; };
 		800520A6192EF7D800E1B39A /* TrailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 800520A5192EF7D800E1B39A /* TrailDataSource.m */; };
 		807C4A3519245B6400764D62 /* TrailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 807C4A3419245B6400764D62 /* TrailTableViewController.m */; };
+		80C280241932EAC80077F96A /* CustomOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C280231932EAC80077F96A /* CustomOverlay.m */; };
+		80C280271932F1F20077F96A /* CustomOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C280261932F1F20077F96A /* CustomOverlayRenderer.m */; };
 		80C458921921B209003D33D7 /* LocationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C458911921B209003D33D7 /* LocationDataSource.m */; };
 		80C9C585192F077F00800BC7 /* jeff-and-moose.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80C9C584192F077F00800BC7 /* jeff-and-moose.jpg */; };
 		8808A764192C3E8F0012DA14 /* LocationList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8808A763192C3E8F0012DA14 /* LocationList.plist */; };
@@ -71,6 +73,10 @@
 		800520A5192EF7D800E1B39A /* TrailDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailDataSource.m; sourceTree = "<group>"; };
 		807C4A3319245B6400764D62 /* TrailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailTableViewController.h; sourceTree = "<group>"; };
 		807C4A3419245B6400764D62 /* TrailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailTableViewController.m; sourceTree = "<group>"; };
+		80C280231932EAC80077F96A /* CustomOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlay.m; sourceTree = "<group>"; };
+		80C280251932EAD50077F96A /* CustomOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlay.h; sourceTree = "<group>"; };
+		80C280261932F1F20077F96A /* CustomOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlayRenderer.m; sourceTree = "<group>"; };
+		80C280281932F1FC0077F96A /* CustomOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlayRenderer.h; sourceTree = "<group>"; };
 		80C458901921B209003D33D7 /* LocationDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDataSource.h; sourceTree = "<group>"; };
 		80C458911921B209003D33D7 /* LocationDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDataSource.m; sourceTree = "<group>"; };
 		80C9C584192F077F00800BC7 /* jeff-and-moose.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jeff-and-moose.jpg"; sourceTree = "<group>"; };
@@ -144,7 +150,8 @@
 				807C4A3319245B6400764D62 /* TrailTableViewController.h */,
 				807C4A3419245B6400764D62 /* TrailTableViewController.m */,
 				04E25C4C191A964C00E7A8F9 /* Images.xcassets */,
-				80C9C583192F077600800BC7 /* Tiling */,
+				80C280221932EAA70077F96A /* Overlays */,
+				80C9C583192F077600800BC7 /* Tiles */,
 				68E8A34F192A737E00FDF440 /* KMLfiles */,
 				80C458931921B214003D33D7 /* Data Sources */,
 				04E25C3B191A964C00E7A8F9 /* Supporting Files */,
@@ -199,6 +206,17 @@
 			name = KMLfiles;
 			sourceTree = "<group>";
 		};
+		80C280221932EAA70077F96A /* Overlays */ = {
+			isa = PBXGroup;
+			children = (
+				80C280251932EAD50077F96A /* CustomOverlay.h */,
+				80C280231932EAC80077F96A /* CustomOverlay.m */,
+				80C280281932F1FC0077F96A /* CustomOverlayRenderer.h */,
+				80C280261932F1F20077F96A /* CustomOverlayRenderer.m */,
+			);
+			name = Overlays;
+			sourceTree = "<group>";
+		};
 		80C458931921B214003D33D7 /* Data Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,12 +230,12 @@
 			name = "Data Sources";
 			sourceTree = "<group>";
 		};
-		80C9C583192F077600800BC7 /* Tiling */ = {
+		80C9C583192F077600800BC7 /* Tiles */ = {
 			isa = PBXGroup;
 			children = (
 				80C9C584192F077F00800BC7 /* jeff-and-moose.jpg */,
 			);
-			name = Tiling;
+			name = Tiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +353,8 @@
 				68153153192AABEB0021E5C9 /* KMLParser.m in Sources */,
 				04E25C41191A964C00E7A8F9 /* main.m in Sources */,
 				80C458921921B209003D33D7 /* LocationDataSource.m in Sources */,
+				80C280271932F1F20077F96A /* CustomOverlayRenderer.m in Sources */,
+				80C280241932EAC80077F96A /* CustomOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

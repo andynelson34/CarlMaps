@@ -9,13 +9,14 @@
 #import "MapViewController.h"
 #import "LocationDataSource.h"
 #import "KMLParser.h"
+#import "CustomOverlay.h"
+#import "CustomOverlayRenderer.h"
 
 @interface MapViewController ()
 
 @end
 
 @implementation MapViewController {
-    __weak IBOutlet MKMapView *mapView;
     __weak IBOutlet UIButton *trailsButton;
     __weak IBOutlet UISearchBar *locSearchBar;
     IBOutlet UITableView *searchTableView;
@@ -38,16 +39,12 @@
     //locSearchBar.delegate = self;
     
     CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(44.461329, -93.155607);
-    MKCoordinateRegion adjustedRegion = [mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 200, 200)];
-    [mapView setRegion:adjustedRegion animated:YES];
-    mapView.rotateEnabled = false;
+    MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 200, 200)];
+    [self.mapView setRegion:adjustedRegion animated:YES];
+    self.mapView.rotateEnabled = false;
     
-    
-    //load KML files?
-    //[self loadKMLfiles];
-    
-    //add the tiled overlay
-    [self placeTiledOverlay];
+    //add the overlay
+    [self placeOverlay];
 
     // Create a location data source
     locSource = [[LocationDataSource alloc] init];
@@ -71,7 +68,7 @@
     if ([locSearchBar isFirstResponder] && [touch view] != locSearchBar)
     {
         [locSearchBar resignFirstResponder];
-        [mapView setUserInteractionEnabled:YES];
+        [self.mapView setUserInteractionEnabled:YES];
     }
     [super touchesBegan:touches withEvent:event];
 }
@@ -91,30 +88,28 @@
     pinLoc.longitude = [pinCoords[1] doubleValue];
     MKPointAnnotation *destinationPin = [[MKPointAnnotation alloc] init];
     destinationPin.coordinate = pinLoc;
-    [mapView addAnnotation:destinationPin];
+    [self.mapView addAnnotation:destinationPin];
     
 }
 
 -(void)pinSearchResult:(NSArray*)pinCoords {
     
     // First, remove all existing pins from the map
-    NSArray *existingpoints = mapView.annotations;
+    NSArray *existingpoints = self.mapView.annotations;
     if ([existingpoints count]) {
-        [mapView removeAnnotations:existingpoints];
+        [self.mapView removeAnnotations:existingpoints];
     }
     
     // Then add pin for the searched location
     [self dropPin:pinCoords];
 }
 
-//Add in a tiled overlay
--(void)placeTiledOverlay{
-    NSString *template = @"jeff-and-moose.jpg";
-    arbtrails = [[MKTileOverlay alloc] initWithURLTemplate: template];
-    arbtrails.canReplaceMapContent = YES;
-    [mapView addOverlay:arbtrails level: MKOverlayLevelAboveRoads];
+//Add in a normal overlay
+-(void)placeOverlay{
+    NSLog(@"added");
+    CustomOverlay *overlay = [[CustomOverlay alloc] initWithRectangle: MKMapRectMake(44.461329, -93.155607,10,10)];
+    [self.mapView addOverlay:overlay level: MKOverlayLevelAboveRoads];
 }
-
 
 //Attempt to load in a KML file
 -(void)loadKMLfiles{
@@ -127,11 +122,11 @@
     
     // Add all of the MKOverlay objects parsed from the KML file to the map.
     NSArray *overlays = [theParser overlays];
-    [mapView addOverlays:overlays];
+    [self.mapView addOverlays:overlays];
     
     // Add all of the MKAnnotation objects parsed from the KML file to the map.
     NSArray *annotations = [theParser points];
-    [mapView addAnnotations:annotations];
+    [self.mapView addAnnotations:annotations];
     
     // Walk the list of overlays and annotations and create a MKMapRect that
     // bounds all of them and store it into flyTo.
@@ -155,18 +150,21 @@
     }
     
     // Position the map so that all overlays and annotations are visible on screen.
-    mapView.visibleMapRect = flyTo;
+    self.mapView.visibleMapRect = flyTo;
+}
+
+//Tells the MapView which renderer to use
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay{
+    NSLog(@"I was called");
+    UIImage *jeffImage = [UIImage imageNamed:@"jeff-and-moose.jpg"];
+    CustomOverlayRenderer *overlayRenderer = [[CustomOverlayRenderer alloc] initWithOverlay:overlay overlayImage:jeffImage];
+    return overlayRenderer;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (MKTileOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay
-{
-    return [[MKTileOverlayRenderer alloc] initWithTileOverlay:arbtrails];
 }
 
 @end
