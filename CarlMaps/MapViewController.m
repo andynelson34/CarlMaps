@@ -150,51 +150,15 @@
 
 //Add in a normal overlay
 -(void)placeOverlay{
-    NSLog(@"added");
-    CustomOverlay *overlay = [[CustomOverlay alloc] initWithRectangle: MKMapRectMake(44.461329, -93.155607,10,10)];
-    [self.mapView addOverlay:overlay level: MKOverlayLevelAboveRoads];
-}
-
-//Attempt to load in a KML file
--(void)loadKMLfiles{
-    // Locate the path to the route.kml file in the application's bundle
-    // and parse it with the KMLParser.
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"KML_Samples" ofType:@"kml"];
-    NSURL *url = [NSURL fileURLWithPath:path];
-    theParser = [[KMLParser alloc] initWithURL:url];
-    [theParser parseKML];
+    // draw MKRectangle on the map using the outline coordinates of the building
+    CLLocationCoordinate2D *coords = malloc(sizeof(CLLocationCoordinate2D) * 4);
+    coords[0] = CLLocationCoordinate2DMake(44.4608902423,-93.1567658615);
+    coords[1] = CLLocationCoordinate2DMake(44.4608902423,-93.1568401051);
+    coords[1] = CLLocationCoordinate2DMake(44.4605042217,-93.156478259);
+    coords[1] = CLLocationCoordinate2DMake(44.4605558631,-93.156523186);
+    MKPolygon *polygon = [MKPolygon polygonWithCoordinates:coords count:4];
     
-    // Add all of the MKOverlay objects parsed from the KML file to the map.
-    NSArray *overlays = [theParser overlays];
-    [self.mapView addOverlays:overlays];
-    
-    // Add all of the MKAnnotation objects parsed from the KML file to the map.
-    NSArray *annotations = [theParser points];
-    [self.mapView addAnnotations:annotations];
-    
-    // Walk the list of overlays and annotations and create a MKMapRect that
-    // bounds all of them and store it into flyTo.
-    MKMapRect flyTo = MKMapRectNull;
-    for (id <MKOverlay> overlay in overlays) {
-        if (MKMapRectIsNull(flyTo)) {
-            flyTo = [overlay boundingMapRect];
-        } else {
-            flyTo = MKMapRectUnion(flyTo, [overlay boundingMapRect]);
-        }
-    }
-    
-    for (id <MKAnnotation> annotation in annotations) {
-        MKMapPoint annotationPoint = MKMapPointForCoordinate(annotation.coordinate);
-        MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
-        if (MKMapRectIsNull(flyTo)) {
-            flyTo = pointRect;
-        }else{
-            flyTo = MKMapRectUnion(flyTo, pointRect);
-        }
-    }
-    
-    // Position the map so that all overlays and annotations are visible on screen.
-    self.mapView.visibleMapRect = flyTo;
+    [self.mapView addOverlay:polygon];
 }
 
 //Tells the MapView which renderer to use
