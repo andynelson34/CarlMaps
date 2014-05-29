@@ -18,7 +18,7 @@
 
 @implementation MapViewController {
     __weak IBOutlet UIButton *trailsButton;
-    __weak IBOutlet UISearchBar *locSearchBar;
+    //__weak IBOutlet UISearchBar *locSearchBar;
     IBOutlet UITableView *searchTableView;
     LocationDataSource *locSource;
     NSArray *trailStatuses;
@@ -83,7 +83,7 @@
 /*-(void)saveSettings {
  [[NSUserDefaults standardUserDefaults] setObject:trailStatuses forKey:@"trails_key"];
  }*/
-
+/*
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     
     // Carries out search for a given location
@@ -115,11 +115,7 @@
     }
     [super touchesBegan:touches withEvent:event];
 }
-
-/*- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
- [locSearchBar resignFirstResponder];
- [locSearchBar setShowsCancelButton:YES animated:YES];
- }*/
+*/
 
 -(void)dropPin:(NSArray*)pinCoords {
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046E2FFC1937BFBB00344FA9 /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E2FFB1937BFBB00344FA9 /* SearchTableViewController.m */; };
 		04E25C35191A964C00E7A8F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E25C34191A964C00E7A8F9 /* Foundation.framework */; };
 		04E25C37191A964C00E7A8F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E25C36191A964C00E7A8F9 /* CoreGraphics.framework */; };
 		04E25C39191A964C00E7A8F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E25C38191A964C00E7A8F9 /* UIKit.framework */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		046E2FFA1937BFBB00344FA9 /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
+		046E2FFB1937BFBB00344FA9 /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
 		04E25C31191A964C00E7A8F9 /* CarlMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarlMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E25C34191A964C00E7A8F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		04E25C36191A964C00E7A8F9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -145,6 +148,8 @@
 				04E25C43191A964C00E7A8F9 /* AppDelegate.h */,
 				04E25C44191A964C00E7A8F9 /* AppDelegate.m */,
 				04E25C46191A964C00E7A8F9 /* Main.storyboard */,
+				046E2FFA1937BFBB00344FA9 /* SearchTableViewController.h */,
+				046E2FFB1937BFBB00344FA9 /* SearchTableViewController.m */,
 				04E25C49191A964C00E7A8F9 /* MapViewController.h */,
 				04E25C4A191A964C00E7A8F9 /* MapViewController.m */,
 				807C4A3319245B6400764D62 /* TrailTableViewController.h */,
@@ -349,6 +354,7 @@
 				807C4A3519245B6400764D62 /* TrailTableViewController.m in Sources */,
 				04E25C4B191A964C00E7A8F9 /* MapViewController.m in Sources */,
 				800520A6192EF7D800E1B39A /* TrailDataSource.m in Sources */,
+				046E2FFC1937BFBB00344FA9 /* SearchTableViewController.m in Sources */,
 				04E25C45191A964C00E7A8F9 /* AppDelegate.m in Sources */,
 				68153153192AABEB0021E5C9 /* KMLParser.m in Sources */,
 				04E25C41191A964C00E7A8F9 /* main.m in Sources */,
