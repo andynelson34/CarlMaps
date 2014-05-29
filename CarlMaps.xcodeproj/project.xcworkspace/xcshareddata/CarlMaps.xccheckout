@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5A96DC9F-75F8-4257-BBF8-FB3D983DAE08</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CarlMaps</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FB70F553-F32C-420B-B452-BA4FAF00AE0C</key>
+		<string>https://bitbucket.org/anelson34/CarlMaps</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CarlMaps.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FB70F553-F32C-420B-B452-BA4FAF00AE0C</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/anelson34/CarlMaps</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FB70F553-F32C-420B-B452-BA4FAF00AE0C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FB70F553-F32C-420B-B452-BA4FAF00AE0C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>bestBranch2</string>
+		</dict>
+	</array>
+</dict>
+</plist>
