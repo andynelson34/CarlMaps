@@ -7,13 +7,18 @@
 //
 
 #import "SearchTableViewController.h"
+#import "LocationDataSource.h"
+
 
 @interface SearchTableViewController ()
-@property (weak, nonatomic) IBOutlet UISearchBar *locSearchBar;
 
 @end
 
-@implementation SearchTableViewController
+@implementation SearchTableViewController {
+    __weak IBOutlet UISearchBar *locSearchBar;
+    LocationDataSource *locSource;
+
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -29,6 +34,10 @@
     [super viewDidLoad];
     
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
+    
+    locSource = [[LocationDataSource alloc] init];
+    
+    NSLog(@"%@",[locSource searchForPlace:@"CMC"]);
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

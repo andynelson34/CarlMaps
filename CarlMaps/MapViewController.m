@@ -18,7 +18,6 @@
 
 @implementation MapViewController {
     __weak IBOutlet UIButton *trailsButton;
-    //__weak IBOutlet UISearchBar *locSearchBar;
     IBOutlet UITableView *searchTableView;
     LocationDataSource *locSource;
     NSArray *trailStatuses;
