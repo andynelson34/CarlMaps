@@ -24,7 +24,7 @@
     MKMapRect theMapRect = self.overlay.boundingMapRect;
     CGRect theRect = [self rectForMapRect:theMapRect];
     
-    CGContextScaleCTM(context, 1.0, -1.0);
+    CGContextScaleCTM(context, 1, -1);
     CGContextTranslateCTM(context, 0.0, -theRect.size.height);
     CGContextDrawImage(context, theRect, imageReference);
 }

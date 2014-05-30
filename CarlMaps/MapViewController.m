@@ -8,7 +8,6 @@
 
 #import "MapViewController.h"
 #import "LocationDataSource.h"
-#import "KMLParser.h"
 #import "CustomOverlay.h"
 #import "CustomOverlayRenderer.h"
 
@@ -21,8 +20,7 @@
     IBOutlet UITableView *searchTableView;
     LocationDataSource *locSource;
     NSArray *trailStatuses;
-    KMLParser *theParser;
-    MKTileOverlay *arbtrails;
+    bool showJeff;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -47,20 +45,23 @@
     adjustedRegion.span = span;
     
     [self.mapView setRegion:adjustedRegion animated:YES];
+    
+    //place overlays
     [self placeOverlay];
     
-    
-    
-    //load KML files?
-    //[self loadKMLfiles];
-    
-    //add the tiled overlay
     
     // Create a location data source
     locSource = [[LocationDataSource alloc] init];
     
     self.mapView.showsUserLocation = YES;
-    //NSLog(@"%@",[locSource searchForPlace:CMC]);*/
+    
+    //randomly toggle showing jeff's face
+    int i = arc4random()%3;
+    if (i == 1){
+        showJeff = TRUE;
+    }else{
+        showJeff = FALSE;
+    }
     
 }
 
@@ -145,23 +146,51 @@
 
 //Add in a normal overlay
 -(void)placeOverlay{
-    // draw MKRectangle on the map using the outline coordinates of the building
+    //TEMPORARY: make two random overlays.
     CLLocationCoordinate2D *coords = malloc(sizeof(CLLocationCoordinate2D) * 4);
-    coords[0] = CLLocationCoordinate2DMake(44.4608902423,-93.1567658615);
-    coords[1] = CLLocationCoordinate2DMake(44.4608902423,-93.1568401051);
-    coords[1] = CLLocationCoordinate2DMake(44.4605042217,-93.156478259);
-    coords[1] = CLLocationCoordinate2DMake(44.4605558631,-93.156523186);
+    coords[0] = CLLocationCoordinate2DMake(44.46141,-93.154928);
+    coords[1] = CLLocationCoordinate2DMake(44.46141,-93.1543);
+    coords[2] = CLLocationCoordinate2DMake(44.460802,-93.154928);
+    coords[3] = CLLocationCoordinate2DMake(44.460802,-93.1543);
     MKPolygon *polygon = [MKPolygon polygonWithCoordinates:coords count:4];
+    polygon.title = @"baldspot";
     
+    [self.mapView addOverlay:polygon];
+
+    
+    coords[0] = CLLocationCoordinate2DMake(44.46241,-93.155928);
+    coords[1] = CLLocationCoordinate2DMake(44.46241,-93.1553);
+    coords[2] = CLLocationCoordinate2DMake(44.463802,-93.155928);
+    coords[3] = CLLocationCoordinate2DMake(44.463802,-93.1553);
+    polygon = [MKPolygon polygonWithCoordinates:coords count:4];
+    polygon.title = @"other one";
     [self.mapView addOverlay:polygon];
 }
 
 //Tells the MapView which renderer to use
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay{
-    NSLog(@"I was called");
-    UIImage *jeffImage = [UIImage imageNamed:@"jeff-and-moose.jpg"];
-    CustomOverlayRenderer *overlayRenderer = [[CustomOverlayRenderer alloc] initWithOverlay:overlay overlayImage:jeffImage];
+    UIImage *theImage;
+    
+    //RIGHT NOW I am using "other one" as an example of what could be a trail overlay, and "baldspot" as an overlay we always want to show
+    //the variable "showjeff" says whether or not we want to display the trail overlay, randomly
+    
+    //check which overlay is being drawn, and return the appropriate image
+    if ([overlay.title  isEqual: @"baldspot"]){
+         theImage= [UIImage imageNamed:@"jeff-and-moose.jpg"];
+    }else if ([overlay.title  isEqual: @"other one"]){
+        if (showJeff){
+            theImage= [UIImage imageNamed:@"jeff-handsome.jpg"];
+        }else{
+            return nil;
+        }
+    }else{
+        return nil;
+    }
+    
+    //Return an overlayrenderer primed with the custom image
+    CustomOverlayRenderer *overlayRenderer = [[CustomOverlayRenderer alloc] initWithOverlay:overlay overlayImage:theImage];
     return overlayRenderer;
+    
 }
 
 - (void)didReceiveMemoryWarning
