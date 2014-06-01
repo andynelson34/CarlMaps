@@ -27,7 +27,9 @@
 		800520A6192EF7D800E1B39A /* TrailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 800520A5192EF7D800E1B39A /* TrailDataSource.m */; };
 		801CF0001938372300347295 /* BuildingCoordsFromCarlTours.plist in Resources */ = {isa = PBXBuildFile; fileRef = 801CEFFF1938372300347295 /* BuildingCoordsFromCarlTours.plist */; };
 		801CF0021938395900347295 /* jeff-handsome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 801CF0011938395900347295 /* jeff-handsome.jpg */; };
+		8043CE49193BDB87001FB29C /* carlmaps_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 8043CE48193BDB87001FB29C /* carlmaps_map.png */; };
 		807C4A3519245B6400764D62 /* TrailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 807C4A3419245B6400764D62 /* TrailTableViewController.m */; };
+		809D4BD6193BC775007447B1 /* carlmaps_trails.png in Resources */ = {isa = PBXBuildFile; fileRef = 809D4BD5193BC775007447B1 /* carlmaps_trails.png */; };
 		80C280241932EAC80077F96A /* CustomOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C280231932EAC80077F96A /* CustomOverlay.m */; };
 		80C280271932F1F20077F96A /* CustomOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C280261932F1F20077F96A /* CustomOverlayRenderer.m */; };
 		80C458921921B209003D33D7 /* LocationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C458911921B209003D33D7 /* LocationDataSource.m */; };
@@ -73,8 +75,10 @@
 		800520A5192EF7D800E1B39A /* TrailDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailDataSource.m; sourceTree = "<group>"; };
 		801CEFFF1938372300347295 /* BuildingCoordsFromCarlTours.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BuildingCoordsFromCarlTours.plist; sourceTree = "<group>"; };
 		801CF0011938395900347295 /* jeff-handsome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jeff-handsome.jpg"; sourceTree = "<group>"; };
+		8043CE48193BDB87001FB29C /* carlmaps_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carlmaps_map.png; sourceTree = "<group>"; };
 		807C4A3319245B6400764D62 /* TrailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailTableViewController.h; sourceTree = "<group>"; };
 		807C4A3419245B6400764D62 /* TrailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailTableViewController.m; sourceTree = "<group>"; };
+		809D4BD5193BC775007447B1 /* carlmaps_trails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carlmaps_trails.png; sourceTree = "<group>"; };
 		80C280231932EAC80077F96A /* CustomOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlay.m; sourceTree = "<group>"; };
 		80C280251932EAD50077F96A /* CustomOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlay.h; sourceTree = "<group>"; };
 		80C280261932F1F20077F96A /* CustomOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlayRenderer.m; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 			children = (
 				80C9C584192F077F00800BC7 /* jeff-and-moose.jpg */,
 				801CF0011938395900347295 /* jeff-handsome.jpg */,
+				8043CE48193BDB87001FB29C /* carlmaps_map.png */,
+				809D4BD5193BC775007447B1 /* carlmaps_trails.png */,
 			);
 			name = Tiles;
 			sourceTree = "<group>";
@@ -308,8 +314,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				809D4BD6193BC775007447B1 /* carlmaps_trails.png in Resources */,
 				04E25C4D191A964C00E7A8F9 /* Images.xcassets in Resources */,
 				8808A764192C3E8F0012DA14 /* LocationList.plist in Resources */,
+				8043CE49193BDB87001FB29C /* carlmaps_map.png in Resources */,
 				801CF0001938372300347295 /* BuildingCoordsFromCarlTours.plist in Resources */,
 				04E25C3F191A964C00E7A8F9 /* InfoPlist.strings in Resources */,
 				3F432871192EB4060074E30C /* TrailList.plist in Resources */,

@@ -148,23 +148,26 @@
 -(void)placeOverlay{
     //TEMPORARY: make two random overlays.
     CLLocationCoordinate2D *coords = malloc(sizeof(CLLocationCoordinate2D) * 4);
-    coords[0] = CLLocationCoordinate2DMake(44.46141,-93.154928);
-    coords[1] = CLLocationCoordinate2DMake(44.46141,-93.1543);
-    coords[2] = CLLocationCoordinate2DMake(44.460802,-93.154928);
-    coords[3] = CLLocationCoordinate2DMake(44.460802,-93.1543);
+    coords[0] = CLLocationCoordinate2DMake(44.486443000000001,-93.165485000000004);
+    coords[1] = CLLocationCoordinate2DMake(44.455624999999998,-93.165571000000000);
+    coords[2] = CLLocationCoordinate2DMake(44.486412000000001,-93.118768000000003);
+    coords[3] = CLLocationCoordinate2DMake(44.455840000000002,-93.118853999999999);
     MKPolygon *polygon = [MKPolygon polygonWithCoordinates:coords count:4];
-    polygon.title = @"baldspot";
+    polygon.title = @"basemap";
     
     [self.mapView addOverlay:polygon];
 
     
-    coords[0] = CLLocationCoordinate2DMake(44.46241,-93.155928);
-    coords[1] = CLLocationCoordinate2DMake(44.46241,-93.1553);
-    coords[2] = CLLocationCoordinate2DMake(44.463802,-93.155928);
-    coords[3] = CLLocationCoordinate2DMake(44.463802,-93.1553);
+    
+    coords[0] = CLLocationCoordinate2DMake(44.486443000000001,-93.165485000000004);
+    coords[1] = CLLocationCoordinate2DMake(44.455624999999998,-93.165571000000000);
+    coords[2] = CLLocationCoordinate2DMake(44.486412000000001,-93.118768000000003);
+    coords[3] = CLLocationCoordinate2DMake(44.455840000000002,-93.118853999999999);
     polygon = [MKPolygon polygonWithCoordinates:coords count:4];
-    polygon.title = @"other one";
+    polygon.title = @"trails";
+    
     [self.mapView addOverlay:polygon];
+
 }
 
 //Tells the MapView which renderer to use
@@ -175,14 +178,10 @@
     //the variable "showjeff" says whether or not we want to display the trail overlay, randomly
     
     //check which overlay is being drawn, and return the appropriate image
-    if ([overlay.title  isEqual: @"baldspot"]){
-         theImage= [UIImage imageNamed:@"jeff-and-moose.jpg"];
-    }else if ([overlay.title  isEqual: @"other one"]){
-        if (showJeff){
-            theImage= [UIImage imageNamed:@"jeff-handsome.jpg"];
-        }else{
-            return nil;
-        }
+    if ([overlay.title  isEqual: @"basemap"]){
+        theImage= [UIImage imageNamed:@"carlmaps_map.png"];
+    }else if ([overlay.title  isEqual: @"trails"]){
+        theImage= [UIImage imageNamed:@"carlmaps_trails.png"];
     }else{
         return nil;
     }
