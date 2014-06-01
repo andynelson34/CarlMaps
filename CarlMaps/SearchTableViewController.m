@@ -17,6 +17,7 @@
 @implementation SearchTableViewController {
     __weak IBOutlet UISearchBar *locSearchBar;
     LocationDataSource *locSource;
+    NSArray *searchResults;
 
 }
 
@@ -56,28 +57,62 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [searchResults count];
+        
+    }
+    
+    else {
+        return [locSource.locList count];
+    }
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *searchTableIdentifier = @"SearchTableCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:searchTableIdentifier];
     
     // Configure the cell...
     
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:searchTableIdentifier];
+    }
+    
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        NSString *locName = [searchResults objectAtIndex:indexPath.row];
+        [[cell textLabel] setText:locName];
+    } else {
+        NSString *locName = [locSource.locList objectAtIndex:indexPath.row];
+        [[cell textLabel] setText:locName];
+    }
+    
     return cell;
 }
-*/
+
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"name contains[c] %@", searchText];
+    searchResults = [locSource.locList filteredArrayUsingPredicate:resultPredicate];
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString
+                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                                      objectAtIndex:[self.searchDisplayController.searchBar
+                                                     selectedScopeButtonIndex]]];
+    
+    return YES;
+}
+
 
 /*
 // Override to support conditional editing of the table view.

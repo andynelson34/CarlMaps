@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="i2d-0T-6Da">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="i2d-0T-6Da">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Search Table View Controller - Search-->
+        <!--Search Table View Controller - Location Search-->
         <scene sceneID="2FP-5j-OBW">
             <objects>
                 <tableViewController id="rsc-b9-Gsq" customClass="SearchTableViewController" sceneMemberID="viewController">
@@ -12,7 +12,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableFooterView" contentMode="redraw" placeholder="Ex: &quot;Leighton Hall&quot;" id="Uv9-dR-ffz">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Enter a location..." id="Uv9-dR-ffz">
                             <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -20,12 +20,22 @@
                                 <outlet property="delegate" destination="rsc-b9-Gsq" id="TrO-Iw-UKp"/>
                             </connections>
                         </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="AXX-Kg-083">
+                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AXX-Kg-083" id="oEa-bB-dQ6">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="rsc-b9-Gsq" id="XLT-xE-HD6"/>
                             <outlet property="delegate" destination="rsc-b9-Gsq" id="Lby-wM-5Qg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Search" id="QaQ-7F-Jcm"/>
+                    <navigationItem key="navigationItem" title="Location Search" id="QaQ-7F-Jcm"/>
                     <connections>
                         <outlet property="locSearchBar" destination="Uv9-dR-ffz" id="l3C-fv-yi0"/>
                         <outlet property="searchDisplayController" destination="ebb-dD-32T" id="Xwz-Xi-jhT"/>
@@ -35,13 +45,14 @@
                 <searchDisplayController id="ebb-dD-32T">
                     <connections>
                         <outlet property="delegate" destination="rsc-b9-Gsq" id="oNe-Xw-Ua0"/>
+                        <outlet property="searchBar" destination="Uv9-dR-ffz" id="hPf-sV-pyE"/>
                         <outlet property="searchContentsController" destination="rsc-b9-Gsq" id="7eu-du-CdT"/>
                         <outlet property="searchResultsDataSource" destination="rsc-b9-Gsq" id="SsW-Hy-SS5"/>
                         <outlet property="searchResultsDelegate" destination="rsc-b9-Gsq" id="jii-Sx-Zer"/>
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="902" y="-522"/>
+            <point key="canvasLocation" x="1147" y="-628"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -73,9 +84,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SL-c0-6A8">
-                                <rect key="frame" x="20" y="20" width="147" height="30"/>
+                                <rect key="frame" x="20" y="20" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Search for a location">
+                                <state key="normal" title="Locations">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>

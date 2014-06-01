@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>5A96DC9F-75F8-4257-BBF8-FB3D983DAE08</string>
+	<string>3F993109-CA8D-4F21-959B-C11FC18D02A5</string>
 	<key>IDESourceControlProjectName</key>
 	<string>CarlMaps</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>FB70F553-F32C-420B-B452-BA4FAF00AE0C</key>
-		<string>https://bitbucket.org/anelson34/CarlMaps</string>
+		<key>EC1BB37A-93F4-49F8-BC27-B65568C77889</key>
+		<string>https://bitbucket.org/anelson34/carlmaps.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>CarlMaps.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>FB70F553-F32C-420B-B452-BA4FAF00AE0C</key>
+		<key>EC1BB37A-93F4-49F8-BC27-B65568C77889</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://bitbucket.org/anelson34/CarlMaps</string>
+	<string>https://bitbucket.org/anelson34/carlmaps.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>FB70F553-F32C-420B-B452-BA4FAF00AE0C</string>
+	<string>EC1BB37A-93F4-49F8-BC27-B65568C77889</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FB70F553-F32C-420B-B452-BA4FAF00AE0C</string>
+			<string>EC1BB37A-93F4-49F8-BC27-B65568C77889</string>
 			<key>IDESourceControlWCCName</key>
-			<string>bestBranch2</string>
+			<string>carlmaps</string>
 		</dict>
 	</array>
 </dict>

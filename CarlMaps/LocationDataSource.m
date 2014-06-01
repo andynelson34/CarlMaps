@@ -17,7 +17,8 @@
         //Creates dictionary of location GPS coordinates from plist
         
         NSString *locationResourcePath = [[NSBundle mainBundle] pathForResource:@"LocationList" ofType:@"plist"];
-        self.placesDict = [[NSDictionary alloc] initWithContentsOfFile:locationResourcePath];
+        self.locDict = [[NSDictionary alloc] initWithContentsOfFile:locationResourcePath];
+        self.locList = [self.locDict allKeys];
     }
     return self;
 }
@@ -26,8 +27,8 @@
     
     // This is a standin method for a more advanced search algorithm with autocomplete that we will implement soon.
     
-    if([self.placesDict objectForKey:searchString]) {
-        return [self.placesDict objectForKey:searchString];
+    if([self.locDict objectForKey:searchString]) {
+        return [self.locDict objectForKey:searchString];
     }
     else {
         return NULL;
