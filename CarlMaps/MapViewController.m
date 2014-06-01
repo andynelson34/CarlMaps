@@ -117,7 +117,7 @@
 }
 */
 
--(void)dropPin:(NSArray*)pinCoords {
+/*-(void)dropPin:(NSArray*)pinCoords {
     
     // TODO: MAYBE ADD ANIMATION? THIS IS JUST POLISHING, BUT IT LOOKS COMPLICATED, NEED TO ADD A NEW THING CALLED MKANNOTATIONVIEW
     
@@ -142,7 +142,7 @@
     
     // Then add pin for the searched location
     [self dropPin:pinCoords];
-}
+}*/
 
 //Add in a normal overlay
 -(void)placeOverlay{
