@@ -26,11 +26,14 @@
 		68AC53A9192D0C7F002D6039 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AC53A8192D0C7F002D6039 /* MapKit.framework */; };
 		800520A6192EF7D800E1B39A /* TrailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 800520A5192EF7D800E1B39A /* TrailDataSource.m */; };
 		801CF0001938372300347295 /* BuildingCoordsFromCarlTours.plist in Resources */ = {isa = PBXBuildFile; fileRef = 801CEFFF1938372300347295 /* BuildingCoordsFromCarlTours.plist */; };
-		801CF0021938395900347295 /* jeff-handsome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 801CF0011938395900347295 /* jeff-handsome.jpg */; };
 		8043CE49193BDB87001FB29C /* carlmaps_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 8043CE48193BDB87001FB29C /* carlmaps_map.png */; };
 		807C4A3519245B6400764D62 /* TrailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 807C4A3419245B6400764D62 /* TrailTableViewController.m */; };
 		809D4BD6193BC775007447B1 /* carlmaps_trails.png in Resources */ = {isa = PBXBuildFile; fileRef = 809D4BD5193BC775007447B1 /* carlmaps_trails.png */; };
-		80C280241932EAC80077F96A /* CustomOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C280231932EAC80077F96A /* CustomOverlay.m */; };
+		80AB552D193BE14500E6914B /* carlmaps_trails_lower_long.png in Resources */ = {isa = PBXBuildFile; fileRef = 80AB552C193BE14500E6914B /* carlmaps_trails_lower_long.png */; };
+		80AB552F193BE74F00E6914B /* carlmaps_trails_upper_long.png in Resources */ = {isa = PBXBuildFile; fileRef = 80AB552E193BE74F00E6914B /* carlmaps_trails_upper_long.png */; };
+		80AB5531193BE76300E6914B /* carlmaps_trails_upper_medium.png in Resources */ = {isa = PBXBuildFile; fileRef = 80AB5530193BE76300E6914B /* carlmaps_trails_upper_medium.png */; };
+		80AB5533193BE78C00E6914B /* carlmaps_trails_lower_short.png in Resources */ = {isa = PBXBuildFile; fileRef = 80AB5532193BE78C00E6914B /* carlmaps_trails_lower_short.png */; };
+		80AB5535193BE7FC00E6914B /* carlmaps_trails_lower_medium.png in Resources */ = {isa = PBXBuildFile; fileRef = 80AB5534193BE7FC00E6914B /* carlmaps_trails_lower_medium.png */; };
 		80C280271932F1F20077F96A /* CustomOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C280261932F1F20077F96A /* CustomOverlayRenderer.m */; };
 		80C458921921B209003D33D7 /* LocationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C458911921B209003D33D7 /* LocationDataSource.m */; };
 		80C9C585192F077F00800BC7 /* jeff-and-moose.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80C9C584192F077F00800BC7 /* jeff-and-moose.jpg */; };
@@ -74,13 +77,15 @@
 		800520A4192EF7D800E1B39A /* TrailDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailDataSource.h; sourceTree = "<group>"; };
 		800520A5192EF7D800E1B39A /* TrailDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailDataSource.m; sourceTree = "<group>"; };
 		801CEFFF1938372300347295 /* BuildingCoordsFromCarlTours.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BuildingCoordsFromCarlTours.plist; sourceTree = "<group>"; };
-		801CF0011938395900347295 /* jeff-handsome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jeff-handsome.jpg"; sourceTree = "<group>"; };
 		8043CE48193BDB87001FB29C /* carlmaps_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carlmaps_map.png; sourceTree = "<group>"; };
 		807C4A3319245B6400764D62 /* TrailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailTableViewController.h; sourceTree = "<group>"; };
 		807C4A3419245B6400764D62 /* TrailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailTableViewController.m; sourceTree = "<group>"; };
 		809D4BD5193BC775007447B1 /* carlmaps_trails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carlmaps_trails.png; sourceTree = "<group>"; };
-		80C280231932EAC80077F96A /* CustomOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlay.m; sourceTree = "<group>"; };
-		80C280251932EAD50077F96A /* CustomOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlay.h; sourceTree = "<group>"; };
+		80AB552C193BE14500E6914B /* carlmaps_trails_lower_long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carlmaps_trails_lower_long.png; sourceTree = "<group>"; };
+		80AB552E193BE74F00E6914B /* carlmaps_trails_upper_long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carlmaps_trails_upper_long.png; sourceTree = "<group>"; };
+		80AB5530193BE76300E6914B /* carlmaps_trails_upper_medium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carlmaps_trails_upper_medium.png; sourceTree = "<group>"; };
+		80AB5532193BE78C00E6914B /* carlmaps_trails_lower_short.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carlmaps_trails_lower_short.png; sourceTree = "<group>"; };
+		80AB5534193BE7FC00E6914B /* carlmaps_trails_lower_medium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carlmaps_trails_lower_medium.png; sourceTree = "<group>"; };
 		80C280261932F1F20077F96A /* CustomOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlayRenderer.m; sourceTree = "<group>"; };
 		80C280281932F1FC0077F96A /* CustomOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlayRenderer.h; sourceTree = "<group>"; };
 		80C458901921B209003D33D7 /* LocationDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDataSource.h; sourceTree = "<group>"; };
@@ -159,7 +164,7 @@
 				807C4A3419245B6400764D62 /* TrailTableViewController.m */,
 				04E25C4C191A964C00E7A8F9 /* Images.xcassets */,
 				80C280221932EAA70077F96A /* Overlays */,
-				80C9C583192F077600800BC7 /* Tiles */,
+				80C9C583192F077600800BC7 /* Overlays_Images */,
 				80C458931921B214003D33D7 /* Data Sources */,
 				04E25C3B191A964C00E7A8F9 /* Supporting Files */,
 			);
@@ -198,8 +203,6 @@
 		80C280221932EAA70077F96A /* Overlays */ = {
 			isa = PBXGroup;
 			children = (
-				80C280251932EAD50077F96A /* CustomOverlay.h */,
-				80C280231932EAC80077F96A /* CustomOverlay.m */,
 				80C280281932F1FC0077F96A /* CustomOverlayRenderer.h */,
 				80C280261932F1F20077F96A /* CustomOverlayRenderer.m */,
 			);
@@ -220,15 +223,19 @@
 			name = "Data Sources";
 			sourceTree = "<group>";
 		};
-		80C9C583192F077600800BC7 /* Tiles */ = {
+		80C9C583192F077600800BC7 /* Overlays_Images */ = {
 			isa = PBXGroup;
 			children = (
 				80C9C584192F077F00800BC7 /* jeff-and-moose.jpg */,
-				801CF0011938395900347295 /* jeff-handsome.jpg */,
 				8043CE48193BDB87001FB29C /* carlmaps_map.png */,
 				809D4BD5193BC775007447B1 /* carlmaps_trails.png */,
+				80AB552C193BE14500E6914B /* carlmaps_trails_lower_long.png */,
+				80AB5534193BE7FC00E6914B /* carlmaps_trails_lower_medium.png */,
+				80AB5532193BE78C00E6914B /* carlmaps_trails_lower_short.png */,
+				80AB552E193BE74F00E6914B /* carlmaps_trails_upper_long.png */,
+				80AB5530193BE76300E6914B /* carlmaps_trails_upper_medium.png */,
 			);
-			name = Tiles;
+			name = Overlays_Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,16 +321,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80AB5533193BE78C00E6914B /* carlmaps_trails_lower_short.png in Resources */,
 				809D4BD6193BC775007447B1 /* carlmaps_trails.png in Resources */,
 				04E25C4D191A964C00E7A8F9 /* Images.xcassets in Resources */,
+				80AB5531193BE76300E6914B /* carlmaps_trails_upper_medium.png in Resources */,
 				8808A764192C3E8F0012DA14 /* LocationList.plist in Resources */,
+				80AB5535193BE7FC00E6914B /* carlmaps_trails_lower_medium.png in Resources */,
 				8043CE49193BDB87001FB29C /* carlmaps_map.png in Resources */,
+				80AB552D193BE14500E6914B /* carlmaps_trails_lower_long.png in Resources */,
 				801CF0001938372300347295 /* BuildingCoordsFromCarlTours.plist in Resources */,
 				04E25C3F191A964C00E7A8F9 /* InfoPlist.strings in Resources */,
 				3F432871192EB4060074E30C /* TrailList.plist in Resources */,
+				80AB552F193BE74F00E6914B /* carlmaps_trails_upper_long.png in Resources */,
 				80C9C585192F077F00800BC7 /* jeff-and-moose.jpg in Resources */,
 				04E25C48191A964C00E7A8F9 /* Main.storyboard in Resources */,
-				801CF0021938395900347295 /* jeff-handsome.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +361,6 @@
 				04E25C41191A964C00E7A8F9 /* main.m in Sources */,
 				80C458921921B209003D33D7 /* LocationDataSource.m in Sources */,
 				80C280271932F1F20077F96A /* CustomOverlayRenderer.m in Sources */,
-				80C280241932EAC80077F96A /* CustomOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

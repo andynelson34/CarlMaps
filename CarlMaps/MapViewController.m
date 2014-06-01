@@ -154,18 +154,14 @@
     coords[3] = CLLocationCoordinate2DMake(44.455840000000002,-93.118853999999999);
     MKPolygon *polygon = [MKPolygon polygonWithCoordinates:coords count:4];
     polygon.title = @"basemap";
-    
     [self.mapView addOverlay:polygon];
 
-    
-    
     coords[0] = CLLocationCoordinate2DMake(44.486443000000001,-93.165485000000004);
     coords[1] = CLLocationCoordinate2DMake(44.455624999999998,-93.165571000000000);
     coords[2] = CLLocationCoordinate2DMake(44.486412000000001,-93.118768000000003);
     coords[3] = CLLocationCoordinate2DMake(44.455840000000002,-93.118853999999999);
     polygon = [MKPolygon polygonWithCoordinates:coords count:4];
     polygon.title = @"trails";
-    
     [self.mapView addOverlay:polygon];
 
 }
@@ -181,7 +177,7 @@
     if ([overlay.title  isEqual: @"basemap"]){
         theImage= [UIImage imageNamed:@"carlmaps_map.png"];
     }else if ([overlay.title  isEqual: @"trails"]){
-        theImage= [UIImage imageNamed:@"carlmaps_trails.png"];
+        theImage= [UIImage imageNamed:@"carlmaps_trails_upper_medium.png"];
     }else{
         return nil;
     }
