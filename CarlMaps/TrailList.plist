@@ -3,16 +3,24 @@
 <plist version="1.0">
 <array>
 	<array>
-		<string>Goose Trail</string>
-		<integer>0</integer>
+		<string>Upper Arb Long Loop</string>
+		<string>@&quot;carlmaps_trails_upper_long.png&quot;</string>
 	</array>
 	<array>
-		<string>Deer Path</string>
-		<integer>0</integer>
+		<string>Upper Arb Medium Loop</string>
+		<string>@&quot;carlmaps_trails_upper_medium.png&quot;</string>
 	</array>
 	<array>
-		<string>Trail of Doom</string>
-		<integer>0</integer>
+		<string>Lower Arb Long Loop</string>
+		<string>@&quot;carlmaps_trails_lower_long.png&quot;</string>
+	</array>
+	<array>
+		<string>Lower Arb Medium Loop</string>
+		<string>@&quot;carlmaps_trails_lower_medium.png&quot;</string>
+	</array>
+	<array>
+		<string>Lower Arb Short Loop</string>
+		<string>@&quot;carlmaps_trails_upper_short.png&quot;</string>
 	</array>
 </array>
 </plist>

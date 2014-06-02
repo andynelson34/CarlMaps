@@ -28,7 +28,7 @@
 		801CF0001938372300347295 /* BuildingCoordsFromCarlTours.plist in Resources */ = {isa = PBXBuildFile; fileRef = 801CEFFF1938372300347295 /* BuildingCoordsFromCarlTours.plist */; };
 		8043CE49193BDB87001FB29C /* carlmaps_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 8043CE48193BDB87001FB29C /* carlmaps_map.png */; };
 		807C4A3519245B6400764D62 /* TrailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 807C4A3419245B6400764D62 /* TrailTableViewController.m */; };
-		809D4BD6193BC775007447B1 /* carlmaps_trails.png in Resources */ = {isa = PBXBuildFile; fileRef = 809D4BD5193BC775007447B1 /* carlmaps_trails.png */; };
+		809D4BD6193BC775007447B1 /* carlmaps_trails_all.png in Resources */ = {isa = PBXBuildFile; fileRef = 809D4BD5193BC775007447B1 /* carlmaps_trails_all.png */; };
 		80AB552D193BE14500E6914B /* carlmaps_trails_lower_long.png in Resources */ = {isa = PBXBuildFile; fileRef = 80AB552C193BE14500E6914B /* carlmaps_trails_lower_long.png */; };
 		80AB552F193BE74F00E6914B /* carlmaps_trails_upper_long.png in Resources */ = {isa = PBXBuildFile; fileRef = 80AB552E193BE74F00E6914B /* carlmaps_trails_upper_long.png */; };
 		80AB5531193BE76300E6914B /* carlmaps_trails_upper_medium.png in Resources */ = {isa = PBXBuildFile; fileRef = 80AB5530193BE76300E6914B /* carlmaps_trails_upper_medium.png */; };
@@ -80,7 +80,7 @@
 		8043CE48193BDB87001FB29C /* carlmaps_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carlmaps_map.png; sourceTree = "<group>"; };
 		807C4A3319245B6400764D62 /* TrailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailTableViewController.h; sourceTree = "<group>"; };
 		807C4A3419245B6400764D62 /* TrailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailTableViewController.m; sourceTree = "<group>"; };
-		809D4BD5193BC775007447B1 /* carlmaps_trails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carlmaps_trails.png; sourceTree = "<group>"; };
+		809D4BD5193BC775007447B1 /* carlmaps_trails_all.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carlmaps_trails_all.png; sourceTree = "<group>"; };
 		80AB552C193BE14500E6914B /* carlmaps_trails_lower_long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carlmaps_trails_lower_long.png; sourceTree = "<group>"; };
 		80AB552E193BE74F00E6914B /* carlmaps_trails_upper_long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carlmaps_trails_upper_long.png; sourceTree = "<group>"; };
 		80AB5530193BE76300E6914B /* carlmaps_trails_upper_medium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carlmaps_trails_upper_medium.png; sourceTree = "<group>"; };
@@ -214,9 +214,9 @@
 			children = (
 				801CEFFF1938372300347295 /* BuildingCoordsFromCarlTours.plist */,
 				8808A763192C3E8F0012DA14 /* LocationList.plist */,
+				3F432870192EB4060074E30C /* TrailList.plist */,
 				80C458901921B209003D33D7 /* LocationDataSource.h */,
 				80C458911921B209003D33D7 /* LocationDataSource.m */,
-				3F432870192EB4060074E30C /* TrailList.plist */,
 				800520A4192EF7D800E1B39A /* TrailDataSource.h */,
 				800520A5192EF7D800E1B39A /* TrailDataSource.m */,
 			);
@@ -228,7 +228,7 @@
 			children = (
 				80C9C584192F077F00800BC7 /* jeff-and-moose.jpg */,
 				8043CE48193BDB87001FB29C /* carlmaps_map.png */,
-				809D4BD5193BC775007447B1 /* carlmaps_trails.png */,
+				809D4BD5193BC775007447B1 /* carlmaps_trails_all.png */,
 				80AB552C193BE14500E6914B /* carlmaps_trails_lower_long.png */,
 				80AB5534193BE7FC00E6914B /* carlmaps_trails_lower_medium.png */,
 				80AB5532193BE78C00E6914B /* carlmaps_trails_lower_short.png */,
@@ -322,7 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80AB5533193BE78C00E6914B /* carlmaps_trails_lower_short.png in Resources */,
-				809D4BD6193BC775007447B1 /* carlmaps_trails.png in Resources */,
+				809D4BD6193BC775007447B1 /* carlmaps_trails_all.png in Resources */,
 				04E25C4D191A964C00E7A8F9 /* Images.xcassets in Resources */,
 				80AB5531193BE76300E6914B /* carlmaps_trails_upper_medium.png in Resources */,
 				8808A764192C3E8F0012DA14 /* LocationList.plist in Resources */,
