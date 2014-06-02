@@ -74,7 +74,6 @@
     }
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *searchTableIdentifier = @"SearchTableCell";
@@ -95,6 +94,23 @@
     }
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    // Drops pin on map for tapped cell's location
+    
+    UITableViewCell *tappedCell = [tableView cellForRowAtIndexPath:indexPath];
+    NSArray *coords = [locSource.locDict objectForKey:tappedCell.textLabel.text];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:coords forKey:@"coords_key"];
+    
+    [self performSegueWithIdentifier:@"UnwindToMapSegueID" sender:self];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
 }
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope

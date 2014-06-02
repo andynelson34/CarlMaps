@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Bald Spot</key>
+	<array>
+		<real>44.460988</real>
+		<real>-93.154597</real>
+	</array>
+	<key>Boliou Hall</key>
+	<array>
+		<real>44.462277</real>
+		<real>-93.152843</real>
+	</array>
+	<key>Burton Hall</key>
+	<array>
+		<real>44.460759</real>
+		<real>-93.156751</real>
+	</array>
+	<key>Center for Mathematics and Computing</key>
+	<array>
+		<real>44.462424</real>
+		<real>-93.153396</real>
+	</array>
+	<key>Concert Hall</key>
+	<array>
+		<real>44.46047</real>
+		<real>-93.153364</real>
+	</array>
+	<key>Davis Hall</key>
+	<array>
+		<real>44.460305</real>
+		<real>-93.156722</real>
+	</array>
+	<key>Evans Hall</key>
+	<array>
+		<real>44.460786</real>
+		<real>-93.149795</real>
+	</array>
+	<key>Goodhue Hall</key>
+	<array>
+		<real>44.462643</real>
+		<real>-93.14970599999999</real>
+	</array>
+	<key>Gould Library</key>
+	<array>
+		<real>44.4621306</real>
+		<real>-93.15442299999999</real>
+	</array>
+	<key>Hill of Three Oaks</key>
+	<array>
+		<real>44.463294</real>
+		<real>-93.14758399999999</real>
+	</array>
+	<key>Hulings Hall</key>
+	<array>
+		<real>44.461204</real>
+		<real>-93.153299</real>
+	</array>
+	<key>Laird Hall</key>
+	<array>
+		<real>44.462049</real>
+		<real>-93.154061</real>
+	</array>
+	<key>Leighton Hall</key>
+	<array>
+		<real>44.462043</real>
+		<real>-93.15567</real>
+	</array>
+	<key>Musser Hall</key>
+	<array>
+		<real>44.460191</real>
+		<real>-93.15706299999999</real>
+	</array>
+	<key>Myers Hall</key>
+	<array>
+		<real>44.460948</real>
+		<real>-93.15086700000001</real>
+	</array>
+	<key>Nourse Hall</key>
+	<array>
+		<real>44.460744</real>
+		<real>-93.152007</real>
+	</array>
+	<key>Severance Hall</key>
+	<array>
+		<real>44.461144</real>
+		<real>-93.156561</real>
+	</array>
+	<key>Watson Hall</key>
+	<array>
+		<real>44.459591</real>
+		<real>-93.150442</real>
+	</array>
+	<key>Willis Hall</key>
+	<array>
+		<real>44.460936</real>
+		<real>-93.156093</real>
+	</array>
+</dict>
+</plist>

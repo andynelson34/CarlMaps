@@ -28,6 +28,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="I2Q-Ms-TUN" kind="unwind" identifier="UnwindToMapSegueID" unwindAction="unwindToMap:" id="syf-qd-LZK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -42,6 +45,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2sr-Xt-ktH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="I2Q-Ms-TUN" userLabel="Exit" sceneMemberID="exit"/>
                 <searchDisplayController id="ebb-dD-32T">
                     <connections>
                         <outlet property="delegate" destination="rsc-b9-Gsq" id="oNe-Xw-Ua0"/>

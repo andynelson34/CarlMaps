@@ -26,6 +26,7 @@
 		68AC53A9192D0C7F002D6039 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AC53A8192D0C7F002D6039 /* MapKit.framework */; };
 		800520A6192EF7D800E1B39A /* TrailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 800520A5192EF7D800E1B39A /* TrailDataSource.m */; };
 		801CF0001938372300347295 /* BuildingCoordsFromCarlTours.plist in Resources */ = {isa = PBXBuildFile; fileRef = 801CEFFF1938372300347295 /* BuildingCoordsFromCarlTours.plist */; };
+		80284B39193C3B4200DABB05 /* LocationList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80284B38193C3B4200DABB05 /* LocationList.plist */; };
 		8043CE49193BDB87001FB29C /* carlmaps_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 8043CE48193BDB87001FB29C /* carlmaps_map.png */; };
 		807C4A3519245B6400764D62 /* TrailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 807C4A3419245B6400764D62 /* TrailTableViewController.m */; };
 		809D4BD6193BC775007447B1 /* carlmaps_trails_all.png in Resources */ = {isa = PBXBuildFile; fileRef = 809D4BD5193BC775007447B1 /* carlmaps_trails_all.png */; };
@@ -37,7 +38,6 @@
 		80C280271932F1F20077F96A /* CustomOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C280261932F1F20077F96A /* CustomOverlayRenderer.m */; };
 		80C458921921B209003D33D7 /* LocationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C458911921B209003D33D7 /* LocationDataSource.m */; };
 		80C9C585192F077F00800BC7 /* jeff-and-moose.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80C9C584192F077F00800BC7 /* jeff-and-moose.jpg */; };
-		8808A764192C3E8F0012DA14 /* LocationList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8808A763192C3E8F0012DA14 /* LocationList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +77,7 @@
 		800520A4192EF7D800E1B39A /* TrailDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailDataSource.h; sourceTree = "<group>"; };
 		800520A5192EF7D800E1B39A /* TrailDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailDataSource.m; sourceTree = "<group>"; };
 		801CEFFF1938372300347295 /* BuildingCoordsFromCarlTours.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BuildingCoordsFromCarlTours.plist; sourceTree = "<group>"; };
+		80284B38193C3B4200DABB05 /* LocationList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LocationList.plist; sourceTree = "<group>"; };
 		8043CE48193BDB87001FB29C /* carlmaps_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carlmaps_map.png; sourceTree = "<group>"; };
 		807C4A3319245B6400764D62 /* TrailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailTableViewController.h; sourceTree = "<group>"; };
 		807C4A3419245B6400764D62 /* TrailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailTableViewController.m; sourceTree = "<group>"; };
@@ -91,7 +92,6 @@
 		80C458901921B209003D33D7 /* LocationDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDataSource.h; sourceTree = "<group>"; };
 		80C458911921B209003D33D7 /* LocationDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDataSource.m; sourceTree = "<group>"; };
 		80C9C584192F077F00800BC7 /* jeff-and-moose.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jeff-and-moose.jpg"; sourceTree = "<group>"; };
-		8808A763192C3E8F0012DA14 /* LocationList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = LocationList.plist; path = ../LocationList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,7 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				801CEFFF1938372300347295 /* BuildingCoordsFromCarlTours.plist */,
-				8808A763192C3E8F0012DA14 /* LocationList.plist */,
+				80284B38193C3B4200DABB05 /* LocationList.plist */,
 				3F432870192EB4060074E30C /* TrailList.plist */,
 				80C458901921B209003D33D7 /* LocationDataSource.h */,
 				80C458911921B209003D33D7 /* LocationDataSource.m */,
@@ -325,7 +325,6 @@
 				809D4BD6193BC775007447B1 /* carlmaps_trails_all.png in Resources */,
 				04E25C4D191A964C00E7A8F9 /* Images.xcassets in Resources */,
 				80AB5531193BE76300E6914B /* carlmaps_trails_upper_medium.png in Resources */,
-				8808A764192C3E8F0012DA14 /* LocationList.plist in Resources */,
 				80AB5535193BE7FC00E6914B /* carlmaps_trails_lower_medium.png in Resources */,
 				8043CE49193BDB87001FB29C /* carlmaps_map.png in Resources */,
 				80AB552D193BE14500E6914B /* carlmaps_trails_lower_long.png in Resources */,
@@ -335,6 +334,7 @@
 				80AB552F193BE74F00E6914B /* carlmaps_trails_upper_long.png in Resources */,
 				80C9C585192F077F00800BC7 /* jeff-and-moose.jpg in Resources */,
 				04E25C48191A964C00E7A8F9 /* Main.storyboard in Resources */,
+				80284B39193C3B4200DABB05 /* LocationList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

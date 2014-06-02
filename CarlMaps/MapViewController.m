@@ -21,6 +21,7 @@
     IBOutlet UITableView *searchTableView;
     LocationDataSource *locSource;
     NSArray *checkedTrails;
+    NSArray *pinCoords;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -28,92 +29,48 @@
     [self.navigationController setNavigationBarHidden:YES animated:animated];
     [super viewWillAppear:animated];
     [self loadSettings];
+    [self pinSearchResult:pinCoords];
 }
 
 - (void)viewDidLoad
 {
-    //locSearchBar.delegate = self;
     
     CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(44.461329, -93.155607);
     MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 400, 400)];
     [self.mapView setRegion:adjustedRegion animated:YES];
     self.mapView.rotateEnabled = false;
+    [self.mapView setDelegate:self];
     adjustedRegion.center = startCoord;
     MKCoordinateSpan span;
     span.latitudeDelta = 0.005;
     span.longitudeDelta = 0.005;
     adjustedRegion.span = span;
-    
+    self.mapView.showsUserLocation = YES;
     [self.mapView setRegion:adjustedRegion animated:YES];
     
     //place overlays
     
     // Create a location data source
     locSource = [[LocationDataSource alloc] init];
-    
-    self.mapView.showsUserLocation = YES;
 }
 
-/*- (void)saveSettings{
- // Store the data
- NSMutableArray *checkmarkedTrails;
- int saveSlide = self.erotic_slider.value;
- [[NSUserDefaults standardUserDefaults] setObject:saveString forKey:@"haiku_key"];
- [[NSUserDefaults standardUserDefaults] setInteger:saveSlide forKey:@"slider_key"];
- }*/
 
 -(void)loadSettings {
     // Load trails to display
     checkedTrails = [[NSUserDefaults standardUserDefaults] arrayForKey:@"trails_key"];
-    NSLog(@"Loading map view: %@", checkedTrails);
+    pinCoords = [[NSUserDefaults standardUserDefaults] arrayForKey:@"coords_key"];
     [self placeOverlay];
 }
 
-/*-(void)saveSettings {
- [[NSUserDefaults standardUserDefaults] setObject:trailStatuses forKey:@"trails_key"];
- }*/
-/*
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    
-    // Carries out search for a given location
-    NSArray *searchCoords = [locSource searchForPlace:searchBar.text];
-    
-    // Removes keyboard if search is successful
-    if ([locSource searchForPlace:searchBar.text]) {
-        if ([locSearchBar isFirstResponder])
-        {
-            [locSearchBar resignFirstResponder];
-            [self.mapView setUserInteractionEnabled:YES];
-        }
-    }
-    
-    // Places pin on map at coordinates for search result if a result was found
-    if (searchCoords != nil) {
-        [self pinSearchResult:searchCoords];
-        NSLog(@"%@",[locSource searchForPlace:searchBar.text]);
-    }
-}
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    UITouch *touch = [[event allTouches] anyObject];
-    if ([locSearchBar isFirstResponder] && [touch view] != locSearchBar)
-    {
-        [locSearchBar resignFirstResponder];
-        [self.mapView setUserInteractionEnabled:YES];
-    }
-    [super touchesBegan:touches withEvent:event];
-}
-*/
-
-/*-(void)dropPin:(NSArray*)pinCoords {
+-(void)dropPin:(NSArray*)coords {
     
     // TODO: MAYBE ADD ANIMATION? THIS IS JUST POLISHING, BUT IT LOOKS COMPLICATED, NEED TO ADD A NEW THING CALLED MKANNOTATIONVIEW
     
     // Drops pin onto map at given coordinates
     CLLocationCoordinate2D pinLoc;
-    pinLoc.latitude = [pinCoords[0] doubleValue];
-    pinLoc.longitude = [pinCoords[1] doubleValue];
+    pinLoc.latitude = [coords[0] doubleValue];
+    pinLoc.longitude = [coords[1] doubleValue];
     MKPointAnnotation *destinationPin = [[MKPointAnnotation alloc] init];
     destinationPin.coordinate = pinLoc;
     [self.mapView addAnnotation:destinationPin];
@@ -121,8 +78,8 @@
     [self.mapView setCenterCoordinate:pinLoc animated:YES];
 }
 
--(void)pinSearchResult:(NSArray*)pinCoords {
-    
+-(void)pinSearchResult:(NSArray*)coords {
+    NSLog(@"booty");
     // First, remove all existing pins from the map
     NSArray *existingPoints = self.mapView.annotations;
     if ([existingPoints count]) {
@@ -130,8 +87,8 @@
     }
     
     // Then add pin for the searched location
-    [self dropPin:pinCoords];
-}*/
+    [self dropPin:coords];
+}
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
 
@@ -205,6 +162,10 @@
     CustomOverlayRenderer *overlayRenderer = [[CustomOverlayRenderer alloc] initWithOverlay:overlay overlayImage:theImage];
     return overlayRenderer;
     
+}
+
+- (IBAction)unwindToMap:(UIStoryboardSegue *)unwindSegue{
+    NSLog(@"I'm back!");
 }
 
 - (void)didReceiveMemoryWarning
