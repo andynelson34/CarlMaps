@@ -19,7 +19,7 @@
     __weak IBOutlet UIButton *trailsButton;
     IBOutlet UITableView *searchTableView;
     LocationDataSource *locSource;
-    NSArray *trailStatuses;
+    NSArray *checkedTrails;
     bool showJeff;
 }
 
@@ -76,8 +76,8 @@
 -(void)loadSettings {
     
     // Load trails to display
-    self->trailStatuses = [[NSUserDefaults standardUserDefaults] arrayForKey:@"trails_key"];
-    NSLog(@"%@", self->trailStatuses);
+    checkedTrails = [[NSUserDefaults standardUserDefaults] arrayForKey:@"trails_key"];
+    NSLog(@"Loading map view: %@", checkedTrails);
 }
 
 /*-(void)saveSettings {

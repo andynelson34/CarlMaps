@@ -18,7 +18,7 @@
         
         NSString *locationResourcePath = [[NSBundle mainBundle] pathForResource:@"LocationList" ofType:@"plist"];
         self.locDict = [[NSDictionary alloc] initWithContentsOfFile:locationResourcePath];
-        self.locList = [self.locDict allKeys];
+        self.locList = [[self.locDict allKeys] sortedArrayUsingSelector: @selector(caseInsensitiveCompare:)];
     }
     return self;
 }

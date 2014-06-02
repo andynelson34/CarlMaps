@@ -125,6 +125,9 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Trails" id="mTy-ad-AQ3"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="trailTableView" destination="alM-5e-cTz" id="LD7-BA-L4H"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgI-mK-PcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -16,6 +16,7 @@
 @implementation TrailTableViewController {
     TrailDataSource *trailSource;
     IBOutlet UITableView *trailTableView;
+    NSMutableArray *checkedTrails;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -62,29 +63,15 @@
 }
 
 - (void)saveSettings {
-    // Save the checkmarked/uncheckmarked status of each trail.
-    NSMutableArray *trailStatuses;
-    trailStatuses = [[NSMutableArray alloc] init];
-    for (NSMutableArray *trail in trailSource.trails) {
-        [trailStatuses addObject:[trail objectAtIndex:1]];
-    }
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:trailStatuses forKey:@"trails_key"];
-    [defaults synchronize];
+    [defaults setObject:checkedTrails forKey:@"trails_key"];
 }
 
 -(void)loadSettings {
-    NSArray *trailStatuses = [[NSUserDefaults standardUserDefaults] arrayForKey:@"trails_key"];
-    NSLog(@"Loading table:%@", trailStatuses);
-    int i;
-    for (i = 0; i < [trailStatuses count]; i++) {
-        NSNumber *checkmarkStatus = [trailStatuses objectAtIndex:i];
-        if ([checkmarkStatus intValue] == 1) {
-            UITableViewCell *cellToCheckmark = [trailTableView cellForRowAtIndexPath:[NSIndexPath indexPathWithIndex:i]];
-            NSLog(@"The terror of Cell!:%@", cellToCheckmark);
-            cellToCheckmark.accessoryType = UITableViewCellAccessoryCheckmark;
-        }
-    }
+    
+    checkedTrails = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"trails_key"] mutableCopy];
+    NSLog(@"Loading table view: %@", [[NSUserDefaults standardUserDefaults] arrayForKey:@"trails_key"]);
+    
 }
 
 #pragma mark - Table view data source
@@ -113,8 +100,15 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:trailTableIdentifier];
     }
     
-    NSMutableArray *selectedTrail = [trailSource.trails objectAtIndex:indexPath.row];
-    cell.textLabel.text = [selectedTrail objectAtIndex:0];
+    NSMutableArray *cellTrail = [trailSource.trails objectAtIndex:indexPath.row];
+    cell.textLabel.text = [cellTrail objectAtIndex:0];
+    
+    if ([checkedTrails containsObject:[cellTrail objectAtIndex:0]]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     
     return cell;
 }
@@ -128,10 +122,10 @@
     
     if (tappedCell.accessoryType == UITableViewCellAccessoryNone) {
         tappedCell.accessoryType = UITableViewCellAccessoryCheckmark;
-        [[trailSource.trails objectAtIndex:indexPath.row] replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:1]];
+        [checkedTrails addObject:tappedCell.textLabel.text];
     } else {
         tappedCell.accessoryType = UITableViewCellAccessoryNone;
-        [[trailSource.trails objectAtIndex:indexPath.row] replaceObjectAtIndex:1 withObject:[NSNumber numberWithInt:0]];
+        [checkedTrails removeObject:tappedCell.textLabel.text];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
