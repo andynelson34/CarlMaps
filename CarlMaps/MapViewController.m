@@ -79,7 +79,6 @@
 }
 
 -(void)pinSearchResult:(NSArray*)coords {
-    NSLog(@"booty");
     // First, remove all existing pins from the map
     NSArray *existingPoints = self.mapView.annotations;
     if ([existingPoints count]) {
