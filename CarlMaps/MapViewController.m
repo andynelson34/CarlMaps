@@ -164,7 +164,6 @@
 }
 
 - (IBAction)unwindToMap:(UIStoryboardSegue *)unwindSegue{
-    NSLog(@"I'm back!");
 }
 
 - (void)didReceiveMemoryWarning
