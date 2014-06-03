@@ -42,10 +42,7 @@
 {
     [super viewDidLoad];
     trailSource = [[TrailDataSource alloc] init];
-    [self loadSettings];
-    //checkedTrails = [[NSMutableArray alloc] init];
-    [checkedTrails addObject:@"HI!"];
-    NSLog(@"%@", checkedTrails);
+    checkedTrails = [[NSMutableArray arrayWithArray:[self loadCheckedTrails]] mutableCopy];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -56,7 +53,7 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    [self saveSettings];
+    [self saveCheckedTrails];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,14 +62,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)saveSettings {
+- (void)saveCheckedTrails {
     defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:checkedTrails forKey:@"trails_key"];
 }
 
--(void)loadSettings {
+-(NSMutableArray*)loadCheckedTrails {
     
-    checkedTrails = [[defaults arrayForKey:@"trails_key"] mutableCopy];
+    defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *checkedTrailArray = [[defaults arrayForKey:@"trails_key"] mutableCopy];
+    return checkedTrailArray;
     //NSLog(@"Loading table view: %@", checkedTrails);
     
 }
@@ -125,11 +124,9 @@
     if (tappedCell.accessoryType == UITableViewCellAccessoryNone) {
         tappedCell.accessoryType = UITableViewCellAccessoryCheckmark;
         [checkedTrails addObject:tappedCell.textLabel.text];
-        NSLog(@"%@", checkedTrails);
     } else {
         tappedCell.accessoryType = UITableViewCellAccessoryNone;
         [checkedTrails removeObject:tappedCell.textLabel.text];
-        NSLog(@"%@", checkedTrails);
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
