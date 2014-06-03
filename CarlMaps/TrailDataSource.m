@@ -14,7 +14,7 @@
     self = [super init];
     if (self) {
         
-        // Creates array of trails and their on-display/off-display status from plist
+        // Creates array of trails from plist
         
         NSString *trailResourcePath = [[NSBundle mainBundle] pathForResource:@"TrailList" ofType:@"plist"];
         self.trails = [[NSMutableArray alloc] initWithContentsOfFile:trailResourcePath];

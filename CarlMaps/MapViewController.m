@@ -142,15 +142,15 @@
         theImage= [UIImage imageNamed:@"carlmaps_map.png"];
     }else{
         //if we're not drawing the basemap, check for one of our cases, and then return the proper renderer, or none at all
-        if ([overlay.title  isEqual: @"carlmaps_trails_lower_long.png"] && [checkedTrails containsObject:@"Lower Arb Long Loop"]){
+        if ([overlay.title  isEqual: @"carlmaps_trails_lower_long.png"] && [checkedTrails containsObject:@"Lower Arb (Long)"]){
             theImage= [UIImage imageNamed:@"carlmaps_trails_lower_long.png"];
-        }else if ([overlay.title  isEqual: @"carlmaps_trails_lower_medium.png"] && [checkedTrails containsObject:@"Lower Arb Medium Loop"]){
+        }else if ([overlay.title  isEqual: @"carlmaps_trails_lower_medium.png"] && [checkedTrails containsObject:@"Lower Arb (Medium)"]){
             theImage= [UIImage imageNamed:@"carlmaps_trails_lower_medium.png"];
-        }else if ([overlay.title  isEqual: @"carlmaps_trails_lower_short.png"] && [checkedTrails containsObject:@"Lower Arb Short Loop"]){
+        }else if ([overlay.title  isEqual: @"carlmaps_trails_lower_short.png"] && [checkedTrails containsObject:@"Lower Arb (Short)"]){
             theImage= [UIImage imageNamed:@"carlmaps_trails_lower_short.png"];
-        }else if ([overlay.title  isEqual: @"carlmaps_trails_upper_long.png"] && [checkedTrails containsObject:@"Upper Arb Long Loop"]){
+        }else if ([overlay.title  isEqual: @"carlmaps_trails_upper_long.png"] && [checkedTrails containsObject:@"Upper Arb (Long)"]){
             theImage= [UIImage imageNamed:@"carlmaps_trails_upper_long.png"];
-        }else if ([overlay.title  isEqual: @"carlmaps_trails_upper_medium.png"] && [checkedTrails containsObject:@"Upper Arb Medium Loop"]){
+        }else if ([overlay.title  isEqual: @"carlmaps_trails_upper_medium.png"] && [checkedTrails containsObject:@"Upper Arb (Medium)"]){
             theImage= [UIImage imageNamed:@"carlmaps_trails_upper_medium.png"];
         }else{
             return nil;

@@ -17,6 +17,7 @@
     TrailDataSource *trailSource;
     IBOutlet UITableView *trailTableView;
     NSMutableArray *checkedTrails;
+    NSUserDefaults *defaults;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -42,7 +43,9 @@
     [super viewDidLoad];
     trailSource = [[TrailDataSource alloc] init];
     [self loadSettings];
-    
+    //checkedTrails = [[NSMutableArray alloc] init];
+    [checkedTrails addObject:@"HI!"];
+    NSLog(@"%@", checkedTrails);
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -63,14 +66,14 @@
 }
 
 - (void)saveSettings {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:checkedTrails forKey:@"trails_key"];
 }
 
 -(void)loadSettings {
     
-    checkedTrails = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"trails_key"] mutableCopy];
-    NSLog(@"Loading table view: %@", [[NSUserDefaults standardUserDefaults] arrayForKey:@"trails_key"]);
+    checkedTrails = [[defaults arrayForKey:@"trails_key"] mutableCopy];
+    //NSLog(@"Loading table view: %@", checkedTrails);
     
 }
 
@@ -100,10 +103,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:trailTableIdentifier];
     }
     
-    NSMutableArray *cellTrail = [trailSource.trails objectAtIndex:indexPath.row];
-    cell.textLabel.text = [cellTrail objectAtIndex:0];
+    cell.textLabel.text = [trailSource.trails objectAtIndex:indexPath.row];
     
-    if ([checkedTrails containsObject:[cellTrail objectAtIndex:0]]) {
+    if ([checkedTrails containsObject:cell.textLabel.text]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
     else {
@@ -123,9 +125,11 @@
     if (tappedCell.accessoryType == UITableViewCellAccessoryNone) {
         tappedCell.accessoryType = UITableViewCellAccessoryCheckmark;
         [checkedTrails addObject:tappedCell.textLabel.text];
+        NSLog(@"%@", checkedTrails);
     } else {
         tappedCell.accessoryType = UITableViewCellAccessoryNone;
         [checkedTrails removeObject:tappedCell.textLabel.text];
+        NSLog(@"%@", checkedTrails);
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

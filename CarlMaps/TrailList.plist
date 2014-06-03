@@ -2,25 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<array>
-		<string>Upper Arb Long Loop</string>
-		<string>@&quot;carlmaps_trails_upper_long.png&quot;</string>
-	</array>
-	<array>
-		<string>Upper Arb Medium Loop</string>
-		<string>@&quot;carlmaps_trails_upper_medium.png&quot;</string>
-	</array>
-	<array>
-		<string>Lower Arb Long Loop</string>
-		<string>@&quot;carlmaps_trails_lower_long.png&quot;</string>
-	</array>
-	<array>
-		<string>Lower Arb Medium Loop</string>
-		<string>@&quot;carlmaps_trails_lower_medium.png&quot;</string>
-	</array>
-	<array>
-		<string>Lower Arb Short Loop</string>
-		<string>@&quot;carlmaps_trails_upper_short.png&quot;</string>
-	</array>
+    <string>Lower Arb (Short)</string>
+	<string>Lower Arb (Medium)</string>
+    <string>Lower Arb (Long)</string>
+    <string>Upper Arb (Medium)</string>
+	<string>Upper Arb (Long)</string>
 </array>
 </plist>
