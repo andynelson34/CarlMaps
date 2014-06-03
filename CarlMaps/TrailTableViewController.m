@@ -53,6 +53,8 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
+    
+    // Save which trails are checkmarked for display on the map as this view closes.
     [self saveCheckedTrails];
 }
 
@@ -63,17 +65,18 @@
 }
 
 - (void)saveCheckedTrails {
+    
+    // Save which trails are checkmarked so they can be displayed on the map.
     defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:checkedTrails forKey:@"trails_key"];
 }
 
 -(NSMutableArray*)loadCheckedTrails {
     
+    // Load previously checked trails so they can be re-checked as the table loads.
     defaults = [NSUserDefaults standardUserDefaults];
     NSMutableArray *checkedTrailArray = [[defaults arrayForKey:@"trails_key"] mutableCopy];
     return checkedTrailArray;
-    //NSLog(@"Loading table view: %@", checkedTrails);
-    
 }
 
 #pragma mark - Table view data source
@@ -104,6 +107,7 @@
     
     cell.textLabel.text = [trailSource.trails objectAtIndex:indexPath.row];
     
+    // Re-checkmarks previously checkmarked cells
     if ([checkedTrails containsObject:cell.textLabel.text]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }

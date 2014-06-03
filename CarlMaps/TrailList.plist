@@ -2,10 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-    <string>Lower Arb (Short)</string>
+	<string>All Arb Trails</string>
+	<string>Lower Arb (Short)</string>
 	<string>Lower Arb (Medium)</string>
-    <string>Lower Arb (Long)</string>
-    <string>Upper Arb (Medium)</string>
+	<string>Lower Arb (Long)</string>
+	<string>Upper Arb (Medium)</string>
 	<string>Upper Arb (Long)</string>
 </array>
 </plist>

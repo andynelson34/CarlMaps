@@ -7,6 +7,11 @@
 		<real>44.460988</real>
 		<real>-93.154597</real>
 	</array>
+	<key>Bell Field</key>
+	<array>
+		<real>44.460138</real>
+        <real>-93.148793</real>
+	</array>
 	<key>Boliou Hall</key>
 	<array>
 		<real>44.462277</real>
@@ -86,6 +91,11 @@
 	<array>
 		<real>44.460744</real>
 		<real>-93.152007</real>
+	</array>
+    <key>Recreation Center</key>
+	<array>
+		<real>44.464074</real>
+		<real>-93.149619</real>
 	</array>
 	<key>Severance Hall</key>
 	<array>
