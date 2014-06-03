@@ -96,14 +96,17 @@
 
 //Creates the overlays
 -(void)placeOverlay{
-    //Make the basemap overlay
+    //Define the region that all of the overlays share
     CLLocationCoordinate2D *coords = malloc(sizeof(CLLocationCoordinate2D) * 4);
-    coords[0] = CLLocationCoordinate2DMake(44.486443000000001,-93.165485000000004);
-    coords[1] = CLLocationCoordinate2DMake(44.455624999999998,-93.165571000000000);
-    coords[2] = CLLocationCoordinate2DMake(44.486412000000001,-93.118768000000003);
-    coords[3] = CLLocationCoordinate2DMake(44.455840000000002,-93.118853999999999);
+    double moveh = .0003;
+    double movew = .00045;
+    coords[0] = CLLocationCoordinate2DMake(44.486443000000001 + moveh,-93.165485000000004  - movew +.0001);
+    coords[1] = CLLocationCoordinate2DMake(44.455624999999998 - moveh +.0001,-93.165571000000000 + movew +.00008);
+    coords[2] = CLLocationCoordinate2DMake(44.486412000000001 + moveh,-93.118768000000003 -movew +.0001);
+    coords[3] = CLLocationCoordinate2DMake(44.455840000000002 - moveh + .0001,-93.118853999999999  +movew +.00008);
 
     
+    //Add the basemap overlay
     MKPolygon *polygon = [MKPolygon polygonWithCoordinates:coords count:4];
     polygon.title = @"basemap";
     [self.mapView addOverlay:polygon];
@@ -139,8 +142,9 @@
     
     //check which overlay is being drawn, and return the appropriate image
     if ([overlay.title  isEqual: @"basemap"]){
-        theImage= [UIImage imageNamed:@"carlmaps_map.png"];
+        theImage= [UIImage imageNamed:@"CM_basemap.png"];
     }else{
+        return nil;
         //if we're not drawing the basemap, check for one of our cases, and then return the proper renderer, or none at all
         if ([overlay.title  isEqual: @"carlmaps_trails_lower_long.png"] && [checkedTrails containsObject:@"Lower Arb (Long)"]){
             theImage= [UIImage imageNamed:@"carlmaps_trails_lower_long.png"];

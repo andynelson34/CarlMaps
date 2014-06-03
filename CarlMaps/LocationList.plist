@@ -27,6 +27,11 @@
 		<real>44.46047</real>
 		<real>-93.153364</real>
 	</array>
+	<key>Cowling Gymnasium</key>
+	<array>
+		<real>44.4598445235</real>
+		<real>-93.1497711146</real>
+	</array>
 	<key>Davis Hall</key>
 	<array>
 		<real>44.460305</real>
@@ -92,10 +97,35 @@
 		<real>44.459591</real>
 		<real>-93.150442</real>
 	</array>
+	<key>Skinner Memorial Chapel</key>
+	<array>
+		<real>44.4600682701</real>
+		<real>-93.1544985151</real>
+	</array>
 	<key>Willis Hall</key>
 	<array>
 		<real>44.460936</real>
 		<real>-93.156093</real>
+	</array>
+	<key>aTest1</key>
+	<array>
+		<real>44.486443</real>
+		<real>-93.165485</real>
+	</array>
+	<key>aTest2</key>
+	<array>
+		<real>44.455625</real>
+		<real>-93.165571</real>
+	</array>
+	<key>aTest3</key>
+	<array>
+		<real>44.486412</real>
+		<real>-93.118768</real>
+	</array>
+	<key>aTest4</key>
+	<array>
+		<real>44.45584</real>
+		<real>-93.118854</real>
 	</array>
 </dict>
 </plist>
