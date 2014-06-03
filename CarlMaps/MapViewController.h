@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Mapkit/MapKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 

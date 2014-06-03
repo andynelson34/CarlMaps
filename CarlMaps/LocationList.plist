@@ -10,7 +10,7 @@
 	<key>Bell Field</key>
 	<array>
 		<real>44.460138</real>
-        <real>-93.148793</real>
+		<real>-93.148793</real>
 	</array>
 	<key>Boliou Hall</key>
 	<array>
@@ -92,7 +92,7 @@
 		<real>44.460744</real>
 		<real>-93.152007</real>
 	</array>
-    <key>Recreation Center</key>
+	<key>Recreation Center</key>
 	<array>
 		<real>44.464074</real>
 		<real>-93.149619</real>
@@ -116,26 +116,6 @@
 	<array>
 		<real>44.460936</real>
 		<real>-93.156093</real>
-	</array>
-	<key>aTest1</key>
-	<array>
-		<real>44.486443</real>
-		<real>-93.165485</real>
-	</array>
-	<key>aTest2</key>
-	<array>
-		<real>44.455625</real>
-		<real>-93.165571</real>
-	</array>
-	<key>aTest3</key>
-	<array>
-		<real>44.486412</real>
-		<real>-93.118768</real>
-	</array>
-	<key>aTest4</key>
-	<array>
-		<real>44.45584</real>
-		<real>-93.118854</real>
 	</array>
 </dict>
 </plist>

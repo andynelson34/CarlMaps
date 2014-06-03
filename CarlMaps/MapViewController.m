@@ -18,6 +18,7 @@
 
 @implementation MapViewController {
     __weak IBOutlet UIButton *trailsButton;
+    __weak IBOutlet UIButton *locationsButton;
     IBOutlet UITableView *searchTableView;
     LocationDataSource *locSource;
     NSArray *checkedTrails;
@@ -46,8 +47,17 @@
     span.latitudeDelta = 0.005;
     span.longitudeDelta = 0.005;
     adjustedRegion.span = span;
+    
     self.mapView.showsUserLocation = YES;
     [self.mapView setRegion:adjustedRegion animated:YES];
+    
+    CALayer *locationsButtonLayer = [locationsButton layer];
+    [locationsButtonLayer setMasksToBounds:YES];
+    [locationsButtonLayer setCornerRadius:5.0f];
+    
+    CALayer *trailsButtonLayer = [trailsButton layer];
+    [trailsButtonLayer setMasksToBounds:YES];
+    [trailsButtonLayer setCornerRadius:5.0f];
     
     //place overlays
     
@@ -98,10 +108,6 @@
     [self dropPin:coords];
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-
-}
-
 
 //Creates the overlays
 -(void)placeOverlay{
@@ -113,14 +119,12 @@
     coords[1] = CLLocationCoordinate2DMake(44.455624999999998 - moveh +.0001,-93.165571000000000 + movew +.00008);
     coords[2] = CLLocationCoordinate2DMake(44.486412000000001 + moveh,-93.118768000000003 -movew +.0001);
     coords[3] = CLLocationCoordinate2DMake(44.455840000000002 - moveh + .0001,-93.118853999999999  +movew +.00008);
-
     
     //Add the basemap overlay
     MKPolygon *polygon = [MKPolygon polygonWithCoordinates:coords count:4];
     polygon.title = @"basemap";
     [self.mapView addOverlay:polygon];
     
-
     //Add an overlay for each of the trails
     //This is ugly but will serve
     MKPolygon *polygonX = [MKPolygon polygonWithCoordinates:coords count:4];
@@ -157,7 +161,6 @@
     if ([overlay.title  isEqual: @"basemap"]){
         theImage= [UIImage imageNamed:@"CM_basemap.png"];
     }else{
-        return nil;
         //if we're not drawing the basemap, check for one of our cases, and then return the proper renderer, or none at all
         if ([overlay.title  isEqual: @"carlmaps_trails_all.png"] && [checkedTrails containsObject:@"All Arb Trails"]) {
             theImage= [UIImage imageNamed:@"carlmaps_trails_all.png"];

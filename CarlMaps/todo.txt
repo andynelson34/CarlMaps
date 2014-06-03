@@ -1,0 +1,16 @@
+TODO
+
+BRADY
+[] Redo the trails overlays so that they match with the new accurate maps
+[] Have annotations appear above dropped pins
+[] Animate pin drops
+
+ANDY
+[] Make the "search button" and "trails button" real buttons
+[] Make the buttons not look like shit, so our app looks less like shit
+
+JON
+[] Parse BuildingCoords into a usable plist for us
+
+REACH:
+[] Upon dropping a pin, set view to an MKMapRect that includes current location and pin
