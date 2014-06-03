@@ -56,11 +56,14 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
+    
+    // Ensures that when this view is reloaded, by default it will not center on the pin.
     centerStatus = @"No";
 }
 
 -(void)loadSettings {
-    // Load trails to display
+    
+    // Load trails and pin to display.
     checkedTrails = [[NSUserDefaults standardUserDefaults] arrayForKey:@"trails_key"];
     pinCoords = [[NSUserDefaults standardUserDefaults] arrayForKey:@"coords_key"];
     [self placeOverlay];
@@ -117,6 +120,10 @@
 
     //Add an overlay for each of the trails
     //This is ugly but will serve
+    MKPolygon *polygonX = [MKPolygon polygonWithCoordinates:coords count:4];
+    polygonX.title = @"carlmaps_trails_all.png";
+    [self.mapView addOverlay:polygonX];
+    
     MKPolygon *polygon0 = [MKPolygon polygonWithCoordinates:coords count:4];
     polygon0.title = @"carlmaps_trails_lower_long.png";
     [self.mapView addOverlay:polygon0];
@@ -148,7 +155,9 @@
         theImage= [UIImage imageNamed:@"carlmaps_map.png"];
     }else{
         //if we're not drawing the basemap, check for one of our cases, and then return the proper renderer, or none at all
-        if ([overlay.title  isEqual: @"carlmaps_trails_lower_long.png"] && [checkedTrails containsObject:@"Lower Arb (Long)"]){
+        if ([overlay.title  isEqual: @"carlmaps_trails_all.png"] && [checkedTrails containsObject:@"All Arb Trails"]) {
+            theImage= [UIImage imageNamed:@"carlmaps_trails_all.png"];
+        }else if ([overlay.title  isEqual: @"carlmaps_trails_lower_long.png"] && [checkedTrails containsObject:@"Lower Arb (Long)"]){
             theImage= [UIImage imageNamed:@"carlmaps_trails_lower_long.png"];
         }else if ([overlay.title  isEqual: @"carlmaps_trails_lower_medium.png"] && [checkedTrails containsObject:@"Lower Arb (Medium)"]){
             theImage= [UIImage imageNamed:@"carlmaps_trails_lower_medium.png"];
