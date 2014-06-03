@@ -101,11 +101,9 @@
     
     UITableViewCell *tappedCell = [tableView cellForRowAtIndexPath:indexPath];
     NSArray *coords = [locSource.locDict objectForKey:tappedCell.textLabel.text];
-    NSString *centerStatus = @"Yes";
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:coords forKey:@"coords_key"];
-    [defaults setObject:centerStatus forKey:@"center_key"];
     
     [self performSegueWithIdentifier:@"UnwindToMapSegueID" sender:self];
     

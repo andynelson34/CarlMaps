@@ -22,6 +22,7 @@
     LocationDataSource *locSource;
     NSArray *checkedTrails;
     NSArray *pinCoords;
+    NSString *centerStatus;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -54,6 +55,9 @@
     locSource = [[LocationDataSource alloc] init];
 }
 
+-(void)viewWillDisappear:(BOOL)animated {
+    centerStatus = @"No";
+}
 
 -(void)loadSettings {
     // Load trails to display
@@ -75,7 +79,9 @@
     destinationPin.coordinate = pinLoc;
     [self.mapView addAnnotation:destinationPin];
     
-    [self.mapView setCenterCoordinate:pinLoc animated:YES];
+    if ([centerStatus isEqual: @"Yes"]) {
+        [self.mapView setCenterCoordinate:pinLoc animated:YES];
+    }
 }
 
 -(void)pinSearchResult:(NSArray*)coords {
@@ -164,6 +170,7 @@
 }
 
 - (IBAction)unwindToMap:(UIStoryboardSegue *)unwindSegue{
+    centerStatus = @"Yes";
 }
 
 - (void)didReceiveMemoryWarning
