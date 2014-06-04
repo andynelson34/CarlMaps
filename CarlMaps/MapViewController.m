@@ -1,6 +1,6 @@
 //
 //  MapViewController.m
-//  CarlMaps hi
+//  CarlMaps
 //
 //  Created by Jonathan Knudson on 5/7/14.
 //  Copyright (c) 2014 Jonathan Knudson. All rights reserved.
@@ -19,6 +19,7 @@
 @implementation MapViewController {
     __weak IBOutlet UIButton *trailsButton;
     __weak IBOutlet UIButton *locationsButton;
+    __weak IBOutlet UIButton *currentLocButton;
     IBOutlet UITableView *searchTableView;
     LocationDataSource *locSource;
     NSArray *checkedTrails;
@@ -32,21 +33,17 @@
     [self loadSettings];
     [self pinSearchResult:pinTitle];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
-
 }
 
 - (void)viewDidLoad
 {
-    
-    CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(44.461329, -93.155607);
+    //Assign starting coordinates and set desired map variables
+    CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(44.461131, -93.154606);
     MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 400, 400)];
     [self.mapView setRegion:adjustedRegion animated:YES];
+    self.mapView.showsUserLocation = YES;
     self.mapView.rotateEnabled = false;
     [self.mapView setDelegate:self];
-    
-    self.mapView.showsUserLocation = YES;
-    [self.mapView setRegion:adjustedRegion animated:YES];
-    
     
     //Make buttons rounded and transparent
     CALayer *locationsButtonLayer = [locationsButton layer];
@@ -57,30 +54,34 @@
     [trailsButtonLayer setMasksToBounds:YES];
     [trailsButtonLayer setCornerRadius:5.0f];
     
+    CALayer *currentLocButtonLayer = [currentLocButton layer];
+    [currentLocButtonLayer setMasksToBounds:YES];
+    [currentLocButtonLayer setCornerRadius:5.0f];
     
     // Create a location data source
     locSource = [[LocationDataSource alloc] init];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
-    
     // Ensures that when this view is reloaded, by default it will not center on the pin.
     centerStatus = @"No";
 }
 
+// Load trails and pin to display.
 -(void)loadSettings {
-    
-    // Load trails and pin to display.
     checkedTrails = [[NSUserDefaults standardUserDefaults] arrayForKey:@"trails_key"];
     pinTitle = [[NSUserDefaults standardUserDefaults] stringForKey:@"pin_key"];
     [self placeOverlay];
 }
 
+- (IBAction)jumpToUserLocation:(id)sender {
+    
+    // Camera jumps to center on user's location.
+    [self.mapView setCenterCoordinate:self.mapView.userLocation.coordinate animated:YES];
+}
 
+//Drop a pin on the given coordinates
 -(void)dropPin:(NSString*)locName {
-    
-    // TODO: MAYBE ADD ANIMATION? THIS IS JUST POLISHING, BUT IT LOOKS COMPLICATED, NEED TO ADD A NEW THING CALLED MKANNOTATIONVIEW
-    
     // Drops pin onto map at given coordinates
     NSArray *coords = [locSource.locDict objectForKey:locName];
     CLLocationCoordinate2D pinLoc;
@@ -90,12 +91,15 @@
     destinationPin.coordinate = pinLoc;
     destinationPin.title = locName;
     [self.mapView addAnnotation:destinationPin];
+    [self.mapView selectAnnotation:destinationPin animated:YES];
     
+    //If this pin is being placed for the first time, move the camera to it
     if ([centerStatus isEqual: @"Yes"]) {
         [self.mapView setCenterCoordinate:pinLoc animated:YES];
     }
 }
 
+//Given a pin name, assure that a pin is dropped on the proper location
 -(void)pinSearchResult:(NSString*)pinName {
     // First, remove all existing pins from the map
     NSArray *existingPoints = self.mapView.annotations;
@@ -106,8 +110,6 @@
     // Then add pin for the searched location
     [self dropPin:pinName];
 }
-
-
 
 //Creates the overlays
 -(void)placeOverlay{
@@ -154,13 +156,11 @@
 //Tells the MapView which renderer to use for each overlay
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay{
     UIImage *theImage;
-    
-    
     //check which overlay is being drawn, and return the appropriate image
     if ([overlay.title  isEqual: @"basemap"]){
         theImage= [UIImage imageNamed:@"CM_basemap.png"];
     }else{
-        //if we're not drawing the basemap, check for one of our cases, and then return the proper renderer, or none at all
+        //if we're not drawing the basemap, check for each of our overlay trails, and then return the proper renderer, or none at all
         if ([overlay.title  isEqual: @"carlmaps_trails_all.png"] && [checkedTrails containsObject:@"All Arb Trails"]) {
             theImage= [UIImage imageNamed:@"CM_alltrails"];
         }else if ([overlay.title  isEqual: @"carlmaps_trails_lower_long.png"] && [checkedTrails containsObject:@"Lower Arb (Long)"]){
@@ -184,6 +184,7 @@
     
 }
 
+//Segue used by the SearchTableViewController to jump the mapView to the location of the new pin
 - (IBAction)unwindToMap:(UIStoryboardSegue *)unwindSegue{
     centerStatus = @"Yes";
 }

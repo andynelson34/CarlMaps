@@ -23,11 +23,9 @@
 		04E25C5E191A964D00E7A8F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E25C5C191A964D00E7A8F9 /* InfoPlist.strings */; };
 		04E25C60191A964D00E7A8F9 /* CarlMapsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E25C5F191A964D00E7A8F9 /* CarlMapsTests.m */; };
 		3F432871192EB4060074E30C /* TrailList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F432870192EB4060074E30C /* TrailList.plist */; };
-		3FAFABE7193E549500E6F0D5 /* simulatedlocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 3FAFABE6193E549500E6F0D5 /* simulatedlocation.gpx */; };
 		68AC53A9192D0C7F002D6039 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AC53A8192D0C7F002D6039 /* MapKit.framework */; };
 		800520A6192EF7D800E1B39A /* TrailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 800520A5192EF7D800E1B39A /* TrailDataSource.m */; };
 		805AADC9193E74B100F4EE70 /* CM_basemap.png in Resources */ = {isa = PBXBuildFile; fileRef = 805AADC8193E74B100F4EE70 /* CM_basemap.png */; };
-		805AADCB193E760900F4EE70 /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 805AADCA193E760900F4EE70 /* todo.txt */; };
 		807C4A3519245B6400764D62 /* TrailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 807C4A3419245B6400764D62 /* TrailTableViewController.m */; };
 		807DBD15193EC3AE00CF4B28 /* CM_lower_long.png in Resources */ = {isa = PBXBuildFile; fileRef = 807DBD10193EC3AE00CF4B28 /* CM_lower_long.png */; };
 		807DBD16193EC3AE00CF4B28 /* CM_lower_med.png in Resources */ = {isa = PBXBuildFile; fileRef = 807DBD11193EC3AE00CF4B28 /* CM_lower_med.png */; };
@@ -36,6 +34,7 @@
 		807DBD19193EC3AE00CF4B28 /* CM_upper_med.png in Resources */ = {isa = PBXBuildFile; fileRef = 807DBD14193EC3AE00CF4B28 /* CM_upper_med.png */; };
 		807DBD1B193EC3B500CF4B28 /* CM_alltrails.png in Resources */ = {isa = PBXBuildFile; fileRef = 807DBD1A193EC3B500CF4B28 /* CM_alltrails.png */; };
 		807DBD1D193EC51600CF4B28 /* LocationList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 807DBD1C193EC51600CF4B28 /* LocationList.plist */; };
+		80829A7F193EE7DB0067F375 /* currentlocation.png in Resources */ = {isa = PBXBuildFile; fileRef = 80829A7E193EE7DB0067F375 /* currentlocation.png */; };
 		80C280271932F1F20077F96A /* CustomOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C280261932F1F20077F96A /* CustomOverlayRenderer.m */; };
 		80C458921921B209003D33D7 /* LocationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C458911921B209003D33D7 /* LocationDataSource.m */; };
 /* End PBXBuildFile section */
@@ -73,12 +72,10 @@
 		04E25C5D191A964D00E7A8F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		04E25C5F191A964D00E7A8F9 /* CarlMapsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarlMapsTests.m; sourceTree = "<group>"; };
 		3F432870192EB4060074E30C /* TrailList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TrailList.plist; sourceTree = "<group>"; };
-		3FAFABE6193E549500E6F0D5 /* simulatedlocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = simulatedlocation.gpx; path = ../simulatedlocation.gpx; sourceTree = "<group>"; };
 		68AC53A8192D0C7F002D6039 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		800520A4192EF7D800E1B39A /* TrailDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailDataSource.h; sourceTree = "<group>"; };
 		800520A5192EF7D800E1B39A /* TrailDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailDataSource.m; sourceTree = "<group>"; };
 		805AADC8193E74B100F4EE70 /* CM_basemap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CM_basemap.png; sourceTree = "<group>"; };
-		805AADCA193E760900F4EE70 /* todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
 		807C4A3319245B6400764D62 /* TrailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailTableViewController.h; sourceTree = "<group>"; };
 		807C4A3419245B6400764D62 /* TrailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrailTableViewController.m; sourceTree = "<group>"; };
 		807DBD10193EC3AE00CF4B28 /* CM_lower_long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CM_lower_long.png; sourceTree = "<group>"; };
@@ -88,6 +85,7 @@
 		807DBD14193EC3AE00CF4B28 /* CM_upper_med.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CM_upper_med.png; sourceTree = "<group>"; };
 		807DBD1A193EC3B500CF4B28 /* CM_alltrails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CM_alltrails.png; sourceTree = "<group>"; };
 		807DBD1C193EC51600CF4B28 /* LocationList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LocationList.plist; sourceTree = "<group>"; };
+		80829A7E193EE7DB0067F375 /* currentlocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = currentlocation.png; sourceTree = "<group>"; };
 		80C280261932F1F20077F96A /* CustomOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomOverlayRenderer.m; sourceTree = "<group>"; };
 		80C280281932F1FC0077F96A /* CustomOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlayRenderer.h; sourceTree = "<group>"; };
 		80C458901921B209003D33D7 /* LocationDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDataSource.h; sourceTree = "<group>"; };
@@ -156,13 +154,13 @@
 				04E25C43191A964C00E7A8F9 /* AppDelegate.h */,
 				04E25C44191A964C00E7A8F9 /* AppDelegate.m */,
 				04E25C46191A964C00E7A8F9 /* Main.storyboard */,
-				805AADCA193E760900F4EE70 /* todo.txt */,
 				046E2FFA1937BFBB00344FA9 /* SearchTableViewController.h */,
 				046E2FFB1937BFBB00344FA9 /* SearchTableViewController.m */,
 				04E25C49191A964C00E7A8F9 /* MapViewController.h */,
 				04E25C4A191A964C00E7A8F9 /* MapViewController.m */,
 				807C4A3319245B6400764D62 /* TrailTableViewController.h */,
 				807C4A3419245B6400764D62 /* TrailTableViewController.m */,
+				80829A7E193EE7DB0067F375 /* currentlocation.png */,
 				04E25C4C191A964C00E7A8F9 /* Images.xcassets */,
 				805AADC5193E5E0600F4EE70 /* Overlays_Images */,
 				80C280221932EAA70077F96A /* Overlays */,
@@ -227,7 +225,6 @@
 		80C458931921B214003D33D7 /* Data Sources */ = {
 			isa = PBXGroup;
 			children = (
-				3FAFABE6193E549500E6F0D5 /* simulatedlocation.gpx */,
 				807DBD1C193EC51600CF4B28 /* LocationList.plist */,
 				3F432870192EB4060074E30C /* TrailList.plist */,
 				80C458901921B209003D33D7 /* LocationDataSource.h */,
@@ -325,13 +322,12 @@
 				04E25C4D191A964C00E7A8F9 /* Images.xcassets in Resources */,
 				807DBD16193EC3AE00CF4B28 /* CM_lower_med.png in Resources */,
 				807DBD19193EC3AE00CF4B28 /* CM_upper_med.png in Resources */,
+				80829A7F193EE7DB0067F375 /* currentlocation.png in Resources */,
 				807DBD1D193EC51600CF4B28 /* LocationList.plist in Resources */,
-				805AADCB193E760900F4EE70 /* todo.txt in Resources */,
 				807DBD15193EC3AE00CF4B28 /* CM_lower_long.png in Resources */,
 				04E25C3F191A964C00E7A8F9 /* InfoPlist.strings in Resources */,
 				805AADC9193E74B100F4EE70 /* CM_basemap.png in Resources */,
 				3F432871192EB4060074E30C /* TrailList.plist in Resources */,
-				3FAFABE7193E549500E6F0D5 /* simulatedlocation.gpx in Resources */,
 				807DBD17193EC3AE00CF4B28 /* CM_lower_short.png in Resources */,
 				807DBD1B193EC3B500CF4B28 /* CM_alltrails.png in Resources */,
 				04E25C48191A964C00E7A8F9 /* Main.storyboard in Resources */,

@@ -2,6 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Bald Spot</key>
+	<array>
+        <real>44.461131</real>
+        <real>-93.154606</real>
+    </array>
 	<key>106 Winona Street</key>
 	<array>
 		<real>44.459223020925</real>
@@ -37,6 +42,11 @@
 		<real>44.46609517465</real>
 		<real>-93.14819856405001</real>
 	</array>
+    <key>Aggro Crag</key>
+	<array>
+		<real>44.464175</real>
+		<real>-93.152128</real>
+	</array>
 	<key>Allen House</key>
 	<array>
 		<real>44.46010261680625</real>
@@ -52,12 +62,17 @@
 		<real>44.46678133005</real>
 		<real>-93.14923758745002</real>
 	</array>
-	<key>Benton House (Science Fiction House)</key>
+    <key>Bell Field</key>
+	<array>
+		<real>44.460109</real>
+		<real>-93.148802</real>
+	</array>
+	<key>Benton House</key>
 	<array>
 		<real>44.4587183236</real>
 		<real>-93.15427143213334</real>
 	</array>
-	<key>Berg House (Women&apos;s Awareness House)</key>
+	<key>Berg House</key>
 	<array>
 		<real>44.45877752973333</real>
 		<real>-93.15740249276666</real>
@@ -87,12 +102,12 @@
 		<real>44.46002936755177</real>
 		<real>-93.15101991783931</real>
 	</array>
-	<key>Center for Math and Computing (CMC)</key>
+	<key>Center for Math and Computing</key>
 	<array>
 		<real>44.46244654386666</real>
 		<real>-93.15363536596664</real>
 	</array>
-	<key>Chaney House (CANOE House)</key>
+	<key>CANOE House</key>
 	<array>
 		<real>44.4587241032125</real>
 		<real>-93.15022220491875</real>
@@ -137,7 +152,7 @@
 		<real>44.45917569224167</real>
 		<real>-93.15820458144168</real>
 	</array>
-	<key>Douglas House (F.I.S.H. House)</key>
+	<key>F.I.S.H. House</key>
 	<array>
 		<real>44.45762301335</real>
 		<real>-93.15519664049999</real>
@@ -146,6 +161,11 @@
 	<array>
 		<real>44.4590397220375</real>
 		<real>-93.1582599666</real>
+	</array>
+    <key>Druid Circle</key>
+	<array>
+		<real>44.462093</real>
+		<real>-93.145398</real>
 	</array>
 	<key>Eugster House</key>
 	<array>
@@ -172,12 +192,12 @@
 		<real>44.45900506776665</real>
 		<real>-93.14980082810001</real>
 	</array>
-	<key>Farm House (Sustainable Living House)</key>
+	<key>Farm House</key>
 	<array>
 		<real>44.4661117086</real>
 		<real>-93.1491837582</real>
 	</array>
-	<key>Geffert House (Fitness House)</key>
+	<key>Fitness House</key>
 	<array>
 		<real>44.45895074155</real>
 		<real>-93.15902143029999</real>
@@ -232,6 +252,11 @@
 		<real>44.45806101535555</real>
 		<real>-93.15509432017777</real>
 	</array>
+    <key>Hill of Three Oaks</key>
+	<array>
+		<real>44.46326</real>
+		<real>-93.147596</real>
+	</array>
 	<key>Hilton House</key>
 	<array>
 		<real>44.45866318691</real>
@@ -257,17 +282,17 @@
 		<real>44.45871761922</real>
 		<real>-93.15827952968</real>
 	</array>
-	<key>Huntington House (W.H.O.A. House)</key>
+	<key>Huntington House</key>
 	<array>
 		<real>44.458745212</real>
 		<real>-93.15510790077144</real>
 	</array>
-	<key>James Hall</key>
+	<key>James Hall (Memorial Hall)</key>
 	<array>
 		<real>44.46001673920536</real>
 		<real>-93.15179335799283</real>
 	</array>
-	<key>Jewett House (Culinary House)</key>
+	<key>Culinary House</key>
 	<array>
 		<real>44.45764826404287</real>
 		<real>-93.15748926555715</real>
@@ -287,7 +312,7 @@
 		<real>44.4621028377</real>
 		<real>-93.15392513036664</real>
 	</array>
-	<key>Laird Stadium (Athletics)</key>
+	<key>Laird Stadium</key>
 	<array>
 		<real>44.46169415359375</real>
 		<real>-93.15838242152499</real>
@@ -301,6 +326,11 @@
 	<array>
 		<real>44.46205831600999</real>
 		<real>-93.15549290548999</real>
+	</array>
+    <key>Mai Fete Island</key>
+	<array>
+		<real>44.46303</real>
+		<real>-93.151763</real>
 	</array>
 	<key>Mudd Hall</key>
 	<array>
@@ -357,17 +387,22 @@
 		<real>44.45947976466667</real>
 		<real>-93.15802113578333</real>
 	</array>
-	<key>Page House East (Jewish Interest House)</key>
+    <key>Oxbow Pond</key>
+	<array>
+		<real>44.482576</real>
+		<real>-93.138961</real>
+	</array>
+	<key>Page House</key>
 	<array>
 		<real>44.45757270482857</real>
 		<real>-93.15587776832855</real>
 	</array>
-	<key>Parish House (Language House)</key>
+	<key>Parish House</key>
 	<array>
 		<real>44.45772846682222</real>
 		<real>-93.15461788953331</real>
 	</array>
-	<key>Parr House (Sustainable Living House)</key>
+	<key>Parr House</key>
 	<array>
 		<real>44.46636522225</real>
 		<real>-93.14916322055001</real>
@@ -377,7 +412,7 @@
 		<real>44.45905160975001</real>
 		<real>-93.15425490620001</real>
 	</array>
-	<key>Prentice House (Q and A House)</key>
+	<key>Prentice House</key>
 	<array>
 		<real>44.45994717833332</real>
 		<real>-93.15836154251666</real>
@@ -437,7 +472,12 @@
 		<real>44.45908223915715</real>
 		<real>-93.15197950857143</real>
 	</array>
-	<key>Stimson House (Intercultural Center)</key>
+    <key>Stewsie Island</key>
+	<array>
+		<real>44.463524</real>
+		<real>-93.152723</real>
+	</array>
+	<key>Stimson House</key>
 	<array>
 		<real>44.459449505675</real>
 		<real>-93.15667651714999</real>
@@ -446,6 +486,11 @@
 	<array>
 		<real>44.45871407274166</real>
 		<real>-93.15587798953334</real>
+	</array>
+    <key>Turtle Pond</key>
+	<array>
+		<real>44.473466</real>
+		<real>-93.148767</real>
 	</array>
 	<key>Water Tower</key>
 	<array>
@@ -472,7 +517,7 @@
 		<real>44.45827587153334</real>
 		<real>-93.15275704356667</real>
 	</array>
-	<key>Williams House (Freedom House)</key>
+	<key>Williams House</key>
 	<array>
 		<real>44.45907221407499</real>
 		<real>-93.15674980312498</real>

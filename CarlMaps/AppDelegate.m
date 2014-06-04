@@ -1,3 +1,8 @@
+/*
+CARLMAPS
+BY ANDY NELSON, JON KNUDSON, AND BRADY SOGLIN
+*/
+
 //
 //  AppDelegate.m
 //  CarlMaps

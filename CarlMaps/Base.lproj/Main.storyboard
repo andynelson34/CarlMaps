@@ -99,12 +99,24 @@
                                     <segue destination="rsc-b9-Gsq" kind="push" id="LZ8-Nn-zVo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWL-vY-DFA">
+                                <rect key="frame" x="274" y="519" width="26" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="CurrentLocation" image="currentlocation.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="jumpToUserLocation:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0ub-n1-LU0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ECf-Qg-kV5"/>
                     <connections>
                         <outlet property="MapView" destination="jMU-ik-UTi" id="uLN-EV-AGR"/>
+                        <outlet property="currentLocButton" destination="LWL-vY-DFA" id="OGa-kM-JqP"/>
                         <outlet property="locationsButton" destination="2SL-c0-6A8" id="Moy-Wu-GvR"/>
                         <outlet property="mapView" destination="jMU-ik-UTi" id="2Vr-Cb-7hB"/>
                         <outlet property="searchTableView" destination="kh9-bI-dsS" id="tMu-R1-g5l"/>
@@ -156,6 +168,9 @@
             <point key="canvasLocation" x="181" y="42"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="currentlocation.png" width="30" height="30"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

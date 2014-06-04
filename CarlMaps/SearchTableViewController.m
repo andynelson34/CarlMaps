@@ -83,6 +83,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:searchTableIdentifier];
     }
     
+    // Set cell contents based on whether or not we're displaying search results.
+    
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         NSString *locName = [searchResults objectAtIndex:indexPath.row];
         [[cell textLabel] setText:locName];
