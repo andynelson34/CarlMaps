@@ -37,6 +37,7 @@
 		80829A7F193EE7DB0067F375 /* currentlocation.png in Resources */ = {isa = PBXBuildFile; fileRef = 80829A7E193EE7DB0067F375 /* currentlocation.png */; };
 		80C280271932F1F20077F96A /* CustomOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C280261932F1F20077F96A /* CustomOverlayRenderer.m */; };
 		80C458921921B209003D33D7 /* LocationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C458911921B209003D33D7 /* LocationDataSource.m */; };
+		88A0BAB9193FBB9D0084A802 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 88A0BAB8193FBB9D0084A802 /* README.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		80C280281932F1FC0077F96A /* CustomOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomOverlayRenderer.h; sourceTree = "<group>"; };
 		80C458901921B209003D33D7 /* LocationDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDataSource.h; sourceTree = "<group>"; };
 		80C458911921B209003D33D7 /* LocationDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDataSource.m; sourceTree = "<group>"; };
+		88A0BAB8193FBB9D0084A802 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				807C4A3319245B6400764D62 /* TrailTableViewController.h */,
 				807C4A3419245B6400764D62 /* TrailTableViewController.m */,
 				80829A7E193EE7DB0067F375 /* currentlocation.png */,
+				88A0BAB8193FBB9D0084A802 /* README.txt */,
 				04E25C4C191A964C00E7A8F9 /* Images.xcassets */,
 				805AADC5193E5E0600F4EE70 /* Overlays_Images */,
 				80C280221932EAA70077F96A /* Overlays */,
@@ -331,6 +334,7 @@
 				807DBD17193EC3AE00CF4B28 /* CM_lower_short.png in Resources */,
 				807DBD1B193EC3B500CF4B28 /* CM_alltrails.png in Resources */,
 				04E25C48191A964C00E7A8F9 /* Main.storyboard in Resources */,
+				88A0BAB9193FBB9D0084A802 /* README.txt in Resources */,
 				807DBD18193EC3AE00CF4B28 /* CM_upper_long.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
