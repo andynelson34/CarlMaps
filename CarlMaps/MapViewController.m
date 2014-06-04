@@ -22,16 +22,17 @@
     IBOutlet UITableView *searchTableView;
     LocationDataSource *locSource;
     NSArray *checkedTrails;
-    NSArray *pinCoords;
+    NSString *pinTitle;
     NSString *centerStatus;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.navigationController setNavigationBarHidden:YES animated:animated];
     [super viewWillAppear:animated];
     [self loadSettings];
-    [self pinSearchResult:pinCoords];
+    [self pinSearchResult:pinTitle];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+
 }
 
 - (void)viewDidLoad
@@ -42,15 +43,12 @@
     [self.mapView setRegion:adjustedRegion animated:YES];
     self.mapView.rotateEnabled = false;
     [self.mapView setDelegate:self];
-    adjustedRegion.center = startCoord;
-    MKCoordinateSpan span;
-    span.latitudeDelta = 0.005;
-    span.longitudeDelta = 0.005;
-    adjustedRegion.span = span;
     
     self.mapView.showsUserLocation = YES;
     [self.mapView setRegion:adjustedRegion animated:YES];
     
+    
+    //Make buttons rounded and transparent
     CALayer *locationsButtonLayer = [locationsButton layer];
     [locationsButtonLayer setMasksToBounds:YES];
     [locationsButtonLayer setCornerRadius:5.0f];
@@ -59,7 +57,6 @@
     [trailsButtonLayer setMasksToBounds:YES];
     [trailsButtonLayer setCornerRadius:5.0f];
     
-    //place overlays
     
     // Create a location data source
     locSource = [[LocationDataSource alloc] init];
@@ -75,21 +72,23 @@
     
     // Load trails and pin to display.
     checkedTrails = [[NSUserDefaults standardUserDefaults] arrayForKey:@"trails_key"];
-    pinCoords = [[NSUserDefaults standardUserDefaults] arrayForKey:@"coords_key"];
+    pinTitle = [[NSUserDefaults standardUserDefaults] stringForKey:@"pin_key"];
     [self placeOverlay];
 }
 
 
--(void)dropPin:(NSArray*)coords {
+-(void)dropPin:(NSString*)locName {
     
     // TODO: MAYBE ADD ANIMATION? THIS IS JUST POLISHING, BUT IT LOOKS COMPLICATED, NEED TO ADD A NEW THING CALLED MKANNOTATIONVIEW
     
     // Drops pin onto map at given coordinates
+    NSArray *coords = [locSource.locDict objectForKey:locName];
     CLLocationCoordinate2D pinLoc;
     pinLoc.latitude = [coords[0] doubleValue];
     pinLoc.longitude = [coords[1] doubleValue];
     MKPointAnnotation *destinationPin = [[MKPointAnnotation alloc] init];
     destinationPin.coordinate = pinLoc;
+    destinationPin.title = locName;
     [self.mapView addAnnotation:destinationPin];
     
     if ([centerStatus isEqual: @"Yes"]) {
@@ -97,7 +96,7 @@
     }
 }
 
--(void)pinSearchResult:(NSArray*)coords {
+-(void)pinSearchResult:(NSString*)pinName {
     // First, remove all existing pins from the map
     NSArray *existingPoints = self.mapView.annotations;
     if ([existingPoints count]) {
@@ -105,7 +104,7 @@
     }
     
     // Then add pin for the searched location
-    [self dropPin:coords];
+    [self dropPin:pinName];
 }
 
 

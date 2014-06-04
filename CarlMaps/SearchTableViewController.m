@@ -100,10 +100,11 @@
     // Drops pin on map for tapped cell's location
     
     UITableViewCell *tappedCell = [tableView cellForRowAtIndexPath:indexPath];
-    NSArray *coords = [locSource.locDict objectForKey:tappedCell.textLabel.text];
+    NSString *pinTitle = tappedCell.textLabel.text;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:coords forKey:@"coords_key"];
+    [defaults setObject:pinTitle forKey:@"pin_key"];
+    [self.searchDisplayController setActive:NO animated:NO];
     
     [self performSegueWithIdentifier:@"UnwindToMapSegueID" sender:self];
     

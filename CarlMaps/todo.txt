@@ -9,7 +9,7 @@ BRADY
 ANDY
 [X] Make the "search button" and "trails button" real buttons
 [X] Make the buttons not look like shit, so our app looks less like shit
-[] Have annotations appear above dropped pins
+[X] Have annotations appear above dropped pins
 
 JON
 [x] Parse BuildingCoords into a usable plist for us (average coordinates)
