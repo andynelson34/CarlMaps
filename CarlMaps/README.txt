@@ -21,4 +21,6 @@ a single location at once and then traveling to that location over a period of t
 with the map staying stationary.
 
 GETTING STARTED:
-Simply run the app!
+Simply run the app! If you're running it on a computer, you may have to manually
+input current location GPS coordinates into the simulator to simulate location,
+but location tracking works perfectly on an actual device.
