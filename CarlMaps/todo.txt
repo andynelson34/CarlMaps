@@ -1,16 +1,18 @@
-TODO
+TODO:
 
 BRADY
-[] Redo the trails overlays so that they match with the new accurate maps
-[] Have annotations appear above dropped pins
-[] Animate pin drops
+[x] Redo the trails overlays so that they match with the new accurate maps
+[] reduce map size to decrease memory usage
+[] Upon clicking a location, set mapview to an MKMapRect that includes current location and pin
+
 
 ANDY
-[] Make the "search button" and "trails button" real buttons
-[] Make the buttons not look like shit, so our app looks less like shit
+[X] Make the "search button" and "trails button" real buttons
+[X] Make the buttons not look like shit, so our app looks less like shit
+[] Have annotations appear above dropped pins
 
 JON
-[] Parse BuildingCoords into a usable plist for us
+[x] Parse BuildingCoords into a usable plist for us (average coordinates)
 
 REACH:
-[] Upon dropping a pin, set view to an MKMapRect that includes current location and pin
+[] Restrict the zoom and scroll?

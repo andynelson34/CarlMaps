@@ -2,120 +2,490 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Bald Spot</key>
+	<key>106 Winona Street</key>
 	<array>
-		<real>44.460988</real>
-		<real>-93.154597</real>
+		<real>44.459223020925</real>
+		<real>-93.15424074545</real>
 	</array>
-	<key>Bell Field</key>
+	<key>200 Division Street</key>
 	<array>
-		<real>44.460138</real>
-		<real>-93.148793</real>
+		<real>44.45820218079167</real>
+		<real>-93.15945679530834</real>
+	</array>
+	<key>208 Union Street</key>
+	<array>
+		<real>44.45808501499999</real>
+		<real>-93.157396922</real>
+	</array>
+	<key>210 Winona Street</key>
+	<array>
+		<real>44.4579340097</real>
+		<real>-93.1542614776</real>
+	</array>
+	<key>212 East Second Street</key>
+	<array>
+		<real>44.45827680395</real>
+		<real>-93.1574035674</real>
+	</array>
+	<key>216 College Street</key>
+	<array>
+		<real>44.45775001585999</real>
+		<real>-93.15585175824</real>
+	</array>
+	<key>605 Three Oaks Drive</key>
+	<array>
+		<real>44.46609517465</real>
+		<real>-93.14819856405001</real>
+	</array>
+	<key>Allen House</key>
+	<array>
+		<real>44.46010261680625</real>
+		<real>-93.15829130585625</real>
+	</array>
+	<key>Alumni Guest House</key>
+	<array>
+		<real>44.45915350171291</real>
+		<real>-93.15585637989678</real>
+	</array>
+	<key>Arb Office</key>
+	<array>
+		<real>44.46678133005</real>
+		<real>-93.14923758745002</real>
+	</array>
+	<key>Benton House (Science Fiction House)</key>
+	<array>
+		<real>44.4587183236</real>
+		<real>-93.15427143213334</real>
+	</array>
+	<key>Berg House (Women&apos;s Awareness House)</key>
+	<array>
+		<real>44.45877752973333</real>
+		<real>-93.15740249276666</real>
+	</array>
+	<key>Bird House</key>
+	<array>
+		<real>44.45940855283847</real>
+		<real>-93.15513278555771</real>
 	</array>
 	<key>Boliou Hall</key>
 	<array>
-		<real>44.462277</real>
-		<real>-93.152843</real>
+		<real>44.46246432625333</real>
+		<real>-93.15268850649332</real>
+	</array>
+	<key>Brooks House</key>
+	<array>
+		<real>44.45966124138572</real>
+		<real>-93.15788272415</real>
 	</array>
 	<key>Burton Hall</key>
 	<array>
-		<real>44.460759</real>
-		<real>-93.156751</real>
+		<real>44.46050686750187</real>
+		<real>-93.15661825176601</real>
 	</array>
-	<key>Center for Mathematics and Computing</key>
+	<key>Cassat Hall</key>
 	<array>
-		<real>44.462424</real>
-		<real>-93.153396</real>
+		<real>44.46002936755177</real>
+		<real>-93.15101991783931</real>
 	</array>
-	<key>Concert Hall</key>
+	<key>Center for Math and Computing (CMC)</key>
 	<array>
-		<real>44.46047</real>
-		<real>-93.153364</real>
+		<real>44.46244654386666</real>
+		<real>-93.15363536596664</real>
+	</array>
+	<key>Chaney House (CANOE House)</key>
+	<array>
+		<real>44.4587241032125</real>
+		<real>-93.15022220491875</real>
+	</array>
+	<key>Clader House</key>
+	<array>
+		<real>44.45871533894999</real>
+		<real>-93.15763297899167</real>
+	</array>
+	<key>College Warehouse</key>
+	<array>
+		<real>44.46581963805</real>
+		<real>-93.14849156585001</real>
+	</array>
+	<key>Collier House</key>
+	<array>
+		<real>44.4593267022625</real>
+		<real>-93.15809213171875</real>
+	</array>
+	<key>Colwell House</key>
+	<array>
+		<real>44.45888939283571</real>
+		<real>-93.15836532942856</real>
 	</array>
 	<key>Cowling Gymnasium</key>
 	<array>
-		<real>44.4598445235</real>
-		<real>-93.1497711146</real>
+		<real>44.45984452348333</real>
+		<real>-93.14977111458332</real>
+	</array>
+	<key>Dacie Moses House</key>
+	<array>
+		<real>44.45899159813749</real>
+		<real>-93.15738685996251</real>
 	</array>
 	<key>Davis Hall</key>
 	<array>
-		<real>44.460305</real>
-		<real>-93.156722</real>
+		<real>44.46009097479655</real>
+		<real>-93.1565146382413</real>
+	</array>
+	<key>Dixon House</key>
+	<array>
+		<real>44.45917569224167</real>
+		<real>-93.15820458144168</real>
+	</array>
+	<key>Douglas House (F.I.S.H. House)</key>
+	<array>
+		<real>44.45762301335</real>
+		<real>-93.15519664049999</real>
+	</array>
+	<key>Dow House</key>
+	<array>
+		<real>44.4590397220375</real>
+		<real>-93.1582599666</real>
+	</array>
+	<key>Eugster House</key>
+	<array>
+		<real>44.4600384900875</real>
+		<real>-93.15760714305001</real>
 	</array>
 	<key>Evans Hall</key>
 	<array>
-		<real>44.460786</real>
-		<real>-93.149795</real>
+		<real>44.46055134210955</real>
+		<real>-93.14962972142737</real>
+	</array>
+	<key>Facilities Building</key>
+	<array>
+		<real>44.46190324211667</real>
+		<real>-93.15620482205834</real>
+	</array>
+	<key>Faculty Club</key>
+	<array>
+		<real>44.45883955638551</real>
+		<real>-93.14930887139562</real>
+	</array>
+	<key>Faculty Club Annex</key>
+	<array>
+		<real>44.45900506776665</real>
+		<real>-93.14980082810001</real>
+	</array>
+	<key>Farm House (Sustainable Living House)</key>
+	<array>
+		<real>44.4661117086</real>
+		<real>-93.1491837582</real>
+	</array>
+	<key>Geffert House (Fitness House)</key>
+	<array>
+		<real>44.45895074155</real>
+		<real>-93.15902143029999</real>
 	</array>
 	<key>Goodhue Hall</key>
 	<array>
-		<real>44.462643</real>
-		<real>-93.14970599999999</real>
+		<real>44.46234860530249</real>
+		<real>-93.14960396232001</real>
+	</array>
+	<key>Goodsell Observatory</key>
+	<array>
+		<real>44.46189727113715</real>
+		<real>-93.15245645998571</real>
 	</array>
 	<key>Gould Library</key>
 	<array>
-		<real>44.4621306</real>
-		<real>-93.15442299999999</real>
+		<real>44.46231963624483</real>
+		<real>-93.15475909284137</real>
 	</array>
-	<key>Hill of Three Oaks</key>
+	<key>Grounds Garage/Warehouse</key>
 	<array>
-		<real>44.463294</real>
-		<real>-93.14758399999999</real>
+		<real>44.46674693435</real>
+		<real>-93.1485760635</real>
+	</array>
+	<key>Hall House (ASIA House)</key>
+	<array>
+		<real>44.45942407797999</real>
+		<real>-93.15772617280001</real>
+	</array>
+	<key>Headley Cottage</key>
+	<array>
+		<real>44.4589369756</real>
+		<real>-93.14843689656</real>
+	</array>
+	<key>Headley House</key>
+	<array>
+		<real>44.45872854936667</real>
+		<real>-93.14804575793333</real>
+	</array>
+	<key>Henrickson House</key>
+	<array>
+		<real>44.45877493125714</real>
+		<real>-93.15803478090001</real>
+	</array>
+	<key>Henry House</key>
+	<array>
+		<real>44.45923635246667</real>
+		<real>-93.15673916995</real>
+	</array>
+	<key>Hill House</key>
+	<array>
+		<real>44.45806101535555</real>
+		<real>-93.15509432017777</real>
+	</array>
+	<key>Hilton House</key>
+	<array>
+		<real>44.45866318691</real>
+		<real>-93.15918599672</real>
+	</array>
+	<key>Hoppin House</key>
+	<array>
+		<real>44.4594086057</real>
+		<real>-93.15424631956665</real>
 	</array>
 	<key>Hulings Hall</key>
 	<array>
-		<real>44.461204</real>
-		<real>-93.153299</real>
+		<real>44.46091759550001</real>
+		<real>-93.15333246074333</real>
+	</array>
+	<key>Hunt Cottage (La Casa del Sol)</key>
+	<array>
+		<real>44.45923230666667</real>
+		<real>-93.15732275693335</real>
+	</array>
+	<key>Hunt House</key>
+	<array>
+		<real>44.45871761922</real>
+		<real>-93.15827952968</real>
+	</array>
+	<key>Huntington House (W.H.O.A. House)</key>
+	<array>
+		<real>44.458745212</real>
+		<real>-93.15510790077144</real>
+	</array>
+	<key>James Hall</key>
+	<array>
+		<real>44.46001673920536</real>
+		<real>-93.15179335799283</real>
+	</array>
+	<key>Jewett House (Culinary House)</key>
+	<array>
+		<real>44.45764826404287</real>
+		<real>-93.15748926555715</real>
+	</array>
+	<key>Johnson House</key>
+	<array>
+		<real>44.45940157702964</real>
+		<real>-93.15607279797035</real>
+	</array>
+	<key>Jones House</key>
+	<array>
+		<real>44.45820857040001</real>
+		<real>-93.15592791567144</real>
 	</array>
 	<key>Laird Hall</key>
 	<array>
-		<real>44.462049</real>
-		<real>-93.154061</real>
+		<real>44.4621028377</real>
+		<real>-93.15392513036664</real>
+	</array>
+	<key>Laird Stadium (Athletics)</key>
+	<array>
+		<real>44.46169415359375</real>
+		<real>-93.15838242152499</real>
+	</array>
+	<key>Language and Dining Center</key>
+	<array>
+		<real>44.46097193726332</real>
+		<real>-93.15116465704668</real>
 	</array>
 	<key>Leighton Hall</key>
 	<array>
-		<real>44.462043</real>
-		<real>-93.15567</real>
+		<real>44.46205831600999</real>
+		<real>-93.15549290548999</real>
+	</array>
+	<key>Mudd Hall</key>
+	<array>
+		<real>44.46088589687648</real>
+		<real>-93.15229922712943</real>
+	</array>
+	<key>Old Music Hall</key>
+	<array>
+		<real>44.46138264762777</real>
+		<real>-93.15336928842221</real>
+	</array>
+	<key>Concert Hall</key>
+	<array>
+		<real>44.46034714390909</real>
+		<real>-93.15303472135911</real>
 	</array>
 	<key>Musser Hall</key>
 	<array>
-		<real>44.460191</real>
-		<real>-93.15706299999999</real>
+		<real>44.45994130385</real>
+		<real>-93.15720048670001</real>
 	</array>
 	<key>Myers Hall</key>
 	<array>
-		<real>44.460948</real>
-		<real>-93.15086700000001</real>
+		<real>44.460784707775</real>
+		<real>-93.15066507249999</real>
+	</array>
+	<key>Nason House</key>
+	<array>
+		<real>44.45978785601</real>
+		<real>-93.15749962808999</real>
 	</array>
 	<key>Nourse Hall</key>
 	<array>
-		<real>44.460744</real>
-		<real>-93.152007</real>
+		<real>44.46053870992001</real>
+		<real>-93.15185171147601</real>
+	</array>
+	<key>Nutting House</key>
+	<array>
+		<real>44.45765228645</real>
+		<real>-93.1566518408</real>
+	</array>
+	<key>Olin Farm House</key>
+	<array>
+		<real>44.46863786065</real>
+		<real>-93.14876072344001</real>
+	</array>
+	<key>Olin Hall</key>
+	<array>
+		<real>44.46130495556551</real>
+		<real>-93.15254895761379</real>
+	</array>
+	<key>Owens House</key>
+	<array>
+		<real>44.45947976466667</real>
+		<real>-93.15802113578333</real>
+	</array>
+	<key>Page House East (Jewish Interest House)</key>
+	<array>
+		<real>44.45757270482857</real>
+		<real>-93.15587776832855</real>
+	</array>
+	<key>Parish House (Language House)</key>
+	<array>
+		<real>44.45772846682222</real>
+		<real>-93.15461788953331</real>
+	</array>
+	<key>Parr House (Sustainable Living House)</key>
+	<array>
+		<real>44.46636522225</real>
+		<real>-93.14916322055001</real>
+	</array>
+	<key>Pollock House</key>
+	<array>
+		<real>44.45905160975001</real>
+		<real>-93.15425490620001</real>
+	</array>
+	<key>Prentice House (Q and A House)</key>
+	<array>
+		<real>44.45994717833332</real>
+		<real>-93.15836154251666</real>
+	</array>
+	<key>Rayment House</key>
+	<array>
+		<real>44.45601302462499</real>
+		<real>-93.15298472194999</real>
 	</array>
 	<key>Recreation Center</key>
 	<array>
-		<real>44.464074</real>
-		<real>-93.149619</real>
+		<real>44.46397687149218</real>
+		<real>-93.14935416197646</real>
+	</array>
+	<key>Rice House</key>
+	<array>
+		<real>44.45796960565</real>
+		<real>-93.15588075399999</real>
+	</array>
+	<key>Rogers House</key>
+	<array>
+		<real>44.458760913375</real>
+		<real>-93.14877308717499</real>
+	</array>
+	<key>Ryberg House</key>
+	<array>
+		<real>44.458216071</real>
+		<real>-93.15627669767498</real>
+	</array>
+	<key>Sayles-Hill Campus Center</key>
+	<array>
+		<real>44.46121260907273</real>
+		<real>-93.15628379610453</real>
+	</array>
+	<key>Scott House</key>
+	<array>
+		<real>44.45984397312858</real>
+		<real>-93.15771521481427</real>
+	</array>
+	<key>Scoville Hall</key>
+	<array>
+		<real>44.46009366578261</real>
+		<real>-93.15594114798262</real>
 	</array>
 	<key>Severance Hall</key>
 	<array>
-		<real>44.461144</real>
-		<real>-93.156561</real>
-	</array>
-	<key>Watson Hall</key>
-	<array>
-		<real>44.459591</real>
-		<real>-93.150442</real>
+		<real>44.46101038344025</real>
+		<real>-93.15646979552596</real>
 	</array>
 	<key>Skinner Memorial Chapel</key>
 	<array>
-		<real>44.4600682701</real>
-		<real>-93.1544985151</real>
+		<real>44.46014581832063</real>
+		<real>-93.15467956321464</real>
+	</array>
+	<key>Sperry House</key>
+	<array>
+		<real>44.45908223915715</real>
+		<real>-93.15197950857143</real>
+	</array>
+	<key>Stimson House (Intercultural Center)</key>
+	<array>
+		<real>44.459449505675</real>
+		<real>-93.15667651714999</real>
+	</array>
+	<key>Strong House</key>
+	<array>
+		<real>44.45871407274166</real>
+		<real>-93.15587798953334</real>
+	</array>
+	<key>Water Tower</key>
+	<array>
+		<real>44.46540882995883</real>
+		<real>-93.14843665252941</real>
+	</array>
+	<key>Watson Hall</key>
+	<array>
+		<real>44.45929766764</real>
+		<real>-93.150226166</real>
+	</array>
+	<key>Weitz Center for Creativity</key>
+	<array>
+		<real>44.45689752530142</real>
+		<real>-93.15622975376567</real>
+	</array>
+	<key>West Gymnasium</key>
+	<array>
+		<real>44.46287207231526</real>
+		<real>-93.15675618344235</real>
+	</array>
+	<key>Whittier House</key>
+	<array>
+		<real>44.45827587153334</real>
+		<real>-93.15275704356667</real>
+	</array>
+	<key>Williams House (Freedom House)</key>
+	<array>
+		<real>44.45907221407499</real>
+		<real>-93.15674980312498</real>
 	</array>
 	<key>Willis Hall</key>
 	<array>
-		<real>44.460936</real>
-		<real>-93.156093</real>
+		<real>44.46076038671364</real>
+		<real>-93.15600994112724</real>
+	</array>
+	<key>Wilson House</key>
+	<array>
+		<real>44.46026180819167</real>
+		<real>-93.15815813721666</real>
 	</array>
 </dict>
 </plist>

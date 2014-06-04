@@ -109,16 +109,16 @@
 }
 
 
+
 //Creates the overlays
 -(void)placeOverlay{
     //Define the region that all of the overlays share
     CLLocationCoordinate2D *coords = malloc(sizeof(CLLocationCoordinate2D) * 4);
-    double moveh = .0003;
-    double movew = .00045;
-    coords[0] = CLLocationCoordinate2DMake(44.486443000000001 + moveh,-93.165485000000004  - movew +.0001);
-    coords[1] = CLLocationCoordinate2DMake(44.455624999999998 - moveh +.0001,-93.165571000000000 + movew +.00008);
-    coords[2] = CLLocationCoordinate2DMake(44.486412000000001 + moveh,-93.118768000000003 -movew +.0001);
-    coords[3] = CLLocationCoordinate2DMake(44.455840000000002 - moveh + .0001,-93.118853999999999  +movew +.00008);
+
+    coords[0] = CLLocationCoordinate2DMake(44.486743000000001,-93.165835000000004);
+    coords[1] = CLLocationCoordinate2DMake(44.455424999999998,-93.118323999999999);
+    coords[2] = CLLocationCoordinate2DMake(44.486743000000001,-93.165835000000004);
+    coords[3] = CLLocationCoordinate2DMake(44.455424999999998,-93.118323999999999);
     
     //Add the basemap overlay
     MKPolygon *polygon = [MKPolygon polygonWithCoordinates:coords count:4];
@@ -163,17 +163,17 @@
     }else{
         //if we're not drawing the basemap, check for one of our cases, and then return the proper renderer, or none at all
         if ([overlay.title  isEqual: @"carlmaps_trails_all.png"] && [checkedTrails containsObject:@"All Arb Trails"]) {
-            theImage= [UIImage imageNamed:@"carlmaps_trails_all.png"];
+            theImage= [UIImage imageNamed:@"CM_alltrails"];
         }else if ([overlay.title  isEqual: @"carlmaps_trails_lower_long.png"] && [checkedTrails containsObject:@"Lower Arb (Long)"]){
-            theImage= [UIImage imageNamed:@"carlmaps_trails_lower_long.png"];
+            theImage= [UIImage imageNamed:@"CM_lower_long"];
         }else if ([overlay.title  isEqual: @"carlmaps_trails_lower_medium.png"] && [checkedTrails containsObject:@"Lower Arb (Medium)"]){
-            theImage= [UIImage imageNamed:@"carlmaps_trails_lower_medium.png"];
+            theImage= [UIImage imageNamed:@"CM_lower_med"];
         }else if ([overlay.title  isEqual: @"carlmaps_trails_lower_short.png"] && [checkedTrails containsObject:@"Lower Arb (Short)"]){
-            theImage= [UIImage imageNamed:@"carlmaps_trails_lower_short.png"];
+            theImage= [UIImage imageNamed:@"CM_lower_short"];
         }else if ([overlay.title  isEqual: @"carlmaps_trails_upper_long.png"] && [checkedTrails containsObject:@"Upper Arb (Long)"]){
-            theImage= [UIImage imageNamed:@"carlmaps_trails_upper_long.png"];
+            theImage= [UIImage imageNamed:@"CM_upper_long"];
         }else if ([overlay.title  isEqual: @"carlmaps_trails_upper_medium.png"] && [checkedTrails containsObject:@"Upper Arb (Medium)"]){
-            theImage= [UIImage imageNamed:@"carlmaps_trails_upper_medium.png"];
+            theImage= [UIImage imageNamed:@"CM_upper_med"];
         }else{
             return nil;
         }
